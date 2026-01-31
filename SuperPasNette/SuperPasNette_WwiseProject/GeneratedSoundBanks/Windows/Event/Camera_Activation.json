@@ -1,0 +1,118 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2159338999",
+    "Type": "Event",
+    "GUID": "{925F45B8-5836-4590-86CD-C30C8D33C708}",
+    "Language": "SFX",
+    "Hash": "{069F3D5E-50D0-4A71-B656-5A662A3D8CB7}",
+    "ObjectPath": "Camera_Activation",
+    "ShortName": "Camera_Activation",
+    "Path": "Event/Camera_Activation.bnk",
+    "Media": [
+     {
+      "Id": "77465671",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "amb_cam2.wav",
+      "Path": "Media/77465671.wem",
+      "CachePath": "F8/{F89F0128-6A9B-57DC-2078-3C03866C4498}.wem"
+     },
+     {
+      "Id": "155130876",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "amb_cam4.wav",
+      "Path": "Media/155130876.wem",
+      "CachePath": "38/{389B5760-9C2D-E678-CC9C-858DEB04609E}.wem"
+     },
+     {
+      "Id": "161799418",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "amb_cam1.wav",
+      "Path": "Media/161799418.wem",
+      "CachePath": "9D/{9D580803-0A12-663E-378E-3A5B72761BAF}.wem"
+     },
+     {
+      "Id": "252033964",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "amb_camtop.wav",
+      "Path": "Media/252033964.wem",
+      "CachePath": "BF/{BFF516AA-5C61-BB2F-E526-9255F4097F59}.wem"
+     },
+     {
+      "Id": "501121069",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sfx_CamChange1.wav",
+      "Path": "Media/501121069.wem",
+      "CachePath": "1E/{1EC6CA91-22AC-3B43-F8A6-358E6DB5D7FD}.wem"
+     },
+     {
+      "Id": "935354105",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "amb_cam5.wav",
+      "Path": "Media/935354105.wem",
+      "CachePath": "7B/{7B76E6EC-28B2-EEBB-026E-120176539428}.wem"
+     },
+     {
+      "Id": "942553665",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "amb_cam3.wav",
+      "Path": "Media/942553665.wem",
+      "CachePath": "58/{585DCAE2-C94C-B5A1-DFC1-1C45F1FC77E3}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2159338999",
+      "Name": "Camera_Activation",
+      "ObjectPath": "\\Events\\Default Work Unit\\Camera_Activation",
+      "GUID": "{925F45B8-5836-4590-86CD-C30C8D33C708}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "77465671"
+       },
+       {
+        "Id": "155130876"
+       },
+       {
+        "Id": "161799418"
+       },
+       {
+        "Id": "252033964"
+       },
+       {
+        "Id": "501121069"
+       },
+       {
+        "Id": "935354105"
+       },
+       {
+        "Id": "942553665"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{083B9452-8A76-EA88-FDE8-988494F8C5B8}"
+ }
+}

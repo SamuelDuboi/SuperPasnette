@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59d4179dcbb25254fb74b0cdd8f1a5b6, type: 3}
+  m_Name: 925F45B8-5836-4590-86CD-C30C8D33C708
+  m_EditorClassIdentifier: 
+  objectName: Camera_Activation
+  id: 2159338999
+  guid: 925F45B8-5836-4590-86CD-C30C8D33C708
+  IsInUserDefinedSoundBank: 0

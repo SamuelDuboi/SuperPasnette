@@ -1,0 +1,16 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2159338999	Camera_Activation			\Default Work Unit\Camera_Activation	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	3827552702	Camera_POV			\Default Work Unit\Camera_POV	
+
+State	ID	Name	State Group			Notes
+	493766699	camtop	Camera_POV			
+	748895195	None	Camera_POV			
+	3210648341	cammulti	Camera_POV			
+	3736508466	cam4	Camera_POV			
+	3736508467	cam5	Camera_POV			
+	3736508468	cam2	Camera_POV			
+	3736508469	cam3	Camera_POV			
+	3736508471	cam1	Camera_POV			
+
