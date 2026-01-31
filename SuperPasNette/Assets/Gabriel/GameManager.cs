@@ -14,9 +14,22 @@ public class GameManager : MonoBehaviour
 	private void Start()
 	{
 		npcManager.SanityDecrease += NpcManager_SanityDecrease;
+		npcManager.OnDeath += NpcManager_OnDeath;
 		uiManager.OnPause += UiManager_OnPause;
 		uiManager.OnPlay += UiManager_OnPlay;
 		uiManager.Restart += UiManager_Restart;
+	}
+
+	private void Update()
+	{
+		npcManager.UpdateMrX(player.transform.position);
+	}
+
+
+	private void NpcManager_OnDeath()
+	{
+		uiManager.setEndScreen(ENDSCREEN_TYPE.MR_X);
+		npcManager.StopNPC();
 	}
 
 	private void UiManager_Restart()
@@ -26,7 +39,8 @@ public class GameManager : MonoBehaviour
 
 	private void UiManager_OnPlay()
 	{
-		npcManager.Init();
+		//npcManager.Init();
+		npcManager.InitMrX();
 	}
 
 	private void UiManager_OnPause(bool obj)

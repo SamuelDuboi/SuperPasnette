@@ -7,12 +7,14 @@ using UnityEngine.AI;
 public class NPCManager : MonoBehaviour
 {
     public List<NPC> npcs = new List<NPC>();
+	public MrX mrX;
     public List<Transform> positions = new List<Transform>();
 	public float cooldownBetweenMoves;
 
 	private int countArrived = 0;
 	private bool isPaused = false;
 	public event Action<int> SanityDecrease;
+	public event Action OnDeath;
 
     // Start is called before the first frame update
     public void Init()
@@ -25,6 +27,23 @@ public class NPCManager : MonoBehaviour
 
 		//MoveAll();
     }
+
+	public void InitMrX()
+	{
+		mrX.gameObject.SetActive(true);
+		mrX.OnDeath += MrX_OnDeath;
+	}
+
+	private void MrX_OnDeath()
+	{
+		OnDeath?.Invoke();
+	}
+
+	public void UpdateMrX(Vector3 dest)
+	{
+		if (mrX.gameObject.activeSelf)
+			mrX.agent.SetDestination(dest);
+	}
 
 	public void PauseNPC(bool isPause)
 	{
