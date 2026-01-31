@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{77F9D6F5-6EC7-4302-B76F-4547E55A6168}" SchemaVersion="133">
+	<Switches>
+		<WorkUnit Name="Default Work Unit" ID="{77F9D6F5-6EC7-4302-B76F-4547E55A6168}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="Camera_Pov" ID="{33B4246B-BB15-4890-AA6C-2B0C4AE9B4C3}">
+					<ChildrenList>
+						<Switch Name="cam1" ID="{1A4A5BE0-3014-4A67-8136-F4ABBA76BE9E}"/>
+						<Switch Name="cam2" ID="{2935BE5C-DA1D-4A55-94DA-4B786DA2BE1C}"/>
+						<Switch Name="cma3" ID="{856E7A80-8F14-499D-846E-B661183B508E}"/>
+						<Switch Name="cam4" ID="{33EFFC07-BCFB-459C-8DAC-AABA6AB03043}"/>
+						<Switch Name="cam5" ID="{F186A6C7-B719-42CC-A1F7-97E411A8B3C5}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>
