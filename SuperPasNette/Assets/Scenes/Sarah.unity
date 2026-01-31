@@ -505,7 +505,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 44cf82b006e80754ab87b3426ec9aa17, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 6486a7502c666194bbde69b53bf1093f, type: 2}
   useCallbacks: 0
   stopSoundOnDestroy: 1
   Callbacks: []
@@ -886,7 +886,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 44cf82b006e80754ab87b3426ec9aa17, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 6dff62f68ebad0e4f8fd272f05ea62a9, type: 2}
   useCallbacks: 0
   stopSoundOnDestroy: 1
   Callbacks: []
@@ -1734,7 +1734,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 44cf82b006e80754ab87b3426ec9aa17, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: dc8118f1d41f65f46b733347e68f9535, type: 2}
   useCallbacks: 0
   stopSoundOnDestroy: 1
   Callbacks: []
@@ -2382,7 +2382,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 44cf82b006e80754ab87b3426ec9aa17, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 577a91cb22d59b74e8bfeecc116d3db3, type: 2}
   useCallbacks: 0
   stopSoundOnDestroy: 1
   Callbacks: []
@@ -2730,7 +2730,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 44cf82b006e80754ab87b3426ec9aa17, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 991e5c4c1a538cd46afe046c87b46daf, type: 2}
   useCallbacks: 0
   stopSoundOnDestroy: 1
   Callbacks: []
@@ -2909,7 +2909,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 44cf82b006e80754ab87b3426ec9aa17, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 0c335d1a785dca64da7f638cc78e521d, type: 2}
   useCallbacks: 0
   stopSoundOnDestroy: 1
   Callbacks: []

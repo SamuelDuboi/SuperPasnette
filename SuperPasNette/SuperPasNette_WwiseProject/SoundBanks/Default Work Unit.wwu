@@ -10,7 +10,7 @@
 						<ObjectRef Name="Sfx_PickupTrail" ID="{0328D998-8D06-4349-950F-013D6186FD9B}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="sfx_AppOpen" ID="{4A20A262-CC46-440D-B659-34F1702320EB}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_MusicGroceryStore1" ID="{48FCE50B-C4C3-4520-96DB-63B26B4450C2}" WorkUnitID="{BE850E18-235E-437B-ACD7-E532633F032A}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Camera_Activation" ID="{925F45B8-5836-4590-86CD-C30C8D33C708}" WorkUnitID="{BE850E18-235E-437B-ACD7-E532633F032A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Camera_1" ID="{925F45B8-5836-4590-86CD-C30C8D33C708}" WorkUnitID="{BE850E18-235E-437B-ACD7-E532633F032A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="MusicGroceryStore1" ID="{AA6113C9-0419-45CD-BF67-4A0111623309}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="sfx_eerie1" ID="{19DC4FEE-2E28-45E4-B8F9-73312BBBF85E}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="amb_cam1" ID="{0FA70C48-2DAF-4745-A01A-2E97FAEFB806}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}" Origin="Manual" Filter="7"/>

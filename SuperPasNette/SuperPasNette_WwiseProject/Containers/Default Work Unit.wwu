@@ -892,7 +892,7 @@
 									<PropertyList>
 										<Property Name="Highpass" Type="int16" Value="47"/>
 										<Property Name="Lowpass" Type="int16" Value="36"/>
-										<Property Name="Volume" Type="Real64" Value="-5"/>
+										<Property Name="Volume" Type="Real64" Value="-10"/>
 									</PropertyList>
 								</CustomState>
 							</CustomState>
@@ -1539,7 +1539,7 @@
 								<StateRef Name="cam1" ID="{5D1F500A-4723-4852-AE4F-85A67784B1D3}"/>
 								<CustomState Name="" ID="{2FCAD93D-8B86-4666-B649-2DE4A0F847C1}" ShortID="231753980">
 									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-35"/>
+										<Property Name="Volume" Type="Real64" Value="-12"/>
 									</PropertyList>
 								</CustomState>
 							</CustomState>
@@ -1581,6 +1581,180 @@
 						<ActiveSource Name="amb_cam1" ID="{DACB65F4-7023-4C54-9E3D-84C0332AE6F3}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<RandomSequenceContainer Name="Aura_XChord" ID="{23B0297E-F247-4A1D-BFAA-240E8D9463DE}" ShortID="889480469">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-300</Value>
+							</ValueList>
+						</Property>
+						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+						<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="sfx_auraXChord2" ID="{35497503-BC82-4F21-A763-1F6245D92306}" ShortID="834518860">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_auraXChord2" ID="{E298C672-2F16-4B9C-AD8D-0F57DD1A3F69}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="3.75"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Aura_XChord\sfx_auraXChord2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="361129477"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_auraXChord2" ID="{E298C672-2F16-4B9C-AD8D-0F57DD1A3F69}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx_auraXChord3" ID="{BD8616C9-AEF9-4480-8F4D-11E2F3E62B93}" ShortID="105354507">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_auraXChord3" ID="{EF45E4DD-89F1-420D-8D96-3B7462B14221}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="3.084630911188"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="3.084630911188"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Aura_XChord\sfx_auraXChord3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="359265566"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_auraXChord3" ID="{EF45E4DD-89F1-420D-8D96-3B7462B14221}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx_auraXChord4" ID="{E283060F-2829-46B1-B9E9-FA0569564423}" ShortID="45650231">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_auraXChord4" ID="{8A6B10C3-D281-48CA-8DC2-5135D9994DA9}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="3.75295831040995"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="3.75295831040995"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Aura_XChord\sfx_auraXChord4.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="629097335"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_auraXChord4" ID="{8A6B10C3-D281-48CA-8DC2-5135D9994DA9}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx_auraXChord1" ID="{4C40FDAB-A09E-49ED-836D-8C50F3BC49F2}" ShortID="1051333346">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_auraXChord1" ID="{4A4AFF76-6C98-41C3-8658-81012E738920}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="3"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Aura_XChord\sfx_auraXChord1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="487359326"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_auraXChord1" ID="{4A4AFF76-6C98-41C3-8658-81012E738920}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Playlist">
+							<PluginInnerObject Name="" ID="{5024458A-9D87-416F-8C82-A4C1F244D9D1}" PluginName="PlaylistSlot" CompanyID="0" PluginID="86">
+								<ReferenceList>
+									<Reference Name="PlaylistObject">
+										<ObjectRef Name="sfx_auraXChord1" ID="{4C40FDAB-A09E-49ED-836D-8C50F3BC49F2}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+									</Reference>
+								</ReferenceList>
+							</PluginInnerObject>
+							<PluginInnerObject Name="" ID="{2EAD17BC-0FA4-4E69-B110-FE417C990A9F}" PluginName="PlaylistSlot" CompanyID="0" PluginID="86">
+								<ReferenceList>
+									<Reference Name="PlaylistObject">
+										<ObjectRef Name="sfx_auraXChord2" ID="{35497503-BC82-4F21-A763-1F6245D92306}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+									</Reference>
+								</ReferenceList>
+							</PluginInnerObject>
+							<PluginInnerObject Name="" ID="{ED62369B-1E64-4FDF-93C4-DA266B808E72}" PluginName="PlaylistSlot" CompanyID="0" PluginID="86">
+								<ReferenceList>
+									<Reference Name="PlaylistObject">
+										<ObjectRef Name="sfx_auraXChord3" ID="{BD8616C9-AEF9-4480-8F4D-11E2F3E62B93}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+									</Reference>
+								</ReferenceList>
+							</PluginInnerObject>
+							<PluginInnerObject Name="" ID="{7C26A95A-092C-4499-8C96-F39C50CF9E3F}" PluginName="PlaylistSlot" CompanyID="0" PluginID="86">
+								<ReferenceList>
+									<Reference Name="PlaylistObject">
+										<ObjectRef Name="sfx_auraXChord4" ID="{E283060F-2829-46B1-B9E9-FA0569564423}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+									</Reference>
+								</ReferenceList>
+							</PluginInnerObject>
+						</ObjectList>
+						<ObjectList Name="RTPC">
+							<RTPC Name="" ID="{5819CBD1-666F-4C7B-B9D5-6A0AA16A269A}" ShortID="1058611556">
+								<Comment>moins de distance = moins de durée
+==&gt; Fréquence plus rapide pour les notes de l'accord</Comment>
+								<PropertyList>
+									<Property Name="PropertyName" Type="string" Value="PlayMechanismSpecialTransitionsValue"/>
+								</PropertyList>
+								<ReferenceList/>
+							</RTPC>
+						</ObjectList>
+					</ObjectLists>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</Containers>
