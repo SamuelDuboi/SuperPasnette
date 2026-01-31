@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 	public CharacterController player;
 
 	private int sanity = 100;
+	private int nPickedUpItem = 0;
 
 	private void Start()
 	{
@@ -18,6 +19,26 @@ public class GameManager : MonoBehaviour
 		uiManager.OnPause += UiManager_OnPause;
 		uiManager.OnPlay += UiManager_OnPlay;
 		uiManager.Restart += UiManager_Restart;
+		player.OnPickUp += Player_OnPickUp;
+		player.OnTalk += Player_OnTalk;
+	}
+
+	private void Player_OnTalk(Client obj)
+	{
+		if(obj.gameObject.CompareTag("Cashier") && nPickedUpItem == 0)
+		{
+			Debug.Log("You Win");
+			StartCoroutine(TimeBeforeOpenEndScreen(2f));
+		}
+		else
+		{
+			Debug.Log("Tu entends quelqu'un parler");
+		}
+	}
+
+	private void Player_OnPickUp()
+	{
+		nPickedUpItem++;
 	}
 
 	private void Update()
@@ -57,5 +78,12 @@ public class GameManager : MonoBehaviour
 			uiManager.setEndScreen(ENDSCREEN_TYPE.SANITY);
 			npcManager.StopNPC();
 		}
+	}
+
+	IEnumerator TimeBeforeOpenEndScreen(float waitingTime)
+	{
+		yield return new WaitForSeconds(waitingTime);
+		uiManager.setEndScreen(ENDSCREEN_TYPE.WIN);
+		
 	}
 }

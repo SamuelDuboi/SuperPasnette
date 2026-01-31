@@ -1,18 +1,25 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
+    public ItemsList itemsToPickup;
+
     [Range(1,20)]
     public float movementSpeed;
     private Rigidbody rigidbody;
     private Item itemInRange;
+    private Client talkingPersonInRange;
     private List<string> lCarryingItem;
     private bool bIsListOpen = false;
     private UIManager UIManager;
     private CameraHandler camHandler;
     public bool cameraRelative;
+
+    public event Action OnPickUp;
+    public event Action<Client> OnTalk;
 
     private bool isPaused = false;
     // Start is called before the first frame update
@@ -42,14 +49,21 @@ public class CharacterController : MonoBehaviour
             UIManager.getHud().ToggleInteraction(false);
 
             lCarryingItem.Add(itemInRange.name);
-           UIManager.UpdateItemInList(itemInRange.OnPickUp());
+            UIManager.UpdateItemInList(itemInRange.OnPickUp());
+            OnPickUp?.Invoke();
         }
 
-       // if (Input.GetKeyDown(KeyCode.L))                 
-       // {
-       //     UIManager.OnGroceriesList(!bIsListOpen);
-       //     bIsListOpen = !bIsListOpen;
-       // }
+        if (talkingPersonInRange && Input.GetKeyDown(KeyCode.E))
+        {
+            //UIManager.getHud().ToggleTalkInteraction(false);
+            OnTalk?.Invoke(talkingPersonInRange);
+        }
+
+        if (Input.GetKeyDown(KeyCode.L))                 
+       {
+            UIManager.OnGroceriesList(!bIsListOpen);
+            bIsListOpen = !bIsListOpen;
+       }
     }
 
     public void setPause(bool isPause)
@@ -59,10 +73,18 @@ public class CharacterController : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        if (!itemInRange && !talkingPersonInRange) return;
+
         if (itemInRange && other.gameObject.layer == 6) // interactionLayer
         {
             itemInRange = null;
             UIManager.getHud().ToggleInteraction(false);
+        }
+
+        if(talkingPersonInRange && other.gameObject.layer == 7) // interactionTalkLayer
+        {
+            //UIManager.getHud().ToggleTalkInteraction(false);
+            talkingPersonInRange = null;
         }
     }
 
@@ -70,8 +92,18 @@ public class CharacterController : MonoBehaviour
     {
         if(other.gameObject.layer == 6) // interactionLayer
         {
-            UIManager.getHud().ToggleInteraction(true);
-            itemInRange = other.GetComponent<Item>();
+            if(itemsToPickup.lNames.Contains(other.name))
+			{
+                UIManager.getHud().ToggleInteraction(true);
+                itemInRange = other.GetComponent<Item>();
+            }
+            
+        }
+
+        if (other.gameObject.layer == 7) // interactionTalkLayer
+        {
+            //UIManager.getHud().ToggleTalkInteraction(true);
+            talkingPersonInRange = other.GetComponent<Client>();
         }
     }
 
