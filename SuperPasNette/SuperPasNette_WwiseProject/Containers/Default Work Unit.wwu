@@ -827,6 +827,9 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="MusicGroceryStore1" ID="{AA6113C9-0419-45CD-BF67-4A0111623309}" ShortID="194683466">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
@@ -844,6 +847,93 @@
 							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Camera_POV" ID="{5302E343-0790-48B4-B0DF-B3430A29F5FC}"/>
+								<StateGroupInfo Name="" ID="{B95EFE9E-F820-4477-9EBE-AEF50EA5A65C}" ShortID="841280257"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="cam3" ID="{9AFF6E5E-70C7-41C4-AAE6-DCCAB3C9FCB9}"/>
+								<CustomState Name="" ID="{569338C4-E7D1-49E6-935A-2A2D1E31602E}" ShortID="209781412">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16" Value="50"/>
+										<Property Name="Lowpass" Type="int16" Value="39"/>
+										<Property Name="Volume" Type="Real64" Value="-9"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="cam5" ID="{58ACBC69-1917-449B-A76D-A64094ED8EA4}"/>
+								<CustomState Name="" ID="{5BCC4ED1-B1C8-4552-B87C-7D090B3B49FD}" ShortID="919550945">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16" Value="74"/>
+										<Property Name="Lowpass" Type="int16" Value="65"/>
+										<Property Name="Volume" Type="Real64" Value="-49"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="cam4" ID="{849443B7-73BD-4828-A0DC-A4DD88B3CD7B}"/>
+								<CustomState Name="" ID="{DF9C6C85-7ED7-4D67-BAB7-8322AA2A3F16}" ShortID="990062924">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16" Value="68"/>
+										<Property Name="Lowpass" Type="int16" Value="41"/>
+										<Property Name="Pitch" Type="int32" Value="60"/>
+										<Property Name="Volume" Type="Real64" Value="-11"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="cam1" ID="{5D1F500A-4723-4852-AE4F-85A67784B1D3}"/>
+								<CustomState Name="" ID="{B8AA8399-CD74-4D6B-B585-957499A069BE}" ShortID="722640867">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16" Value="47"/>
+										<Property Name="Lowpass" Type="int16" Value="36"/>
+										<Property Name="Volume" Type="Real64" Value="-5"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="None" ID="{BE17A920-CD24-4879-9E61-C58DABB63420}"/>
+								<CustomState Name="" ID="{631FCCB3-1B9F-4E94-AE0B-B2CCB0507F6F}" ShortID="748445338">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-108"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="cam2" ID="{496A1CD7-7076-4994-A025-A3E5E85E11A5}"/>
+								<CustomState Name="" ID="{EAE490DC-70DF-471C-85A5-F290048F52D8}" ShortID="960909175">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16" Value="35"/>
+										<Property Name="Lowpass" Type="int16" Value="66"/>
+										<Property Name="Volume" Type="Real64" Value="-7"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="cammulti" ID="{E479C36E-D651-4CEE-B6F9-B3001DA5CA15}"/>
+								<CustomState Name="" ID="{5B934953-3645-42BC-AC83-50BA83632D00}" ShortID="358969521">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16" Value="38"/>
+										<Property Name="Lowpass" Type="int16" Value="26"/>
+										<Property Name="Volume" Type="Real64" Value="-5"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="camtop" ID="{E922E281-18A7-4EEA-A5E9-E2F7F5238919}"/>
+								<CustomState Name="" ID="{D1089684-7B34-4E05-BFBE-8BD7AC210395}" ShortID="824894301">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-31"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 					<ActiveSourceList>
 						<ActiveSource Name="MusicGroceryStore1" ID="{A38DE95E-2A96-4D7B-9925-8E07E30CC125}" Platform="Linked"/>
 					</ActiveSourceList>
@@ -886,7 +976,11 @@
 						<CustomStateList>
 							<CustomState>
 								<StateRef Name="cam3" ID="{9AFF6E5E-70C7-41C4-AAE6-DCCAB3C9FCB9}"/>
-								<CustomState Name="" ID="{A77808A6-A1F8-42D4-A122-FB888889DDCA}" ShortID="570190695"/>
+								<CustomState Name="" ID="{A77808A6-A1F8-42D4-A122-FB888889DDCA}" ShortID="570190695">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-35"/>
+									</PropertyList>
+								</CustomState>
 							</CustomState>
 							<CustomState>
 								<StateRef Name="cam5" ID="{58ACBC69-1917-449B-A76D-A64094ED8EA4}"/>
@@ -932,7 +1026,7 @@
 								<StateRef Name="cammulti" ID="{E479C36E-D651-4CEE-B6F9-B3001DA5CA15}"/>
 								<CustomState Name="" ID="{94F591F7-C040-48AB-AD46-5210F7113A29}" ShortID="501712876">
 									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-15"/>
+										<Property Name="Volume" Type="Real64" Value="-40"/>
 									</PropertyList>
 								</CustomState>
 							</CustomState>
@@ -1006,7 +1100,11 @@
 							</CustomState>
 							<CustomState>
 								<StateRef Name="cam4" ID="{849443B7-73BD-4828-A0DC-A4DD88B3CD7B}"/>
-								<CustomState Name="" ID="{D60168A7-5A25-4046-9E97-4C486399672D}" ShortID="1035615127"/>
+								<CustomState Name="" ID="{D60168A7-5A25-4046-9E97-4C486399672D}" ShortID="1035615127">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-35"/>
+									</PropertyList>
+								</CustomState>
 							</CustomState>
 							<CustomState>
 								<StateRef Name="cam1" ID="{5D1F500A-4723-4852-AE4F-85A67784B1D3}"/>
@@ -1036,7 +1134,7 @@
 								<StateRef Name="cammulti" ID="{E479C36E-D651-4CEE-B6F9-B3001DA5CA15}"/>
 								<CustomState Name="" ID="{EFDAE979-9CB4-462E-A4C4-02A62D236601}" ShortID="166424633">
 									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-15"/>
+										<Property Name="Volume" Type="Real64" Value="-40"/>
 									</PropertyList>
 								</CustomState>
 							</CustomState>
@@ -1105,7 +1203,11 @@
 							</CustomState>
 							<CustomState>
 								<StateRef Name="cam5" ID="{58ACBC69-1917-449B-A76D-A64094ED8EA4}"/>
-								<CustomState Name="" ID="{C49AE200-3C36-4B57-A48D-BBE4740258C3}" ShortID="785263704"/>
+								<CustomState Name="" ID="{C49AE200-3C36-4B57-A48D-BBE4740258C3}" ShortID="785263704">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-35"/>
+									</PropertyList>
+								</CustomState>
 							</CustomState>
 							<CustomState>
 								<StateRef Name="cam4" ID="{849443B7-73BD-4828-A0DC-A4DD88B3CD7B}"/>
@@ -1143,7 +1245,7 @@
 								<StateRef Name="cammulti" ID="{E479C36E-D651-4CEE-B6F9-B3001DA5CA15}"/>
 								<CustomState Name="" ID="{63B25EEF-7641-4AB2-A9C0-654BD6C99006}" ShortID="493669015">
 									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-15"/>
+										<Property Name="Volume" Type="Real64" Value="-40"/>
 									</PropertyList>
 								</CustomState>
 							</CustomState>
@@ -1255,7 +1357,11 @@
 							</CustomState>
 							<CustomState>
 								<StateRef Name="camtop" ID="{E922E281-18A7-4EEA-A5E9-E2F7F5238919}"/>
-								<CustomState Name="" ID="{7C82D0CF-A3C2-4427-9BAA-B9D64C018653}" ShortID="1019797478"/>
+								<CustomState Name="" ID="{7C82D0CF-A3C2-4427-9BAA-B9D64C018653}" ShortID="1019797478">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-35"/>
+									</PropertyList>
+								</CustomState>
 							</CustomState>
 						</CustomStateList>
 					</StateInfo>
@@ -1341,13 +1447,17 @@
 							</CustomState>
 							<CustomState>
 								<StateRef Name="cam2" ID="{496A1CD7-7076-4994-A025-A3E5E85E11A5}"/>
-								<CustomState Name="" ID="{3F1F36B4-B635-4C48-9D08-61573EBAB437}" ShortID="881814942"/>
+								<CustomState Name="" ID="{3F1F36B4-B635-4C48-9D08-61573EBAB437}" ShortID="881814942">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-35"/>
+									</PropertyList>
+								</CustomState>
 							</CustomState>
 							<CustomState>
 								<StateRef Name="cammulti" ID="{E479C36E-D651-4CEE-B6F9-B3001DA5CA15}"/>
 								<CustomState Name="" ID="{93F0CCDC-36DD-4479-B86B-CB3E581B9D71}" ShortID="954340874">
 									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-15"/>
+										<Property Name="Volume" Type="Real64" Value="-40"/>
 									</PropertyList>
 								</CustomState>
 							</CustomState>
@@ -1427,7 +1537,11 @@
 							</CustomState>
 							<CustomState>
 								<StateRef Name="cam1" ID="{5D1F500A-4723-4852-AE4F-85A67784B1D3}"/>
-								<CustomState Name="" ID="{2FCAD93D-8B86-4666-B649-2DE4A0F847C1}" ShortID="231753980"/>
+								<CustomState Name="" ID="{2FCAD93D-8B86-4666-B649-2DE4A0F847C1}" ShortID="231753980">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-35"/>
+									</PropertyList>
+								</CustomState>
 							</CustomState>
 							<CustomState>
 								<StateRef Name="None" ID="{BE17A920-CD24-4879-9E61-C58DABB63420}"/>
@@ -1449,7 +1563,7 @@
 								<StateRef Name="cammulti" ID="{E479C36E-D651-4CEE-B6F9-B3001DA5CA15}"/>
 								<CustomState Name="" ID="{F5B50D8B-AF88-4AE1-B30C-DB7E41DF8781}" ShortID="229974965">
 									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-15"/>
+										<Property Name="Volume" Type="Real64" Value="-40"/>
 									</PropertyList>
 								</CustomState>
 							</CustomState>

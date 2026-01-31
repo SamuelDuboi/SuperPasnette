@@ -17,6 +17,9 @@ namespace AK
         static const AkUniqueID BUTTONPAUSE = 3982365877U;
         static const AkUniqueID BUTTONPLAY = 2216827983U;
         static const AkUniqueID CAMERA_ACTIVATION = 2159338999U;
+        static const AkUniqueID FOOTSTEPS_MC = 2093862925U;
+        static const AkUniqueID PLAY_FOOTSTEPS_MCSLOWED = 4086908450U;
+        static const AkUniqueID PLAY_MUSICGROCERYSTORE1 = 316151928U;
     } // namespace EVENTS
 
     namespace STATES

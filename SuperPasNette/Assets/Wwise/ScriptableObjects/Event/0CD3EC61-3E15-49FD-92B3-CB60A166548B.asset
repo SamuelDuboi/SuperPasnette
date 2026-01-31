@@ -15,4 +15,4 @@ MonoBehaviour:
   objectName: ButtonPlay
   id: 2216827983
   guid: 0CD3EC61-3E15-49FD-92B3-CB60A166548B
-  IsInUserDefinedSoundBank: 0
+  IsInUserDefinedSoundBank: 1
