@@ -11,10 +11,12 @@ public class CameraHandler : MonoBehaviour
     public bool bWasMaxLenght = false;
     public bool canGodUseGodCam = false;
     public  GameObject hidingplane;
+    [HideInInspector]
     public GameObject activeCam;
     void Start()
     {
         cameras = GetComponentsInChildren<Camera>();
+        activeCam = cameras[0].gameObject;
     }
 
     // Update is called once per frame

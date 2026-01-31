@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 4
-  cameraRelative: 0
+  cameraRelative: 1
 --- !u!114 &8686477641095216200
 MonoBehaviour:
   m_ObjectHideFlags: 0

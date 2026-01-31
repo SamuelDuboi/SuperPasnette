@@ -891,6 +891,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7158751500340947715, guid: 59fe73bc181427c46a6e9d543d830d48, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.2454834
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158751501934928554, guid: 59fe73bc181427c46a6e9d543d830d48, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7158751501934928555, guid: 59fe73bc181427c46a6e9d543d830d48, type: 3}
       propertyPath: m_Name
       value: UI
@@ -1157,7 +1165,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1904132365}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1904132367
 Camera:
   m_ObjectHideFlags: 0
@@ -1223,6 +1231,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 616379084237112666, guid: 2cf4345c8a6d7be47b8524e5b6ecdd24, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2145458439813422378, guid: 2cf4345c8a6d7be47b8524e5b6ecdd24, type: 3}
       propertyPath: m_RootOrder
       value: 3

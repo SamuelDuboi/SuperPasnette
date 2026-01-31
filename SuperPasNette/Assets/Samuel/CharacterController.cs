@@ -19,6 +19,7 @@ public class CharacterController : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
         UIManager = FindObjectOfType<UIManager>();
         camHandler = FindObjectOfType<CameraHandler>();
+        lCarryingItem = new List<string>();
     }
 
     // Update is called once per frame
@@ -28,6 +29,7 @@ public class CharacterController : MonoBehaviour
         if(cameraRelative && !camHandler.bWasMaxLenght)
         {
             m_Input = camHandler.activeCam.transform.TransformDirection(m_Input);
+            m_Input.y = 0;
         }
 
         rigidbody.MovePosition(transform.position + m_Input * Time.fixedDeltaTime * movementSpeed);
@@ -36,12 +38,12 @@ public class CharacterController : MonoBehaviour
             lCarryingItem.Add(itemInRange.name);
            UIManager.UpdateItemInList(itemInRange.OnPickUp());
         }
-        if (Input.GetKeyDown(KeyCode.L)) 
-                
-        {
-            UIManager.OnGroceriesList(!bIsListOpen);
-            bIsListOpen = !bIsListOpen;
-        }
+
+       // if (Input.GetKeyDown(KeyCode.L))                 
+       // {
+       //     UIManager.OnGroceriesList(!bIsListOpen);
+       //     bIsListOpen = !bIsListOpen;
+       // }
     }
 
     private void OnTriggerExit(Collider other)
