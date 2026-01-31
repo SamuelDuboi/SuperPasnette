@@ -10,6 +10,8 @@ public class HudScreen : MonoBehaviour
     public Button pauseBtn;
     public GameObject list;
 	public GameObject listContainer;
+	[SerializeField]
+	private GameObject interactionObject;
     public Animator anim;
     public Animator animList;
 
@@ -38,7 +40,13 @@ public class HudScreen : MonoBehaviour
 		onPause?.Invoke();
 	}
 
-    public void FillList(List<string> groceries)
+	public void ToggleInteraction (bool bActive)
+	{
+		interactionObject.SetActive(bActive);
+	}
+
+
+	public void FillList(List<string> groceries)
 	{
 		for (int i = 0; i < groceries.Count; i++)
 		{
