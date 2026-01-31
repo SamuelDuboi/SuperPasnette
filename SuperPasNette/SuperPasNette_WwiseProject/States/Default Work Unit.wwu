@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{DA7E81F1-595F-43E3-997A-F16EF7A7A7E3}" SchemaVersion="133">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{DA7E81F1-595F-43E3-997A-F16EF7A7A7E3}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{DA7E81F1-595F-43E3-997A-F16EF7A7A7E3}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="MentalState" ID="{9746BC30-1CD8-4EF0-8DAD-CE6697CF2C29}">
+					<ChildrenList>
+						<State Name="None" ID="{9085BFB1-5021-49D9-A1AA-587B658E6523}"/>
+						<State Name="Mental100" ID="{85F7A492-5A1F-48F5-943E-3B2C2C59E639}"/>
+						<State Name="Mental75" ID="{E5D7A720-F1F6-40A7-B12A-E8CB61F0B033}"/>
+						<State Name="Mental50" ID="{3BD9547E-8119-466D-B51F-40E7FFD42FB2}"/>
+						<State Name="Mental25" ID="{25B40CCA-8B0C-4671-BD1D-C3D874C0424C}"/>
+						<State Name="Mental0" ID="{18411788-3B28-48E6-B875-CE3FC5ADDD60}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>
