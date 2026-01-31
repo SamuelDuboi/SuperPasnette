@@ -15,4 +15,4 @@ MonoBehaviour:
   objectName: Camera_Activation
   id: 2159338999
   guid: 925F45B8-5836-4590-86CD-C30C8D33C708
-  IsInUserDefinedSoundBank: 0
+  IsInUserDefinedSoundBank: 1
