@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{BE850E18-235E-437B-ACD7-E532633F032A}" SchemaVersion="133">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{BE850E18-235E-437B-ACD7-E532633F032A}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{BE850E18-235E-437B-ACD7-E532633F032A}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="UI" ID="{2E765B92-2F4F-4AD9-B23B-665D418E4251}" ShortID="637999308">
+					<ChildrenList>
+						<Event Name="Button" ID="{19E02A56-B49A-4B81-A1FD-723F1991574E}">
+							<ChildrenList>
+								<Action Name="" ID="{10122FB8-C50D-4C7A-B09F-7B0584718CF8}" ShortID="328268505">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Boutton1_V1" ID="{43EA58E9-5D22-4D55-82F5-75325104048E}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ButtonPause" ID="{E8E0D8B5-31A0-4423-8025-A671EF840930}">
+							<ChildrenList>
+								<Action Name="" ID="{A4DA170C-C8F6-47E2-8331-50BE8B44C52A}" ShortID="902221598">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Boutton2_V1" ID="{501BAD2E-49F2-464A-B68B-2D19DCD8E376}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ButtonPlay" ID="{0CD3EC61-3E15-49FD-92B3-CB60A166548B}">
+							<ChildrenList>
+								<Action Name="" ID="{9FE25D78-ECD9-4989-A1F4-5C4714E13FDF}" ShortID="874633933">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Boutton3_V1" ID="{937FD25E-929B-4493-AD39-26BF303AA68B}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

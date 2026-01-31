@@ -25,6 +25,94 @@
 						<ActiveSource Name="SD_SFX_Meow_1_V1" ID="{A9F4B92F-93DB-4073-AC4B-828722EEEB5E}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Folder Name="Bouttons" ID="{8417A40C-0457-4E9A-A6DB-721022337F99}" ShortID="948306806">
+					<ChildrenList>
+						<Sound Name="Boutton1_V1" ID="{43EA58E9-5D22-4D55-82F5-75325104048E}" ShortID="689604917">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Boutton1_V1" ID="{6E3974D2-D043-4FC4-926D-3CE2063A46B6}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.202722022552666"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0935640104089229"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.45102654986178"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Bouttons\Boutton1_V1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="941356072"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Boutton1_V1" ID="{6E3974D2-D043-4FC4-926D-3CE2063A46B6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Boutton2_V1" ID="{501BAD2E-49F2-464A-B68B-2D19DCD8E376}" ShortID="126825374">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Boutton2_V1" ID="{72C6BFC8-A58A-4736-9E61-4374BF18AD56}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.263959771827843"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0122512974266087"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.438819210655824"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Bouttons\Boutton2_V1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="152961210"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Boutton2_V1" ID="{72C6BFC8-A58A-4736-9E61-4374BF18AD56}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Boutton3_V1" ID="{937FD25E-929B-4493-AD39-26BF303AA68B}" ShortID="651442422">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Boutton3_V1" ID="{6519233A-26CB-4D34-87AB-E26CEED2BABC}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.230974434293815"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0101009227825284"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.342084581404821"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Bouttons\Boutton3_V1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="380365589"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Boutton3_V1" ID="{6519233A-26CB-4D34-87AB-E26CEED2BABC}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Containers>
