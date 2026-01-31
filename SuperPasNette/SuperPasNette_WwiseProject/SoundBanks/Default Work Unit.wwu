@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{DE0A3D2F-5951-4116-842A-1DB9127F1CF3}" SchemaVersion="133">
 	<SoundBanks>
-		<WorkUnit Name="Default Work Unit" ID="{DE0A3D2F-5951-4116-842A-1DB9127F1CF3}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{DE0A3D2F-5951-4116-842A-1DB9127F1CF3}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Main" ID="{06B81F17-FEE7-41D9-89C2-ED5D5C93701A}">
+					<ObjectInclusionList>
+						<ObjectRef Name="sfx_AppNotif" ID="{3EAE1D9E-454D-401D-835E-8CDCEE3A32C5}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="amb_cam3" ID="{A35A43FD-4393-407A-A3EC-E00D467BDD82}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Sfx_PickupTrail" ID="{0328D998-8D06-4349-950F-013D6186FD9B}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="sfx_AppOpen" ID="{4A20A262-CC46-440D-B659-34F1702320EB}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Camera_Activation" ID="{925F45B8-5836-4590-86CD-C30C8D33C708}" WorkUnitID="{BE850E18-235E-437B-ACD7-E532633F032A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="MusicGroceryStore1" ID="{AA6113C9-0419-45CD-BF67-4A0111623309}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="sfx_eerie1" ID="{19DC4FEE-2E28-45E4-B8F9-73312BBBF85E}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="amb_cam1" ID="{0FA70C48-2DAF-4745-A01A-2E97FAEFB806}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="SD_SFX_Meow_1_V1" ID="{C04DB2C4-E63F-47DB-95AE-A9364841B2A8}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="sfx_PickUp1" ID="{DD61C655-96E7-4830-9A3B-4D59EB8FB355}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="amb_cam2" ID="{1FE5E723-B00A-48D1-B1B4-F9DF7B735687}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Footsteps" ID="{AE3A552F-49BC-49AC-8A42-DCF0DC29537F}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="UI" ID="{2E765B92-2F4F-4AD9-B23B-665D418E4251}" WorkUnitID="{BE850E18-235E-437B-ACD7-E532633F032A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="sfx_Whoosh1" ID="{CE55FCAA-E47E-4BE3-AE85-B2CB1CF914E3}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="amb_cam4" ID="{64EFE454-F79B-4C43-B78E-A6BC5C81158F}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="SFX" ID="{57776515-D67E-4D01-8B26-6EB10F000865}" WorkUnitID="{BE850E18-235E-437B-ACD7-E532633F032A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="sfx_CamChange1" ID="{B89A90F0-C238-4D0D-ABF4-107E9631A606}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="amb_cam5" ID="{8457E47D-8986-4DFC-A925-58BD49C97A6C}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Bouttons" ID="{8417A40C-0457-4E9A-A6DB-721022337F99}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="sfx_eerie2" ID="{BBD32B6A-A039-4ED5-9669-E56AB8835796}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="amb_camtop" ID="{9F4FC2E2-C507-4F2F-8DFF-B45340217509}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundBanks>
 </WwiseDocument>

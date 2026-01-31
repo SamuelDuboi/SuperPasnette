@@ -12,6 +12,67 @@
 						<State Name="Mental25" ID="{25B40CCA-8B0C-4671-BD1D-C3D874C0424C}"/>
 						<State Name="Mental0" ID="{18411788-3B28-48E6-B875-CE3FC5ADDD60}"/>
 					</ChildrenList>
+					<TransitionList>
+						<Transition>
+							<StartState Name="Mental100" ID="{85F7A492-5A1F-48F5-943E-3B2C2C59E639}"/>
+							<EndState Name="Mental75" ID="{E5D7A720-F1F6-40A7-B12A-E8CB61F0B033}"/>
+							<Time>1</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="Mental75" ID="{E5D7A720-F1F6-40A7-B12A-E8CB61F0B033}"/>
+							<EndState Name="Mental50" ID="{3BD9547E-8119-466D-B51F-40E7FFD42FB2}"/>
+							<Time>1</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="Mental50" ID="{3BD9547E-8119-466D-B51F-40E7FFD42FB2}"/>
+							<EndState Name="Mental25" ID="{25B40CCA-8B0C-4671-BD1D-C3D874C0424C}"/>
+							<Time>1</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="Mental25" ID="{25B40CCA-8B0C-4671-BD1D-C3D874C0424C}"/>
+							<EndState Name="Mental0" ID="{18411788-3B28-48E6-B875-CE3FC5ADDD60}"/>
+							<Time>3</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+					</TransitionList>
+				</StateGroup>
+				<StateGroup Name="Speed" ID="{57AEB422-C831-462C-BED0-58BAE269F448}">
+					<ChildrenList>
+						<State Name="None" ID="{0C1FD3F5-EBF8-42FE-9E11-76BCE76C476C}"/>
+						<State Name="Speedhigh" ID="{1C0117E9-8B4E-4D2A-8884-FEAAEFF3A325}"/>
+						<State Name="SpeedLow" ID="{67649101-D375-414C-B2F1-30F6E810C537}"/>
+					</ChildrenList>
+					<TransitionList>
+						<Transition>
+							<StartState Name="Speedhigh" ID="{1C0117E9-8B4E-4D2A-8884-FEAAEFF3A325}"/>
+							<EndState Name="SpeedLow" ID="{67649101-D375-414C-B2F1-30F6E810C537}"/>
+							<Time>0.5</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+					</TransitionList>
+				</StateGroup>
+				<StateGroup Name="Camera_POV" ID="{5302E343-0790-48B4-B0DF-B3430A29F5FC}">
+					<ChildrenList>
+						<State Name="None" ID="{BE17A920-CD24-4879-9E61-C58DABB63420}"/>
+						<State Name="cam1" ID="{5D1F500A-4723-4852-AE4F-85A67784B1D3}"/>
+						<State Name="cam2" ID="{496A1CD7-7076-4994-A025-A3E5E85E11A5}"/>
+						<State Name="cam3" ID="{9AFF6E5E-70C7-41C4-AAE6-DCCAB3C9FCB9}"/>
+						<State Name="cam4" ID="{849443B7-73BD-4828-A0DC-A4DD88B3CD7B}"/>
+						<State Name="cam5" ID="{58ACBC69-1917-449B-A76D-A64094ED8EA4}"/>
+						<State Name="camtop" ID="{E922E281-18A7-4EEA-A5E9-E2F7F5238919}"/>
+						<State Name="cammulti" ID="{E479C36E-D651-4CEE-B6F9-B3001DA5CA15}"/>
+					</ChildrenList>
+					<TransitionList>
+						<Transition>
+							<StartState Name="cam1" ID="{5D1F500A-4723-4852-AE4F-85A67784B1D3}"/>
+							<EndState Name="cam2" ID="{496A1CD7-7076-4994-A025-A3E5E85E11A5}"/>
+							<Time>1</Time>
+							<IsShared>true</IsShared>
+						</Transition>
+					</TransitionList>
 				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
