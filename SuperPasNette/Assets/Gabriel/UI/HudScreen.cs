@@ -9,6 +9,7 @@ public class HudScreen : MonoBehaviour
 {
     public Button pauseBtn;
     public GameObject list;
+	public GameObject listContainer;
     public Animator anim;
     public Animator animList;
 
@@ -21,9 +22,9 @@ public class HudScreen : MonoBehaviour
     void Start()
     {
         pauseBtn.onClick.AddListener(OnPause);
-		for (int i = 0; i < list.transform.childCount; i++)
+		for (int i = 0; i < listContainer.transform.childCount; i++)
 		{
-			listTexts.Add(list.transform.GetChild(i).GetComponent<TMP_Text>());
+			listTexts.Add(listContainer.transform.GetChild(i).GetComponent<TMP_Text>());
 		}
     }
 
@@ -39,7 +40,7 @@ public class HudScreen : MonoBehaviour
 
     public void FillList(List<string> groceries)
 	{
-		for (int i = 0; i < listTexts.Count; i++)
+		for (int i = 0; i < groceries.Count; i++)
 		{
             listTexts[i].text = groceries[i];
 		}

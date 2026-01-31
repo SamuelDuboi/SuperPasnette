@@ -13,6 +13,7 @@ public class UIManager : MonoBehaviour
 
 	public event Action OnQuitLevel;
 	public event Action<bool> OnPause;
+	public event Action OnPlay;
 
 	private GameObject nextScreen;
     // Start is called before the first frame update
@@ -118,5 +119,6 @@ public class UIManager : MonoBehaviour
 	{
 		titleScreen.Close();
 		nextScreen = hud.gameObject;
+		OnPlay?.Invoke();
 	}   
 }

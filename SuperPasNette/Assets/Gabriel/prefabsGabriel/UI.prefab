@@ -3814,7 +3814,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseBtn: {fileID: 7158751500310994245}
-  list: {fileID: 7158751500340947712}
+  list: {fileID: 7158751500203674213}
+  listContainer: {fileID: 7158751500340947712}
   anim: {fileID: 7158751501727858652}
   animList: {fileID: 7158751500203674215}
 --- !u!95 &7158751501727858652

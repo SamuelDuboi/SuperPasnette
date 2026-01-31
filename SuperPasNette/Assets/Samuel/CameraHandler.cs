@@ -7,9 +7,11 @@ public class CameraHandler : MonoBehaviour
     // Start is called before the first frame update
     private Camera[] cameras;
     private bool keydown = false;
-    private bool bWasMaxLenght = false;
+    [HideInInspector]
+    public bool bWasMaxLenght = false;
     public bool canGodUseGodCam = false;
     public  GameObject hidingplane;
+    public GameObject activeCam;
     void Start()
     {
         cameras = GetComponentsInChildren<Camera>();
@@ -149,6 +151,10 @@ public class CameraHandler : MonoBehaviour
                 if( i != cameras.Length || canGodUseGodCam) 
                 {
                 cameras[(int)i].enabled = i == iIndex;
+                    if(i == iIndex) 
+                    {
+                        activeCam = cameras[(int)i].gameObject;
+                    }
                 }
             }
         }
