@@ -8,6 +8,8 @@ public class NPCManager : MonoBehaviour
 {
     public List<NPC> npcs = new List<NPC>();
 	public MrX mrX;
+	public GameObject npcsContainer;
+	public GameObject clientsContainer;
     public List<Transform> positions = new List<Transform>();
 	public float cooldownBetweenMoves;
 
@@ -19,14 +21,26 @@ public class NPCManager : MonoBehaviour
     // Start is called before the first frame update
     public void InitNPC()
     {
-		for (int i = 0; i < npcs.Count; i++)
+		//Spawn NPCs
+
+		/*for (int i = 0; i < npcs.Count; i++)
 		{
-			//npcs[i].Arrived += NPCManager_Arrived;
+			npcs[i].Arrived += NPCManager_Arrived;
 			npcs[i].SanityDecrease += NPCManager_SanityDecrease;
 		}
 
-		//MoveAll();
+		MoveAll();*/
     }
+
+	public void InitClients()
+	{
+		//AddListeners for interaction and Setup random assets on them
+	}
+
+	public void KillClients()
+	{
+		//Called when first object is retrieved, remove Listener for Client, call InitNPC
+	}
 
 	public void InitMrX()
 	{

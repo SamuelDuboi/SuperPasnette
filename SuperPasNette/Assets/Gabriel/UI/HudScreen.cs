@@ -10,8 +10,8 @@ public class HudScreen : MonoBehaviour
     public Button pauseBtn;
     public GameObject list;
 	public GameObject listContainer;
-	[SerializeField]
-	private GameObject interactionObject;
+	[SerializeField] private GameObject interactionObject;
+	[SerializeField] private GameObject interactionTalkingObject;
     public Animator anim;
     public Animator animList;
 
@@ -45,6 +45,11 @@ public class HudScreen : MonoBehaviour
 		interactionObject.SetActive(bActive);
 	}
 
+	public void ToggleTalkInteraction (bool bActive)
+	{
+		interactionTalkingObject.SetActive(bActive);
+	}
+
 
 	public void FillList(List<string> groceries)
 	{
@@ -63,16 +68,6 @@ public class HudScreen : MonoBehaviour
 	{
         list.SetActive(isShowing);
         animList.SetBool("isClosing", !isShowing);
-	}
-
-    public void SmartphoneOpen()
-	{
-
-	}
-
-    public void SmartphoneClose()
-	{
-
 	}
 
     public void Close()

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ItemsList : MonoBehaviour
 {
-    List<string> lNames;
+    public List<string> lNames;
     UIManager manager;
     // Start is called before the first frame update
     void Start()

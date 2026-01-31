@@ -129,6 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a15b1caa28043864f8e6717c525cc4c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemsToPickup: {fileID: 8686477641095216200}
   movementSpeed: 4
   cameraRelative: 1
 --- !u!114 &8686477641095216200
@@ -143,3 +144,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f1daf92c91465f4b94a3b2b12c28192, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lNames: []

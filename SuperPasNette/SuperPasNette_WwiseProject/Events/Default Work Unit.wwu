@@ -193,6 +193,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_MusicGroceryStore1" ID="{48FCE50B-C4C3-4520-96DB-63B26B4450C2}">
+					<ChildrenList>
+						<Action Name="" ID="{F98A93FB-8E27-4D73-9242-158CF47BBCDC}" ShortID="667717392">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MusicGroceryStore1" ID="{AA6113C9-0419-45CD-BF67-4A0111623309}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

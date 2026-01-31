@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{06B81F17-FEE7-41D9-89C2-ED5D5C93701A}",
     "Language": "SFX",
-    "Hash": "{1716F530-AB27-A350-56E8-5DD74892C6FA}",
+    "Hash": "{38A8E146-60A5-9CA7-2D05-5137BAFAB508}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -29,7 +29,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "footsteps-mcSlowed\\sfx_footstepsMCSlowed2.wav",
-      "CachePath": "6C/{6C4C77F8-58F8-EFD3-77EA-2ED4F22F739E}.wem"
+      "CachePath": "4E/{4ECCE89E-9073-0AFA-7B84-4C76F84A1CC7}.wem"
      },
      {
       "Id": "69790729",
@@ -45,7 +45,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "amb_cam2.wav",
-      "CachePath": "F8/{F89F0128-6A9B-57DC-2078-3C03866C4498}.wem"
+      "CachePath": "81/{81AE92FC-0489-C1CD-9032-A8E34D884A8D}.wem"
      },
      {
       "Id": "95658348",
@@ -53,7 +53,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "footsteps-mcSlowed\\sfx_footstepsMCSlowed1.wav",
-      "CachePath": "D1/{D144B908-3EBD-8153-CB6A-816F570367B9}.wem"
+      "CachePath": "14/{144A12C6-2302-4DA9-2FA5-98FA2996817A}.wem"
      },
      {
       "Id": "152961210",
@@ -69,7 +69,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "amb_cam4.wav",
-      "CachePath": "38/{389B5760-9C2D-E678-CC9C-858DEB04609E}.wem"
+      "CachePath": "FB/{FBBF0665-F75D-E619-0BBB-57E0C10F462D}.wem"
      },
      {
       "Id": "161799418",
@@ -77,7 +77,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "amb_cam1.wav",
-      "CachePath": "9D/{9D580803-0A12-663E-378E-3A5B72761BAF}.wem"
+      "CachePath": "0A/{0A520615-B141-4396-9C83-FFCC90194305}.wem"
      },
      {
       "Id": "203516419",
@@ -93,7 +93,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "amb_camtop.wav",
-      "CachePath": "BF/{BFF516AA-5C61-BB2F-E526-9255F4097F59}.wem"
+      "CachePath": "5F/{5FF097E3-967B-9A7D-5C8E-7F0FDB86A44B}.wem"
      },
      {
       "Id": "267543964",
@@ -109,7 +109,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "MusicGroceryStore1.wav",
-      "CachePath": "BB/{BBDF01F3-48BC-D6AF-B821-763666AC172F}.wem"
+      "CachePath": "61/{61447BB7-1E64-02C9-C61F-1D8A1D40DF86}.wem"
      },
      {
       "Id": "341936924",
@@ -197,7 +197,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "footsteps-mcSlowed\\sfx_footstepsMCSlowed3.wav",
-      "CachePath": "0C/{0C9011C5-C36B-BFB8-E1FE-6156DD16FA65}.wem"
+      "CachePath": "88/{88870640-A884-AAEB-B78A-B834A367908E}.wem"
      },
      {
       "Id": "501121069",
@@ -245,7 +245,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "footsteps-mcSlowed\\sfx_footstepsMCSlowed4.wav",
-      "CachePath": "7E/{7E9458AE-D1E2-AEB7-78FF-44E7BE3760DB}.wem"
+      "CachePath": "4C/{4C4CD296-90C9-FAE4-F2E2-D657AD96C81B}.wem"
      },
      {
       "Id": "847334885",
@@ -269,7 +269,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "amb_cam5.wav",
-      "CachePath": "7B/{7B76E6EC-28B2-EEBB-026E-120176539428}.wem"
+      "CachePath": "77/{7722FAD7-4A14-9D70-8FA7-212557A82A47}.wem"
      },
      {
       "Id": "941356072",
@@ -285,7 +285,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "amb_cam3.wav",
-      "CachePath": "58/{585DCAE2-C94C-B5A1-DFC1-1C45F1FC77E3}.wem"
+      "CachePath": "79/{79764ACC-7255-C685-E935-2D263AB9C58A}.wem"
      },
      {
       "Id": "1022786770",
@@ -384,10 +384,92 @@
         "Id": "942553665"
        }
       ]
+     },
+     {
+      "Id": "2093862925",
+      "Name": "footsteps_MC",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\footsteps_MC",
+      "GUID": "{114E9DD2-9649-4636-9888-8ECB13BC202A}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.32134563",
+      "DurationMax": "0.50903845",
+      "MediaRefs": [
+       {
+        "Id": "53216260"
+       },
+       {
+        "Id": "95658348"
+       },
+       {
+        "Id": "396872912"
+       },
+       {
+        "Id": "468184332"
+       },
+       {
+        "Id": "560341166"
+       },
+       {
+        "Id": "809678183"
+       },
+       {
+        "Id": "911871456"
+       },
+       {
+        "Id": "1056913682"
+       }
+      ]
+     },
+     {
+      "Id": "4086908450",
+      "Name": "Play_footsteps_mcSlowed",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_footsteps_mcSlowed",
+      "GUID": "{087BFF17-8DFB-4F50-A2FB-E5136E4955AE}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.32134563",
+      "DurationMax": "0.50903845",
+      "MediaRefs": [
+       {
+        "Id": "53216260"
+       },
+       {
+        "Id": "95658348"
+       },
+       {
+        "Id": "396872912"
+       },
+       {
+        "Id": "468184332"
+       },
+       {
+        "Id": "560341166"
+       },
+       {
+        "Id": "809678183"
+       },
+       {
+        "Id": "911871456"
+       },
+       {
+        "Id": "1056913682"
+       }
+      ]
+     },
+     {
+      "Id": "316151928",
+      "Name": "Play_MusicGroceryStore1",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_MusicGroceryStore1",
+      "GUID": "{48FCE50B-C4C3-4520-96DB-63B26B4450C2}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "286748164"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{388E9494-9667-F6CF-520E-F8FE6C0285CB}"
+  "FileHash": "{547EA2CA-0C9C-98C7-2433-9F53D560F97C}"
  }
 }
