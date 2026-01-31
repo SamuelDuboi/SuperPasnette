@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f43e5b09ab1fde64b99b88716b385c1f, type: 3}
+  m_Name: 5D1F500A-4723-4852-AE4F-85A67784B1D3
+  m_EditorClassIdentifier: 
+  objectName: cam1
+  id: 3736508471
+  guid: 5D1F500A-4723-4852-AE4F-85A67784B1D3
+  WwiseStateGroupReference: {fileID: 11400000, guid: 973f971ff92832b42a3a7d0c7702a534, type: 2}

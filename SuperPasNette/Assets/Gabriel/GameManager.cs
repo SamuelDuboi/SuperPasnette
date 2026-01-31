@@ -39,8 +39,8 @@ public class GameManager : MonoBehaviour
 
 	private void UiManager_OnPlay()
 	{
-		//npcManager.Init();
-		npcManager.InitMrX();
+		npcManager.InitNPC();
+		//npcManager.InitMrX();
 	}
 
 	private void UiManager_OnPause(bool obj)
