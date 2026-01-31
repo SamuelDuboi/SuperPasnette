@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,17 +11,51 @@ public class NPCManager : MonoBehaviour
 	public float cooldownBetweenMoves;
 
 	private int countArrived = 0;
+	private bool isPaused = false;
+	public event Action<int> SanityDecrease;
 
     // Start is called before the first frame update
-    void Start()
+    public void Init()
     {
 		for (int i = 0; i < npcs.Count; i++)
 		{
-			npcs[i].Arrived += NPCManager_Arrived;
+			//npcs[i].Arrived += NPCManager_Arrived;
+			npcs[i].SanityDecrease += NPCManager_SanityDecrease;
 		}
 
-		MoveAll();
+		//MoveAll();
     }
+
+	public void PauseNPC(bool isPause)
+	{
+		isPaused = isPause;
+
+		for (int i = 0; i < npcs.Count; i++)
+		{
+			if (isPause)
+				npcs[i].agent.speed = 0;
+			else
+				npcs[i].agent.speed = npcs[i].baseSpeed;
+		}
+	}
+
+	public void StopNPC()
+	{
+		for (int i = 0; i < npcs.Count; i++)
+		{
+			npcs[i].Arrived -= NPCManager_Arrived;
+			npcs[i].SanityDecrease -= NPCManager_SanityDecrease;
+			npcs[i].agent.ResetPath();
+		}
+	}
+
+	private void NPCManager_SanityDecrease(int obj)
+	{
+		if (isPaused) return;
+
+		SanityDecrease?.Invoke(obj);
+		Debug.Log("Sanity Decrease");
+	}
 
 	private void NPCManager_Arrived()
 	{
@@ -45,7 +80,7 @@ public class NPCManager : MonoBehaviour
 		int currentIndex = 0;
 		foreach (NPC item in npcs)
 		{
-			currentIndex = Random.Range(0, points.Count);
+			currentIndex = UnityEngine.Random.Range(0, points.Count);
 			item.Move(points[currentIndex].position);
 			points.RemoveAt(currentIndex);
 		}

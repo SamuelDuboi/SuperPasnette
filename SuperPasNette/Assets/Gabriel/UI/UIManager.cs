@@ -8,14 +8,17 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TitleScreen titleScreen;
     [SerializeField] private HudScreen hud;
     [SerializeField] private PauseScreen pauseScreen;
-    [SerializeField] private GameObject endScreen;
+    [SerializeField] private EndScreen endScreen;
     [SerializeField] private CreditScreen creditScreen;
 
 	public event Action OnQuitLevel;
+	public event Action Restart;
 	public event Action<bool> OnPause;
 	public event Action OnPlay;
 
 	private GameObject nextScreen;
+	private bool openEndScreen = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,9 +33,47 @@ public class UIManager : MonoBehaviour
 		pauseScreen.onQuit += PauseScreen_onQuit;
 		pauseScreen.closed += PauseScreen_closed;
 
+		endScreen.OnRestart += EndScreen_OnRestart;
+		endScreen.closed += EndScreen_closed;
+
 		creditScreen.onBack += CreditScreen_onBack;
 		creditScreen.closed += CreditScreen_closed;
     }
+
+	private void EndScreen_closed()
+	{
+		if (nextScreen == hud.gameObject)
+		{
+			hud.gameObject.SetActive(true);
+		}
+		else
+		{
+			titleScreen.gameObject.SetActive(true);
+		}
+	}
+
+	private void EndScreen_OnRestart(bool obj)
+	{
+		if(obj)
+		{
+			Restart?.Invoke();
+			nextScreen = hud.gameObject;
+			openEndScreen = false;
+			endScreen.Close();
+		}
+		else
+		{
+			OnQuitLevel?.Invoke();
+			nextScreen = titleScreen.gameObject;
+		}
+	}
+
+	public void setEndScreen(ENDSCREEN_TYPE type)
+	{
+		hud.Close();
+		endScreen.Init(type);
+		openEndScreen = true;
+	}
 
 	private void PauseScreen_closed()
 	{
@@ -63,7 +104,8 @@ public class UIManager : MonoBehaviour
 
 	private void Hud_closed()
 	{
-		pauseScreen.gameObject.SetActive(true);
+		if (openEndScreen) endScreen.gameObject.SetActive(true);
+		else pauseScreen.gameObject.SetActive(true);
 	}
 
 	private void Hud_onPause()
@@ -78,6 +120,7 @@ public class UIManager : MonoBehaviour
 	}
 
 	public HudScreen getHud() { return hud; }
+
 	public void FillGroceries(List<string> groceries)
 	{
 		hud.FillList(groceries);

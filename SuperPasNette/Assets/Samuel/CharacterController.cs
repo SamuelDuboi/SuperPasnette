@@ -13,6 +13,8 @@ public class CharacterController : MonoBehaviour
     private UIManager UIManager;
     private CameraHandler camHandler;
     public bool cameraRelative;
+
+    private bool isPaused = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,8 @@ public class CharacterController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isPaused) return;
+
         Vector3 m_Input =  new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
         if(cameraRelative && !camHandler.bWasMaxLenght)
         {
@@ -47,6 +51,11 @@ public class CharacterController : MonoBehaviour
        //     bIsListOpen = !bIsListOpen;
        // }
     }
+
+    public void setPause(bool isPause)
+	{
+        isPaused = isPause;
+	}
 
     private void OnTriggerExit(Collider other)
     {

@@ -5,12 +5,6 @@ using UnityEngine;
 public class LayoutManager : MonoBehaviour
 {
     public List<GameObject> shelfToMove;
-
-	private void Start()
-	{
-		ChangeLayout();
-	}
-
 	public void ChangeLayout()
 	{
 		GameObject currentGO;
