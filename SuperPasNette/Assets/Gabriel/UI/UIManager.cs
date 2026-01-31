@@ -71,6 +71,16 @@ public class UIManager : MonoBehaviour
 		OnPause?.Invoke(true);
 	}
 
+	public void UpdateItemInList(int index)
+	{
+		hud.UpdateItem(index);
+	}
+
+	public void FillGroceries(List<string> groceries)
+	{
+		hud.FillList(groceries);
+	}
+
 	public void OnGroceriesList(bool isOpen)
 	{
 		hud.ShowList(isOpen);
