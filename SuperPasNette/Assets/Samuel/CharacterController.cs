@@ -35,6 +35,8 @@ public class CharacterController : MonoBehaviour
         rigidbody.MovePosition(transform.position + m_Input * Time.fixedDeltaTime * movementSpeed);
         if(itemInRange && Input.GetKeyDown(KeyCode.E)) 
         {
+            UIManager.getHud().ToggleInteraction(false);
+
             lCarryingItem.Add(itemInRange.name);
            UIManager.UpdateItemInList(itemInRange.OnPickUp());
         }
@@ -50,7 +52,8 @@ public class CharacterController : MonoBehaviour
     {
         if (itemInRange && other.gameObject.layer == 6) // interactionLayer
         {
-            itemInRange = null; 
+            itemInRange = null;
+            UIManager.getHud().ToggleInteraction(false);
         }
     }
 
@@ -58,6 +61,7 @@ public class CharacterController : MonoBehaviour
     {
         if(other.gameObject.layer == 6) // interactionLayer
         {
+            UIManager.getHud().ToggleInteraction(true);
             itemInRange = other.GetComponent<Item>();
         }
     }

@@ -77,6 +77,7 @@ public class UIManager : MonoBehaviour
 		hud.UpdateItem(index);
 	}
 
+	public HudScreen getHud() { return hud; }
 	public void FillGroceries(List<string> groceries)
 	{
 		hud.FillList(groceries);
