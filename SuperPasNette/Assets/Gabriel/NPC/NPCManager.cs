@@ -17,7 +17,7 @@ public class NPCManager : MonoBehaviour
 	public event Action OnDeath;
 
     // Start is called before the first frame update
-    public void Init()
+    public void InitNPC()
     {
 		for (int i = 0; i < npcs.Count; i++)
 		{
