@@ -9,6 +9,7 @@ public class CharacterController : MonoBehaviour
 
     [Range(1,20)]
     public float movementSpeed;
+    public Animator anim;
     private Rigidbody rigidbody;
     private Item itemInRange;
     private Client talkingPersonInRange;
@@ -37,6 +38,8 @@ public class CharacterController : MonoBehaviour
         if (isPaused) return;
 
         Vector3 m_Input =  new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
+        anim.SetFloat("Vertical", Input.GetAxis("Vertical"));
+        anim.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
         if(cameraRelative && !camHandler.bWasMaxLenght)
         {
             m_Input = camHandler.activeCam.transform.TransformDirection(m_Input);
@@ -44,6 +47,7 @@ public class CharacterController : MonoBehaviour
         }
 
         rigidbody.MovePosition(transform.position + m_Input * Time.fixedDeltaTime * movementSpeed);
+        transform.localRotation = Quaternion.LookRotation(m_Input, Vector3.up);
         if(itemInRange && Input.GetKeyDown(KeyCode.E)) 
         {
             UIManager.getHud().ToggleInteraction(false);
@@ -93,7 +97,7 @@ public class CharacterController : MonoBehaviour
     {
         if(other.gameObject.layer == 6) // interactionLayer
         {
-            if(itemsToPickup.lNames.Contains(other.name))
+            if(itemsToPickup && itemsToPickup.lNames.Contains(other.name))
 			{
                 UIManager.getHud().ToggleInteraction(true);
                 itemInRange = other.GetComponent<Item>();

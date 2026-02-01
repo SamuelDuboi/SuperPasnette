@@ -15,31 +15,37 @@ public class NPCManager : MonoBehaviour
 
 	private int countArrived = 0;
 	private bool isPaused = false;
-	public event Action<int> SanityDecrease;
+	public event Action<float> SanityDecrease;
 	public event Action OnDeath;
 
     // Start is called before the first frame update
     public void InitNPC()
     {
-		//Spawn NPCs
+		npcsContainer.SetActive(true);
 
-		/*for (int i = 0; i < npcs.Count; i++)
+		for (int i = 0; i < npcs.Count; i++)
 		{
 			npcs[i].Arrived += NPCManager_Arrived;
 			npcs[i].SanityDecrease += NPCManager_SanityDecrease;
 		}
 
-		MoveAll();*/
+		MoveAll();
     }
 
-	public void InitClients()
+	public void SlowEveryone(float newSpeed)
 	{
-		//AddListeners for interaction and Setup random assets on them
+		foreach (NPC item in npcs)
+		{
+			item.agent.speed = newSpeed;
+		}
+
+		mrX.agent.speed = newSpeed;
+
 	}
 
 	public void KillClients()
 	{
-		//Called when first object is retrieved, remove Listener for Client, call InitNPC
+		clientsContainer.SetActive(false);
 	}
 
 	public void InitMrX()
@@ -74,6 +80,8 @@ public class NPCManager : MonoBehaviour
 
 	public void StopNPC()
 	{
+		if (!npcsContainer.activeSelf) return;
+
 		for (int i = 0; i < npcs.Count; i++)
 		{
 			npcs[i].Arrived -= NPCManager_Arrived;
@@ -82,7 +90,7 @@ public class NPCManager : MonoBehaviour
 		}
 	}
 
-	private void NPCManager_SanityDecrease(int obj)
+	private void NPCManager_SanityDecrease(float obj)
 	{
 		if (isPaused) return;
 

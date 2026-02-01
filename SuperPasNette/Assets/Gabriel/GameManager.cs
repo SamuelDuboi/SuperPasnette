@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,25 +11,72 @@ public class GameManager : MonoBehaviour
 	public NPCManager npcManager;
 	public LayoutManager layoutManager;
 	public CharacterController player;
+	public float newSpeed;
 
-	private int sanity = 100;
+	private bool isLosing = false;
+	private float sanity = 100;
+	private float maxSanity = 100;
 	private int nPickedUpItem = 0;
 
 	private void Start()
 	{
-		npcManager.SanityDecrease += NpcManager_SanityDecrease;
-		npcManager.OnDeath += NpcManager_OnDeath;
 		uiManager.OnPause += UiManager_OnPause;
 		uiManager.OnPlay += UiManager_OnPlay;
 		uiManager.Restart += UiManager_Restart;
+		uiManager.OnQuitLevel += UiManager_OnQuitLevel;
+	}
+
+	private void UiManager_OnQuitLevel()
+	{
+		player.OnPickUp -= Player_OnPickUp;
+		player.OnTalk -= Player_OnTalk;
+		npcManager.SanityDecrease -= NpcManager_SanityDecrease;
+		npcManager.OnDeath -= NpcManager_OnDeath;
+
+		player = null;
+		npcManager = null;
+		layoutManager = null;
+
+		StartCoroutine(UnloadAsync("Level"));
+	}
+
+	private void GetRemainingManagers()
+	{
+		GameObject[] gameObjects = SceneManager.GetSceneAt(1).GetRootGameObjects();
+		foreach (GameObject item in gameObjects)
+		{
+			if(item.GetComponent<CharacterController>())
+			{
+				player = item.GetComponent<CharacterController>();
+				continue;
+			}
+
+			if (item.GetComponent<NPCManager>())
+			{
+				npcManager = item.GetComponent<NPCManager>();
+				continue;
+			}
+
+			if (item.GetComponent<LayoutManager>())
+			{
+				layoutManager = item.GetComponent<LayoutManager>();
+				continue;
+			}
+		}
+
 		player.OnPickUp += Player_OnPickUp;
 		player.OnTalk += Player_OnTalk;
+		npcManager.SanityDecrease += NpcManager_SanityDecrease;
+		npcManager.OnDeath += NpcManager_OnDeath;
+
+		player.itemsToPickup.SetManager(uiManager);
 	}
 
 	private void Player_OnTalk(Client obj)
 	{
-		if(obj.gameObject.CompareTag("Cashier") && nPickedUpItem == 6)
+		if(obj.gameObject.CompareTag("Cashier") && nPickedUpItem == 0)
 		{
+			isLosing = false;
 			StartCoroutine(TimeBeforeOpenEndScreen(2f));
 		}
 		else
@@ -40,29 +89,62 @@ public class GameManager : MonoBehaviour
 	private void Player_OnPickUp()
 	{
 		nPickedUpItem++;
+		switch (nPickedUpItem)
+		{
+			case 1:
+				npcManager?.KillClients();
+				break;
+			case 2:
+				npcManager?.InitNPC();
+				break;
+			case 3:
+				Debug.Log("Blinking Lights");
+				break;
+			case 4:
+				layoutManager?.ChangeLayout();
+				break;
+			case 5:
+				npcManager?.InitMrX();
+				break;
+			case 6:
+				Debug.Log("Slow Speed");
+				npcManager?.SlowEveryone(newSpeed);
+				if(player) player.movementSpeed = newSpeed;
+				break;
+			default:
+				break;
+		}
 	}
 
 	private void Update()
 	{
-		npcManager.UpdateMrX(player.transform.position);
+		npcManager?.UpdateMrX(player.transform.position);
 	}
 
 
 	private void NpcManager_OnDeath()
 	{
+		isLosing = true;
 		uiManager.setEndScreen(ENDSCREEN_TYPE.MR_X);
 		npcManager.StopNPC();
 	}
 
 	private void UiManager_Restart()
 	{
-		Debug.Log("Reload LevelScene");
+		player.OnPickUp -= Player_OnPickUp;
+		player.OnTalk -= Player_OnTalk;
+		npcManager.SanityDecrease -= NpcManager_SanityDecrease;
+		npcManager.OnDeath -= NpcManager_OnDeath;
+
+		player = null;
+		npcManager = null;
+		layoutManager = null;
+		StartCoroutine(UnloadAsync("Level"));
 	}
 
 	private void UiManager_OnPlay()
 	{
-		npcManager.InitNPC();
-		//npcManager.InitMrX();
+		StartCoroutine(LoadAsync("Level"));
 	}
 
 	private void UiManager_OnPause(bool obj)
@@ -71,11 +153,14 @@ public class GameManager : MonoBehaviour
 		player.setPause(obj);
 	}
 
-	private void NpcManager_SanityDecrease(int obj)
+	private void NpcManager_SanityDecrease(float obj)
 	{
 		sanity -= obj;
+		uiManager.UpdateSanity(sanity / maxSanity);
+
 		if (sanity <= 0)
 		{
+			isLosing = true;
 			uiManager.setEndScreen(ENDSCREEN_TYPE.SANITY);
 			npcManager.StopNPC();
 		}
@@ -86,5 +171,44 @@ public class GameManager : MonoBehaviour
 		yield return new WaitForSeconds(waitingTime);
 		uiManager.setEndScreen(ENDSCREEN_TYPE.WIN);
 		
+	}
+
+	IEnumerator LoadAsync(string sceneToLoad)
+	{
+		AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneToLoad, LoadSceneMode.Additive);
+
+
+		while (!asyncLoad.isDone)
+		{
+			asyncLoad.completed += AsyncLoad_completed;
+			yield return null;
+		}
+
+	}
+
+	IEnumerator UnloadAsync(string sceneToUnload)
+	{
+		AsyncOperation asyncUnload = SceneManager.UnloadSceneAsync(sceneToUnload);
+
+		while (!asyncUnload.isDone)
+		{
+			asyncUnload.completed += AsyncUnload_completed;
+			yield return null;
+		}
+	}
+
+	private void AsyncLoad_completed(AsyncOperation obj)
+	{
+		obj.completed -= AsyncLoad_completed;
+		GetRemainingManagers();
+		if (!isLosing) uiManager.CloseStoryScreen();
+		else uiManager.EndScreenRestartPrepared();
+	}
+
+	private void AsyncUnload_completed(AsyncOperation obj)
+	{
+		obj.completed -= AsyncUnload_completed;
+		if (!isLosing) uiManager.RestoreCreditBtn();
+		else StartCoroutine(LoadAsync("Level"));
 	}
 }

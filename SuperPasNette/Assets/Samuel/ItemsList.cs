@@ -9,39 +9,49 @@ public class ItemsList : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+    }
+
+    public void SetManager(UIManager ui)
+	{
+        manager = ui;
+	}
+
+	private void OnEnable()
+	{
         lNames = new List<string>();
         Item[] items = FindObjectsOfType<Item>();
         int cpt = 0;
-        foreach(Item item in items) 
+        foreach (Item item in items)
         {
             lNames.Add(item.gameObject.name);
             item.iIndex = cpt;
             cpt++;
         };
 
-        manager = FindObjectOfType<UIManager>();
-        if (manager) 
+        //manager = FindObjectOfType<UIManager>();
+        if (manager)
         {
             manager.OnPlay += () =>
-                 {
-                     StartCoroutine(fillName());
-                
-                 };
+            {
+                StartCoroutine(fillName());
+
+            };
         }
-        else 
+        else
         {
-            print("tu as oublier le ui manager");   
+            print("tu as oublier le ui manager");
         }
     }
 
-    IEnumerator fillName() 
+	IEnumerator fillName() 
     {
         yield return new WaitForSeconds(1.5f);// wait for the animation
         while (lNames.Count > 6) 
         {
-            lNames.RemoveAt(Random.Range(0, lNames.Count));
+            lNames?.RemoveAt(Random.Range(0, lNames.Count));
         }
-        manager.FillGroceries(lNames);
+        manager?.FillGroceries(lNames);
     }
 
 }

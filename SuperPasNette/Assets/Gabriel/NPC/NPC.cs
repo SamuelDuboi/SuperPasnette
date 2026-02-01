@@ -9,12 +9,13 @@ public class NPC : MonoBehaviour
     public NavMeshAgent agent;
 	public float baseSpeed;
 	public SanityCollider colision;
+	public Animator anim;
 
 	public int sanityDecreaseValue;
 
     public bool isAtDestination = true;
     public event Action Arrived;
-	public event Action<int> SanityDecrease;
+	public event Action<float> SanityDecrease;
 
 	private void Start()
 	{
@@ -30,6 +31,7 @@ public class NPC : MonoBehaviour
 	public void Move(Vector3 destination)
 	{
         agent.SetDestination(destination);
+		anim.SetBool("IsMoving", true);
         isAtDestination = false;
 	}
 
@@ -44,7 +46,8 @@ public class NPC : MonoBehaviour
         else if(Mathf.Round(agent.remainingDistance) <= 0.1f)
 		{
             Arrived?.Invoke();
-            isAtDestination = true;
+			anim.SetBool("IsMoving", true);
+			isAtDestination = true;
 		}
     }
 }

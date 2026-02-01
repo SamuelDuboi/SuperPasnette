@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private PauseScreen pauseScreen;
     [SerializeField] private EndScreen endScreen;
     [SerializeField] private CreditScreen creditScreen;
+    [SerializeField] private StoryScreen storyScreen;
 
 	public event Action OnQuitLevel;
 	public event Action Restart;
@@ -26,6 +27,9 @@ public class UIManager : MonoBehaviour
 		titleScreen.onCredit += TitleScreen_onCredit;
 		titleScreen.closed += TitleScreen_closed;
 
+		storyScreen.opened += StoryScreen_opened;
+		storyScreen.closed += StoryScreen_closed;
+
 		hud.onPause += Hud_onPause;
 		hud.closed += Hud_closed;
 
@@ -35,10 +39,47 @@ public class UIManager : MonoBehaviour
 
 		endScreen.OnRestart += EndScreen_OnRestart;
 		endScreen.closed += EndScreen_closed;
+		endScreen.opened += EndScreen_opened;
 
 		creditScreen.onBack += CreditScreen_onBack;
 		creditScreen.closed += CreditScreen_closed;
+		creditScreen.opened += CreditScreen_opened;
     }
+
+	public void EndScreenRestartPrepared()
+	{
+		endScreen.SetBtnListener();
+	}
+
+	private void EndScreen_opened()
+	{
+		Restart?.Invoke();
+	}
+
+	public void RestoreCreditBtn()
+	{
+		creditScreen.backBtn.interactable = true;
+	}
+
+	private void CreditScreen_opened()
+	{
+		OnQuitLevel?.Invoke();
+	}
+
+	private void StoryScreen_closed()
+	{
+		hud.gameObject.SetActive(true);
+	}
+
+	private void StoryScreen_opened()
+	{
+		OnPlay?.Invoke();
+	}
+
+	public void CloseStoryScreen()
+	{
+		storyScreen.Close();
+	}
 
 	private void EndScreen_closed()
 	{
@@ -56,14 +97,12 @@ public class UIManager : MonoBehaviour
 	{
 		if(obj)
 		{
-			Restart?.Invoke();
 			nextScreen = hud.gameObject;
 			openEndScreen = false;
 			endScreen.Close();
 		}
 		else
 		{
-			OnQuitLevel?.Invoke();
 			endScreen.Close();
 			nextScreen = creditScreen.gameObject;
 		}
@@ -109,6 +148,11 @@ public class UIManager : MonoBehaviour
 		else pauseScreen.gameObject.SetActive(true);
 	}
 
+	public void UpdateSanity(float newFillAmount)
+	{
+		hud.UpdateSanity(newFillAmount);
+	}
+
 	private void Hud_onPause()
 	{
 		hud.Close();
@@ -144,9 +188,9 @@ public class UIManager : MonoBehaviour
 
 	private void TitleScreen_closed()
 	{
-		if(nextScreen == hud.gameObject)
+		if(nextScreen == storyScreen.gameObject)
 		{
-			hud.gameObject.SetActive(true);
+			storyScreen.gameObject.SetActive(true);
 		}
 		else
 		{
@@ -163,7 +207,6 @@ public class UIManager : MonoBehaviour
 	private void TitleScreen_onPlay()
 	{
 		titleScreen.Close();
-		nextScreen = hud.gameObject;
-		OnPlay?.Invoke();
+		nextScreen = storyScreen.gameObject;
 	}   
 }

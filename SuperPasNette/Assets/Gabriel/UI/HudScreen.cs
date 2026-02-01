@@ -12,6 +12,7 @@ public class HudScreen : MonoBehaviour
 	public GameObject listContainer;
 	[SerializeField] private GameObject interactionObject;
 	[SerializeField] private GameObject interactionTalkingObject;
+	public Image fillBarSanity;
 	public GameObject dialogueBox;
     public Animator anim;
     public Animator animList;
@@ -34,6 +35,11 @@ public class HudScreen : MonoBehaviour
 	private void OnEnable()
 	{
         anim.SetBool("isClosing", false);
+	}
+
+	public void UpdateSanity(float newFillAmount)
+	{
+		fillBarSanity.fillAmount = newFillAmount;
 	}
 
 	private void OnPause()

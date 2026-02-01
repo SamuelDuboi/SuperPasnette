@@ -11,6 +11,7 @@ public class CreditScreen : MonoBehaviour
 
     public event Action onBack;
     public event Action closed;
+    public event Action opened;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,5 +37,11 @@ public class CreditScreen : MonoBehaviour
 	{
         gameObject.SetActive(false);
         closed?.Invoke();
+	}
+
+    public void Opened()
+	{
+        opened?.Invoke();
+        backBtn.interactable = false;
 	}
 }

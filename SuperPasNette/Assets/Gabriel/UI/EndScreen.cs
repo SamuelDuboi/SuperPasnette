@@ -16,19 +16,29 @@ public class EndScreen : MonoBehaviour
 
 	public event Action<bool> OnRestart;
 	public event Action closed;
+	public event Action opened;
 
 	private ENDSCREEN_TYPE chosenType;
 
 	private void OnEnable()
 	{
 		anim.SetBool("isClosing", false);
-		StartCoroutine(TimeBeforeOpenCredit(3f));
+		if(chosenType == ENDSCREEN_TYPE.WIN) StartCoroutine(TimeBeforeOpenCredit(3f));
+	}
+
+	public void SetBtnListener()
+	{
+		mainBtn.onClick.AddListener(OnClick);
+	}
+
+	public void Opened()
+	{
+		opened?.Invoke();
 	}
 
 	public void Init(ENDSCREEN_TYPE type)
 	{
 		chosenType = type;
-		mainBtn.onClick.AddListener(OnClick);
 
 		switch (chosenType)
 		{
@@ -46,7 +56,6 @@ public class EndScreen : MonoBehaviour
 				title.text = "Tu as gagne";
 				text.text = "Vous produits sont lentement scannés par le caissier qui ne vous adresse pas un mot. Est - il déçu? Est-il complice? Est-il juste fatigué ? Vous sortez et rejoignez la soirée en vous demandant si tout ceci était bien réel.";
 				buttonText.gameObject.SetActive(false);
-				
 				break;
 		}
 	}
