@@ -468,8 +468,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Vous n\u2019avez plus le choix : le masque qu\u2019il vous tend est le
-    v\xF4tre.\r\nLe mettre vous ouvre les yeux et toute cette course-poursuite vous
-    semble \xEAtre une perte de temps.\r\nCe qu\u2019il vous faut maintenant, c\u2019est
+    votre.\r\nLe mettre vous ouvre les yeux et toute cette course-poursuite vous
+    semble etre une perte de temps.\r\nCe qu\u2019il vous faut maintenant, c\u2019est
     de continuer les courses. Toujours plus de courses. Pour toujours."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: be9789fa9c1c84e4ba972263ab7323ac, type: 2}
@@ -497,7 +497,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 61.8
+  m_fontSize: 51.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2399,7 +2399,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "3D ARTISTS\n\rHugo Benard\n\rMa\xEBlle Le Bris\n\nSOUND DESIGN & MUSIC\n\rSarah
+  m_text: "3D ARTISTS\n\rHugo Benard\n\rMaelle Le Bris\n\nSOUND DESIGN & MUSIC\n\rSarah
     Marchal\n\nMUSIC\n\rGuillaume Evezard"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: be9789fa9c1c84e4ba972263ab7323ac, type: 2}
