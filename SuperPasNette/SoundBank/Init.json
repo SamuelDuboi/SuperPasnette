@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{09885BDB-4F81-614A-4C79-F3F0F488184A}",
+    "Hash": "{4B4511B7-F89A-3296-745F-201CD2D92434}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -43,32 +43,6 @@
      }
     ],
     "StateGroups": [
-     {
-      "Id": "640949982",
-      "Name": "Speed",
-      "ObjectPath": "\\States\\Default Work Unit\\Speed",
-      "GUID": "{57AEB422-C831-462C-BED0-58BAE269F448}",
-      "States": [
-       {
-        "Id": "748895195",
-        "Name": "None",
-        "ObjectPath": "\\States\\Default Work Unit\\Speed\\None",
-        "GUID": "{0C1FD3F5-EBF8-42FE-9E11-76BCE76C476C}"
-       },
-       {
-        "Id": "809829910",
-        "Name": "Speedhigh",
-        "ObjectPath": "\\States\\Default Work Unit\\Speed\\Speedhigh",
-        "GUID": "{1C0117E9-8B4E-4D2A-8884-FEAAEFF3A325}"
-       },
-       {
-        "Id": "1951840192",
-        "Name": "SpeedLow",
-        "ObjectPath": "\\States\\Default Work Unit\\Speed\\SpeedLow",
-        "GUID": "{67649101-D375-414C-B2F1-30F6E810C537}"
-       }
-      ]
-     },
      {
       "Id": "1256220241",
       "Name": "MentalState",
@@ -110,6 +84,62 @@
         "Name": "Mental100",
         "ObjectPath": "\\States\\Default Work Unit\\MentalState\\Mental100",
         "GUID": "{85F7A492-5A1F-48F5-943E-3B2C2C59E639}"
+       }
+      ]
+     },
+     {
+      "Id": "2887363794",
+      "Name": "Paranormal",
+      "ObjectPath": "\\States\\Default Work Unit\\Paranormal",
+      "GUID": "{43DB557B-A809-4DD5-8C4D-462D4EC33DE2}",
+      "States": [
+       {
+        "Id": "187901679",
+        "Name": "Normal_00",
+        "ObjectPath": "\\States\\Default Work Unit\\Paranormal\\Normal_00",
+        "GUID": "{004DB45E-6AD3-4555-BCB6-DBE1537069D7}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\Paranormal\\None",
+        "GUID": "{EAC474D8-A31B-4342-86FE-4FE6173D9B26}"
+       },
+       {
+        "Id": "1736576286",
+        "Name": "mrX_05",
+        "ObjectPath": "\\States\\Default Work Unit\\Paranormal\\mrX_05",
+        "GUID": "{FCBABB9D-FE78-4DF2-A5A7-4BFE51EA2A02}"
+       },
+       {
+        "Id": "2198517790",
+        "Name": "Customers_01",
+        "ObjectPath": "\\States\\Default Work Unit\\Paranormal\\Customers_01",
+        "GUID": "{21270C67-9F8C-4F83-90DB-AEB4A415FBCE}"
+       },
+       {
+        "Id": "2460914622",
+        "Name": "Slowed_06",
+        "ObjectPath": "\\States\\Default Work Unit\\Paranormal\\Slowed_06",
+        "GUID": "{ADF4CF2E-CF42-4C88-9B7F-38A903BBB33F}"
+       },
+       {
+        "Id": "3442077614",
+        "Name": "Layout_04",
+        "ObjectPath": "\\States\\Default Work Unit\\Paranormal\\Layout_04",
+        "GUID": "{1CC5687D-4CB7-4AB6-A92B-F6D3A94A01FE}"
+       },
+       {
+        "Id": "3865111338",
+        "Name": "Lights_03",
+        "ObjectPath": "\\States\\Default Work Unit\\Paranormal\\Lights_03",
+        "GUID": "{6F5A41CC-2390-4695-A85C-02312BF47A65}"
+       },
+       {
+        "Id": "4033003399",
+        "Name": "Roamers_02",
+        "ObjectPath": "\\States\\Default Work Unit\\Paranormal\\Roamers_02",
+        "GUID": "{1DEBA9D2-4386-4E78-BF26-514253EEB63A}"
        }
       ]
      },
@@ -172,6 +202,6 @@
     ]
    }
   ],
-  "FileHash": "{87BCC516-8B3D-76AC-B5E2-2620CBC7E52E}"
+  "FileHash": "{D9FC975A-CB3D-3E89-479D-E0B7B4B0C8A2}"
  }
 }

@@ -1,18 +1,23 @@
 State Group	ID	Name			Wwise Object Path	Notes
-	640949982	Speed			\Default Work Unit\Speed	
 	1256220241	MentalState			\Default Work Unit\MentalState	
+	2887363794	Paranormal			\Default Work Unit\Paranormal	
 	3827552702	Camera_POV			\Default Work Unit\Camera_POV	
 
 State	ID	Name	State Group			Notes
-	748895195	None	Speed			
-	809829910	Speedhigh	Speed			
-	1951840192	SpeedLow	Speed			
 	316655582	Mental75	MentalState			
 	350210849	Mental50	MentalState			
 	366988433	Mental25	MentalState			
 	748895195	None	MentalState			
 	1489794894	Mental0	MentalState			
 	2505485991	Mental100	MentalState			
+	187901679	Normal_00	Paranormal			
+	748895195	None	Paranormal			
+	1736576286	mrX_05	Paranormal			
+	2198517790	Customers_01	Paranormal			
+	2460914622	Slowed_06	Paranormal			
+	3442077614	Layout_04	Paranormal			
+	3865111338	Lights_03	Paranormal			
+	4033003399	Roamers_02	Paranormal			
 	493766699	camtop	Camera_POV			
 	748895195	None	Camera_POV			
 	3210648341	cammulti	Camera_POV			
