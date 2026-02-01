@@ -12,8 +12,8 @@ public class GameManager : MonoBehaviour
     public float newSpeed;
 
     private bool isLosing = false;
-    private float sanity = 100;
-    private float maxSanity = 100;
+    private float sanity = 100f;
+    private float maxSanity = 100f;
     private int nPickedUpItem = 0;
 
     private void Start()
@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
         }
 
         nPickedUpItem = 0;
-        sanity = 100;
+        sanity = maxSanity;
 
         player.OnPickUp += Player_OnPickUp;
         player.OnTalk += Player_OnTalk;
