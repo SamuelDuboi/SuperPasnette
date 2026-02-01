@@ -581,11 +581,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5582387989181239062, guid: 59fe73bc181427c46a6e9d543d830d48, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5582387989181239062, guid: 59fe73bc181427c46a6e9d543d830d48, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5582387989181239062, guid: 59fe73bc181427c46a6e9d543d830d48, type: 3}
       propertyPath: m_SizeDelta.x
@@ -593,11 +593,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5582387989181239062, guid: 59fe73bc181427c46a6e9d543d830d48, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 450
       objectReference: {fileID: 0}
     - target: {fileID: 5582387989181239062, guid: 59fe73bc181427c46a6e9d543d830d48, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -61.55
       objectReference: {fileID: 0}
     - target: {fileID: 7123483188953420918, guid: 59fe73bc181427c46a6e9d543d830d48, type: 3}
       propertyPath: m_AnchorMax.y
@@ -913,19 +913,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7187912231107836013, guid: 59fe73bc181427c46a6e9d543d830d48, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7187912231107836013, guid: 59fe73bc181427c46a6e9d543d830d48, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7187912231107836013, guid: 59fe73bc181427c46a6e9d543d830d48, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 450
       objectReference: {fileID: 0}
     - target: {fileID: 7187912231107836013, guid: 59fe73bc181427c46a6e9d543d830d48, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -71.1
       objectReference: {fileID: 0}
     - target: {fileID: 7230277085845282704, guid: 59fe73bc181427c46a6e9d543d830d48, type: 3}
       propertyPath: m_fontColor.b
