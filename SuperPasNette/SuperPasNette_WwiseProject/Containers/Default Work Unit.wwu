@@ -879,6 +879,9 @@
 					</ChildrenList>
 				</Folder>
 				<Sound Name="sfx_CamChange1" ID="{B89A90F0-C238-4D0D-ABF4-107E9631A606}" ShortID="739587838">
+					<PropertyList>
+						<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
@@ -2233,6 +2236,11 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="sfx_LightBug1" ID="{C99A7EE3-BF23-492B-94BE-E29978025E24}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.222289644012945"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>Light_bugs\sfx_LightBug1.wav</AudioFile>
 									<MediaIDList>
@@ -2255,6 +2263,10 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="sfx_LightBug2" ID="{3FFED060-2C5F-4D02-B71F-64B4F8145042}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0865695792880259"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>Light_bugs\sfx_LightBug2.wav</AudioFile>
 									<MediaIDList>
@@ -2277,6 +2289,11 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="sfx_LightBug3" ID="{36F25AEF-292A-44E6-8C4E-258DF60C1BDB}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.171521035598705"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>Light_bugs\sfx_LightBug3.wav</AudioFile>
 									<MediaIDList>
@@ -2299,6 +2316,11 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="sfx_LightBug4" ID="{F414C8BB-F847-4AE3-B8A6-50DAD88D7C3D}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.394552319309601"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.568230852211435"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>Light_bugs\sfx_LightBug4.wav</AudioFile>
 									<MediaIDList>
@@ -2321,6 +2343,11 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="sfx_LightBug5" ID="{FF9063D4-AF18-4BFC-9410-2DD0BFEAEC28}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.467098166127292"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.855447680690399"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>Light_bugs\sfx_LightBug5.wav</AudioFile>
 									<MediaIDList>

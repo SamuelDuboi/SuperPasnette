@@ -40,6 +40,9 @@
 					</TransitionList>
 				</StateGroup>
 				<StateGroup Name="Camera_POV" ID="{5302E343-0790-48B4-B0DF-B3430A29F5FC}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0.1"/>
+					</PropertyList>
 					<ChildrenList>
 						<State Name="None" ID="{BE17A920-CD24-4879-9E61-C58DABB63420}"/>
 						<State Name="cam1" ID="{5D1F500A-4723-4852-AE4F-85A67784B1D3}"/>
@@ -60,6 +63,9 @@
 					</TransitionList>
 				</StateGroup>
 				<StateGroup Name="Paranormal" ID="{43DB557B-A809-4DD5-8C4D-462D4EC33DE2}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0.1"/>
+					</PropertyList>
 					<ChildrenList>
 						<State Name="None" ID="{EAC474D8-A31B-4342-86FE-4FE6173D9B26}"/>
 						<State Name="Customers_01" ID="{21270C67-9F8C-4F83-90DB-AEB4A415FBCE}"/>
