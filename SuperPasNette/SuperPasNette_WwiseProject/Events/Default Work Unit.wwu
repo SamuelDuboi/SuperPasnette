@@ -44,17 +44,17 @@
 					<ChildrenList>
 						<Event Name="Footsteps_MC" ID="{114E9DD2-9649-4636-9888-8ECB13BC202A}">
 							<ChildrenList>
-								<Action Name="" ID="{922B032C-3BAF-4D2B-9E78-BDB4833DE08A}" ShortID="647335867">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="footsteps-mcSlowed" ID="{71F72664-5F75-41ED-BD31-697C0109A71F}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
 								<Action Name="" ID="{9B318367-D903-44F0-9F59-2DD69ABC88D3}" ShortID="825154144">
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="footsteps_mc" ID="{ECACD5D8-067C-4B5E-980D-6FC86833427B}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{922B032C-3BAF-4D2B-9E78-BDB4833DE08A}" ShortID="647335867">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="footsteps-mcSlowed" ID="{71F72664-5F75-41ED-BD31-697C0109A71F}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -702,6 +702,81 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="LightsBug" ID="{B6EC20E6-7486-45AC-87CD-BB633EC36988}">
+							<ChildrenList>
+								<Action Name="" ID="{E50AC874-50FE-405C-9970-271BDFDD1808}" ShortID="974111850">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Light_bugs" ID="{51ED70C3-774C-4858-B87C-5167BE960D29}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Hallucinations" ID="{2986C045-D796-4712-AB34-D9EF9D42A5E2}">
+							<ChildrenList>
+								<Action Name="" ID="{0291ACE1-C02D-4AC9-8730-D2D8DF14D49A}" ShortID="915365309">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Hallucinations" ID="{42180809-0DD3-4D79-BA6C-CE46BE958EF1}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="PickUp" ID="{DF33029F-4E23-444C-A0E5-C88782313544}">
+							<ChildrenList>
+								<Action Name="" ID="{9281BFD0-580F-40C7-9BF5-4AD5255AC9E2}" ShortID="491606521">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_PickUp1" ID="{DD61C655-96E7-4830-9A3B-4D59EB8FB355}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{379D1CA5-8AA8-4F44-9205-35306F248042}" ShortID="577311312">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_TrailX" ID="{A3B15A43-CA8F-4C40-BC16-000A294B4276}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{A8133FC1-858E-4692-BE1B-312EBCD588AD}" ShortID="84369396">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_TrailDisparition" ID="{952FBF15-AD98-4291-8E64-17B07320A159}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{84F27CD8-1F63-41C8-901F-0C2E6C3F3A01}" ShortID="30819373">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_TrailLightBug" ID="{B5BA57B4-5FC7-4858-ADB8-2B6828557CFF}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{F0476A6E-EC16-458A-B53A-FE1C2344B201}" ShortID="445489102">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_TrailLightsOutLayerChange" ID="{49E63832-2955-42C2-96AA-8319424BFFFD}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{76A2745F-4590-477F-BD1E-6B2DC0585400}" ShortID="168297871">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_TrailRalentissement" ID="{7A4ABA38-DCB6-4DEB-B132-B175D1B29D63}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{0CB4CFA9-906C-415E-8C09-18C565AC235E}" ShortID="929927628">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_trailroaming" ID="{2DEEB37C-C9D9-48B0-90DB-675291D4EA8C}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Musique" ID="{12D37E3D-8527-4389-A307-7D1136AD93BC}" ShortID="174622266">
@@ -740,6 +815,7 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_MusicTitle" ID="{11B03702-F7AA-4B56-B1EC-58FAF411A8EC}"/>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Ambiance" ID="{00D32B36-E066-46D6-9ED7-4D7B1F8680AE}" ShortID="876432988">
