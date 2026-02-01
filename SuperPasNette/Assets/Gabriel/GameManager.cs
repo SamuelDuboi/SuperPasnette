@@ -74,6 +74,7 @@ public class GameManager : MonoBehaviour
         }
 
         nPickedUpItem = 0;
+        sanity = 100;
 
         player.OnPickUp += Player_OnPickUp;
         player.OnTalk += Player_OnTalk;
