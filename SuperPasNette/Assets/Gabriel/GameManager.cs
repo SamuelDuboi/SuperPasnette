@@ -28,16 +28,27 @@ public class GameManager : MonoBehaviour
 
 	private void UiManager_OnQuitLevel()
 	{
-		player.OnPickUp -= Player_OnPickUp;
-		player.OnTalk -= Player_OnTalk;
-		npcManager.SanityDecrease -= NpcManager_SanityDecrease;
-		npcManager.OnDeath -= NpcManager_OnDeath;
+		if(player)
+		{
+			player.OnPickUp -= Player_OnPickUp;
+			player.OnTalk -= Player_OnTalk;
+		}
+		
+		if(npcManager)
+		{
+			npcManager.SanityDecrease -= NpcManager_SanityDecrease;
+			npcManager.OnDeath -= NpcManager_OnDeath;
+		}
+		
 
 		player = null;
 		npcManager = null;
 		layoutManager = null;
 
-		StartCoroutine(UnloadAsync("Level"));
+		if(SceneManager.sceneCount > 1)
+			StartCoroutine(UnloadAsync("Level"));
+
+		if(!isLosing) uiManager.RestoreCreditBtn();
 	}
 
 	private void GetRemainingManagers()

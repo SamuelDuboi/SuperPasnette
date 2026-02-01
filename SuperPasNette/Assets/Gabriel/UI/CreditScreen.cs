@@ -42,6 +42,6 @@ public class CreditScreen : MonoBehaviour
     public void Opened()
 	{
         opened?.Invoke();
-        backBtn.interactable = false;
+        //backBtn.interactable = false;
 	}
 }

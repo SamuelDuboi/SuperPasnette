@@ -58,6 +58,7 @@ public class UIManager : MonoBehaviour
 
 	public void RestoreCreditBtn()
 	{
+		Debug.Log("coucou");
 		creditScreen.backBtn.interactable = true;
 	}
 
