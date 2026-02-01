@@ -58,7 +58,6 @@ public class UIManager : MonoBehaviour
 
 	public void RestoreCreditBtn()
 	{
-		Debug.Log("coucou");
 		creditScreen.backBtn.interactable = true;
 	}
 
@@ -145,6 +144,8 @@ public class UIManager : MonoBehaviour
 
 	private void Hud_closed()
 	{
+		Debug.Log(openEndScreen);
+
 		if (openEndScreen) endScreen.gameObject.SetActive(true);
 		else pauseScreen.gameObject.SetActive(true);
 	}
@@ -208,6 +209,7 @@ public class UIManager : MonoBehaviour
 	private void TitleScreen_onPlay()
 	{
 		titleScreen.Close();
+		openEndScreen = false;
 		nextScreen = storyScreen.gameObject;
 	}   
 }
