@@ -3175,6 +3175,25 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!1 &7476076248298760765 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8586368577275288382, guid: 24cdd9281d3be004c84c63acb4e3c282, type: 3}
+  m_PrefabInstance: {fileID: 1218420540147298563}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &232948911053436190
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7476076248298760765}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5622047627816740280, guid: 24cdd9281d3be004c84c63acb4e3c282, type: 3}
 --- !u!1001 &2235321773683697334
 PrefabInstance:
   m_ObjectHideFlags: 0
