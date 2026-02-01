@@ -22,6 +22,7 @@ public class EndScreen : MonoBehaviour
 	private void OnEnable()
 	{
 		anim.SetBool("isClosing", false);
+		StartCoroutine(TimeBeforeOpenCredit(3f));
 	}
 
 	public void Init(ENDSCREEN_TYPE type)
@@ -44,13 +45,15 @@ public class EndScreen : MonoBehaviour
 			case ENDSCREEN_TYPE.WIN:
 				title.text = "Tu as gagne";
 				text.text = "Vous produits sont lentement scannés par le caissier qui ne vous adresse pas un mot. Est - il déçu? Est-il complice? Est-il juste fatigué ? Vous sortez et rejoignez la soirée en vous demandant si tout ceci était bien réel.";
-				buttonText.text = "Suivant";
+				buttonText.gameObject.SetActive(false);
+				
 				break;
 		}
 	}
 
 	private void OnClick()
 	{
+		Debug.Log("OnClick");
 		switch (chosenType)
 		{
 			case ENDSCREEN_TYPE.MR_X:
@@ -74,5 +77,12 @@ public class EndScreen : MonoBehaviour
 	{
 		gameObject.SetActive(false);
 		closed?.Invoke();
+	}
+
+	IEnumerator TimeBeforeOpenCredit(float waitingTime)
+	{
+		yield return new WaitForSeconds(waitingTime);
+		OnClick();
+		
 	}
 }

@@ -55,7 +55,7 @@ public class CharacterController : MonoBehaviour
 
         if (talkingPersonInRange && Input.GetKeyDown(KeyCode.E))
         {
-            //UIManager.getHud().ToggleTalkInteraction(false);
+            UIManager.getHud().ToggleTalkInteraction(false);
             OnTalk?.Invoke(talkingPersonInRange);
         }
 
@@ -83,7 +83,8 @@ public class CharacterController : MonoBehaviour
 
         if(talkingPersonInRange && other.gameObject.layer == 7) // interactionTalkLayer
         {
-            //UIManager.getHud().ToggleTalkInteraction(false);
+            UIManager.getHud().ToggleTalkInteraction(false);
+            UIManager.getHud().ToggleDialogueBox(false);
             talkingPersonInRange = null;
         }
     }
@@ -102,7 +103,7 @@ public class CharacterController : MonoBehaviour
 
         if (other.gameObject.layer == 7) // interactionTalkLayer
         {
-            //UIManager.getHud().ToggleTalkInteraction(true);
+            UIManager.getHud().ToggleTalkInteraction(true);
             talkingPersonInRange = other.GetComponent<Client>();
         }
     }

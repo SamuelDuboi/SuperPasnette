@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -25,14 +26,14 @@ public class GameManager : MonoBehaviour
 
 	private void Player_OnTalk(Client obj)
 	{
-		if(obj.gameObject.CompareTag("Cashier") && nPickedUpItem == 0)
+		if(obj.gameObject.CompareTag("Cashier") && nPickedUpItem == 6)
 		{
-			Debug.Log("You Win");
 			StartCoroutine(TimeBeforeOpenEndScreen(2f));
 		}
 		else
 		{
-			Debug.Log("Tu entends quelqu'un parler");
+			uiManager.getHud().ToggleDialogueBox(true);
+			uiManager.getHud().dialogueBox.transform.GetChild(1).GetComponent<TMP_Text>().text = obj.GetBark();
 		}
 	}
 

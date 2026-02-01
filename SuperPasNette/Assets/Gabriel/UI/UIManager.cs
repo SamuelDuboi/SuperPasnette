@@ -48,7 +48,7 @@ public class UIManager : MonoBehaviour
 		}
 		else
 		{
-			titleScreen.gameObject.SetActive(true);
+			creditScreen.gameObject.SetActive(true);
 		}
 	}
 
@@ -64,7 +64,8 @@ public class UIManager : MonoBehaviour
 		else
 		{
 			OnQuitLevel?.Invoke();
-			nextScreen = titleScreen.gameObject;
+			endScreen.Close();
+			nextScreen = creditScreen.gameObject;
 		}
 	}
 

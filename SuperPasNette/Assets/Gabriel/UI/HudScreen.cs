@@ -12,6 +12,7 @@ public class HudScreen : MonoBehaviour
 	public GameObject listContainer;
 	[SerializeField] private GameObject interactionObject;
 	[SerializeField] private GameObject interactionTalkingObject;
+	public GameObject dialogueBox;
     public Animator anim;
     public Animator animList;
 
@@ -48,6 +49,11 @@ public class HudScreen : MonoBehaviour
 	public void ToggleTalkInteraction (bool bActive)
 	{
 		interactionTalkingObject.SetActive(bActive);
+	}
+
+	public void ToggleDialogueBox (bool isActive)
+	{
+		dialogueBox.gameObject.SetActive(isActive);
 	}
 
 
