@@ -52,7 +52,7 @@ MonoBehaviour:
   - {fileID: 5817158398332161712}
   - {fileID: 4541411227557744246}
   - {fileID: 8270355523071486627}
-  - {fileID: 4877636369323784498}
+  - {fileID: 0}
   mrX: {fileID: 5599839442345823209}
   npcsContainer: {fileID: 5817158398648557025}
   clientsContainer: {fileID: 2807412018888155927}
@@ -77,6 +77,10 @@ PrefabInstance:
     - target: {fileID: 7509603387703923203, guid: 3d0c9f23f731eab4f9b4d0bc640f8658, type: 3}
       propertyPath: m_Name
       value: NPCs
+      objectReference: {fileID: 0}
+    - target: {fileID: 7509603387703923203, guid: 3d0c9f23f731eab4f9b4d0bc640f8658, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7509603387703923204, guid: 3d0c9f23f731eab4f9b4d0bc640f8658, type: 3}
       propertyPath: m_RootOrder
@@ -129,17 +133,6 @@ PrefabInstance:
 --- !u!114 &4541411227557744246 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 543703772720120212, guid: 3d0c9f23f731eab4f9b4d0bc640f8658, type: 3}
-  m_PrefabInstance: {fileID: 4075136165593288674}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f7070da76f1bf9488176b770049b4ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &4877636369323784498 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8880274583217305296, guid: 3d0c9f23f731eab4f9b4d0bc640f8658, type: 3}
   m_PrefabInstance: {fileID: 4075136165593288674}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
