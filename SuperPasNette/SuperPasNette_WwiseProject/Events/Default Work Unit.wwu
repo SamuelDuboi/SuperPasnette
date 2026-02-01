@@ -42,7 +42,7 @@
 				</Folder>
 				<Folder Name="SFX" ID="{57776515-D67E-4D01-8B26-6EB10F000865}" ShortID="110871225">
 					<ChildrenList>
-						<Event Name="footsteps_MC" ID="{114E9DD2-9649-4636-9888-8ECB13BC202A}">
+						<Event Name="Footsteps_MC" ID="{114E9DD2-9649-4636-9888-8ECB13BC202A}">
 							<ChildrenList>
 								<Action Name="" ID="{922B032C-3BAF-4D2B-9E78-BDB4833DE08A}" ShortID="647335867">
 									<ReferenceList>
@@ -83,24 +83,6 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Aura_XChord" ID="{23B0297E-F247-4A1D-BFAA-240E8D9463DE}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_footsteps_mcSlowed" ID="{087BFF17-8DFB-4F50-A2FB-E5136E4955AE}">
-							<ChildrenList>
-								<Action Name="" ID="{F3D84338-2263-4E43-84ED-C012DE6F1EE2}" ShortID="464736919">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="footsteps-mcSlowed" ID="{71F72664-5F75-41ED-BD31-697C0109A71F}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{46C0B4CE-DC4E-4E03-847A-D668273D56BF}" ShortID="884190104">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="footsteps_mc" ID="{ECACD5D8-067C-4B5E-980D-6FC86833427B}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -687,6 +669,39 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Footsteps_Roamers" ID="{5359F716-BB80-446D-964B-3DA84FFF158C}">
+							<ChildrenList>
+								<Action Name="" ID="{AFEAAAEC-FCB3-4C86-9D43-EB6222D4D3CF}" ShortID="1000921313">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="footsteps_roamer" ID="{9934B3C2-3053-4604-AEE9-6B006367C53C}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Footsteps_mrX" ID="{2D413B49-F425-4930-93FE-32934FD1BFC6}">
+							<ChildrenList>
+								<Action Name="" ID="{22120B06-BF5C-48E5-9B62-76800E8C38CA}" ShortID="705058415">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="footsteps_X" ID="{B65E0DCF-E6B7-4EA1-B96A-C6DC4A43CECB}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="GettingHurt" ID="{6B9E79B7-EAA8-466F-8946-306A69E048FA}">
+							<ChildrenList>
+								<Action Name="" ID="{C5A6FFD8-ECD1-4642-B3E4-89AEE6A89CB1}" ShortID="511518893">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_Hurt" ID="{101E5C9E-8778-4D10-B5D9-876809E4F7D3}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Musique" ID="{12D37E3D-8527-4389-A307-7D1136AD93BC}" ShortID="174622266">
@@ -703,7 +718,50 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="Play_MusicVictory" ID="{5A170784-6089-40C8-81ED-29DF1DA5606B}"/>
-						<Event Name="Play_MusicGameOver" ID="{0EEF4750-B378-4E2B-9A46-6687B65B48A5}"/>
+						<Event Name="Play_MusicDeathInsanity" ID="{0EEF4750-B378-4E2B-9A46-6687B65B48A5}">
+							<ChildrenList>
+								<Action Name="" ID="{DD61F263-F206-4410-AFC5-ACC165229E96}" ShortID="574109064">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="gamejam mort folie" ID="{93C2E644-3D2C-4A28-9F58-98DCE2B561BA}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_MusicDeathMrX" ID="{F9AB27E1-9847-4D4D-B6B1-AE55F95A2A9C}">
+							<ChildrenList>
+								<Action Name="" ID="{C37C9365-81EB-4D6B-BD60-BB3BE26122D3}" ShortID="505008675">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="gamejam mort mr X" ID="{ECCC59CF-ECDA-4A54-9EDA-25B9D1F7C01E}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Ambiance" ID="{00D32B36-E066-46D6-9ED7-4D7B1F8680AE}" ShortID="876432988">
+					<ChildrenList>
+						<Event Name="Market" ID="{7D41933C-8BC1-470D-B724-F9AAB67AE137}">
+							<ChildrenList>
+								<Action Name="" ID="{F9186F1F-7D0B-4509-8FE3-5E953D2EC739}" ShortID="504647926">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_MartCrowded1" ID="{08A8636A-DB44-411E-92F4-EF3A4CB945D2}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{71300024-C6A2-49A1-9425-CC9C510568EB}" ShortID="547219845">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_MartEmpty1" ID="{56E6E7E5-9C78-4168-8967-58AFF3F6EC4B}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

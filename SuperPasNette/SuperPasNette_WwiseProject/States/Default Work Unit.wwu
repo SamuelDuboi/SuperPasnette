@@ -39,21 +39,6 @@
 						</Transition>
 					</TransitionList>
 				</StateGroup>
-				<StateGroup Name="Speed" ID="{57AEB422-C831-462C-BED0-58BAE269F448}">
-					<ChildrenList>
-						<State Name="None" ID="{0C1FD3F5-EBF8-42FE-9E11-76BCE76C476C}"/>
-						<State Name="Speedhigh" ID="{1C0117E9-8B4E-4D2A-8884-FEAAEFF3A325}"/>
-						<State Name="SpeedLow" ID="{67649101-D375-414C-B2F1-30F6E810C537}"/>
-					</ChildrenList>
-					<TransitionList>
-						<Transition>
-							<StartState Name="Speedhigh" ID="{1C0117E9-8B4E-4D2A-8884-FEAAEFF3A325}"/>
-							<EndState Name="SpeedLow" ID="{67649101-D375-414C-B2F1-30F6E810C537}"/>
-							<Time>0.5</Time>
-							<IsShared>false</IsShared>
-						</Transition>
-					</TransitionList>
-				</StateGroup>
 				<StateGroup Name="Camera_POV" ID="{5302E343-0790-48B4-B0DF-B3430A29F5FC}">
 					<ChildrenList>
 						<State Name="None" ID="{BE17A920-CD24-4879-9E61-C58DABB63420}"/>
@@ -73,6 +58,18 @@
 							<IsShared>true</IsShared>
 						</Transition>
 					</TransitionList>
+				</StateGroup>
+				<StateGroup Name="Paranormal" ID="{43DB557B-A809-4DD5-8C4D-462D4EC33DE2}">
+					<ChildrenList>
+						<State Name="None" ID="{EAC474D8-A31B-4342-86FE-4FE6173D9B26}"/>
+						<State Name="Customers_01" ID="{21270C67-9F8C-4F83-90DB-AEB4A415FBCE}"/>
+						<State Name="Roamers_02" ID="{1DEBA9D2-4386-4E78-BF26-514253EEB63A}"/>
+						<State Name="Lights_03" ID="{6F5A41CC-2390-4695-A85C-02312BF47A65}"/>
+						<State Name="Layout_04" ID="{1CC5687D-4CB7-4AB6-A92B-F6D3A94A01FE}"/>
+						<State Name="mrX_05" ID="{FCBABB9D-FE78-4DF2-A5A7-4BFE51EA2A02}"/>
+						<State Name="Slowed_06" ID="{ADF4CF2E-CF42-4C88-9B7F-38A903BBB33F}"/>
+						<State Name="Normal_00" ID="{004DB45E-6AD3-4555-BCB6-DBE1537069D7}"/>
+					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
