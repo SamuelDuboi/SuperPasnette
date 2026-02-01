@@ -160,5 +160,25 @@ public class CameraHandler : MonoBehaviour
                 }
             }
         }
+
+        switch (iIndex)
+        {
+            case 0:
+                AkSoundEngine.SetState("Camera_POV", "Cam1");
+                break;
+            case 1:
+                AkSoundEngine.SetState("Camera_POV", "Cam2");
+                break;
+            case 2:
+                AkSoundEngine.SetState("Camera_POV", "Cam3");
+                break;
+            case 3:
+                AkSoundEngine.SetState("Camera_POV", "Cam4");
+                break;
+            case 4:
+                AkSoundEngine.SetState("Camera_POV", "Cam5");
+                break;
+        }
+
     }
 }
