@@ -60,150 +60,652 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Aura_X" ID="{830DD64F-D51D-4706-9DB6-378A62A179EC}">
+							<PropertyList>
+								<Property Name="LimitScope" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ChildrenList>
+								<Action Name="" ID="{7D34005B-55C2-4645-8997-81B0BDEA7630}" ShortID="130512667">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Aura_XChord" ID="{23B0297E-F247-4A1D-BFAA-240E8D9463DE}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{2B90F209-F074-45EB-808B-1E2903B49E51}" ShortID="211617485">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Aura_XChord" ID="{23B0297E-F247-4A1D-BFAA-240E8D9463DE}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_footsteps_mcSlowed" ID="{087BFF17-8DFB-4F50-A2FB-E5136E4955AE}">
+							<ChildrenList>
+								<Action Name="" ID="{F3D84338-2263-4E43-84ED-C012DE6F1EE2}" ShortID="464736919">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="footsteps-mcSlowed" ID="{71F72664-5F75-41ED-BD31-697C0109A71F}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{46C0B4CE-DC4E-4E03-847A-D668273D56BF}" ShortID="884190104">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="footsteps_mc" ID="{ECACD5D8-067C-4B5E-980D-6FC86833427B}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Camera_01" ID="{31E6F01D-EEF1-4296-B4D3-51470DD0E4E0}">
+							<ChildrenList>
+								<Action Name="" ID="{0D6C71C2-6128-4371-977D-0E31C11EE733}" ShortID="518902387">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam1" ID="{0FA70C48-2DAF-4745-A01A-2E97FAEFB806}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{7616901B-2256-4C12-951D-46795D65BCED}" ShortID="179139844">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam3" ID="{A35A43FD-4393-407A-A3EC-E00D467BDD82}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{AA144492-400A-4521-8022-CA0302210584}" ShortID="507496297">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam5" ID="{8457E47D-8986-4DFC-A925-58BD49C97A6C}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{0023583B-61D5-4ACB-8715-A0A237A6B65F}" ShortID="409907366">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam2" ID="{1FE5E723-B00A-48D1-B1B4-F9DF7B735687}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{A504301C-4486-4F3E-9D0E-DDB6EF771E82}" ShortID="146997292">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam4" ID="{64EFE454-F79B-4C43-B78E-A6BC5C81158F}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{5E589888-E592-4E03-B29B-6D21D27A5D0C}" ShortID="185576748">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_camtop" ID="{9F4FC2E2-C507-4F2F-8DFF-B45340217509}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{343812A8-E340-44F9-93B1-2EB73CFDF004}" ShortID="12982684">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_CamChange1" ID="{B89A90F0-C238-4D0D-ABF4-107E9631A606}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{AF56F187-A325-47D3-8465-49275B8B1946}" ShortID="206628787">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam1" ID="{0FA70C48-2DAF-4745-A01A-2E97FAEFB806}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Camera_02" ID="{6EE3DE2F-6914-4D12-A3DC-12CAF228AA82}">
+							<ChildrenList>
+								<Action Name="" ID="{0DEC8449-BF26-4C0C-B9EB-DB406385D30E}" ShortID="741292244">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam1" ID="{0FA70C48-2DAF-4745-A01A-2E97FAEFB806}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{6A0D841C-3A32-4970-A1D8-F817AE84FA18}" ShortID="775647640">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam3" ID="{A35A43FD-4393-407A-A3EC-E00D467BDD82}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{477524DF-CDE5-4D2D-B803-88B8D3FC621F}" ShortID="495111691">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam5" ID="{8457E47D-8986-4DFC-A925-58BD49C97A6C}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{94ECBC83-4091-4B01-B5CA-B1B9B46BA202}" ShortID="906593511">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam2" ID="{1FE5E723-B00A-48D1-B1B4-F9DF7B735687}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{590310DB-60F7-4F5D-BC61-D777D04EFD8D}" ShortID="683349925">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam4" ID="{64EFE454-F79B-4C43-B78E-A6BC5C81158F}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{3290B816-A708-43C1-94FD-93D1E1926E49}" ShortID="736975398">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_camtop" ID="{9F4FC2E2-C507-4F2F-8DFF-B45340217509}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{37A3EB6D-FC90-48B0-8495-B40BDB56B56C}" ShortID="1004569841">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_CamChange1" ID="{B89A90F0-C238-4D0D-ABF4-107E9631A606}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{006D2AB6-9A90-46BC-BEB3-91D7092DDCBE}" ShortID="581259705">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam2" ID="{1FE5E723-B00A-48D1-B1B4-F9DF7B735687}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Camera_03" ID="{7C2E26A2-2074-4461-8333-FA8029CCBC49}">
+							<ChildrenList>
+								<Action Name="" ID="{4CCC6CB3-5062-440A-823F-04D815C6507C}" ShortID="80359368">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam1" ID="{0FA70C48-2DAF-4745-A01A-2E97FAEFB806}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{E7ED31D0-775B-4F77-9F9E-277C341F217A}" ShortID="261450334">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam3" ID="{A35A43FD-4393-407A-A3EC-E00D467BDD82}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{89032A92-089A-450B-9967-4C0C8179F873}" ShortID="928889610">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam5" ID="{8457E47D-8986-4DFC-A925-58BD49C97A6C}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{ACA19900-71F1-4750-A63D-C89E975ED104}" ShortID="57696383">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam2" ID="{1FE5E723-B00A-48D1-B1B4-F9DF7B735687}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{211B3427-DBD2-4EB8-A9FC-5CE8896D9E55}" ShortID="393478140">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam4" ID="{64EFE454-F79B-4C43-B78E-A6BC5C81158F}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{58CB536A-7763-4763-BBCC-3C0E72BAAE4B}" ShortID="195660137">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_camtop" ID="{9F4FC2E2-C507-4F2F-8DFF-B45340217509}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{780E64CE-8656-4730-9BEB-355F5D7FC5C5}" ShortID="657964171">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_CamChange1" ID="{B89A90F0-C238-4D0D-ABF4-107E9631A606}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{00555BE7-0A38-48CA-8A57-198CACC250F1}" ShortID="316257957">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam3" ID="{A35A43FD-4393-407A-A3EC-E00D467BDD82}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Camera_04" ID="{72EF723F-BAD1-43B7-B70B-93AE88B229F4}">
+							<ChildrenList>
+								<Action Name="" ID="{A7A12B0E-2922-4201-8251-34B0A9A8045A}" ShortID="425188114">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam1" ID="{0FA70C48-2DAF-4745-A01A-2E97FAEFB806}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{4B86C264-E616-400E-869F-891A375D2F38}" ShortID="659631615">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam3" ID="{A35A43FD-4393-407A-A3EC-E00D467BDD82}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{2EE148DC-4F2E-43C6-8E46-DC6C74F26E7A}" ShortID="696308443">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam5" ID="{8457E47D-8986-4DFC-A925-58BD49C97A6C}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{E6D11CB8-D04C-4029-BE58-8BB99C7DB156}" ShortID="727709949">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam2" ID="{1FE5E723-B00A-48D1-B1B4-F9DF7B735687}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{9EC07EF7-D860-478A-A651-8F7500519066}" ShortID="922469950">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam4" ID="{64EFE454-F79B-4C43-B78E-A6BC5C81158F}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{A644CB78-DFC6-4499-978C-7B22A6F2B74D}" ShortID="121456235">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_camtop" ID="{9F4FC2E2-C507-4F2F-8DFF-B45340217509}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{7234D6A9-E97C-4A05-9B05-E3BF1EC710F3}" ShortID="258857476">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_CamChange1" ID="{B89A90F0-C238-4D0D-ABF4-107E9631A606}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{11FC38B9-3D9C-406B-9F6A-395D28F8D746}" ShortID="890453224">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam4" ID="{64EFE454-F79B-4C43-B78E-A6BC5C81158F}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Camera_05" ID="{D09791CC-70B6-4079-969B-4F602065D59F}">
+							<ChildrenList>
+								<Action Name="" ID="{0FAC7F6A-6476-465A-BA9C-687DD4AB6ED5}" ShortID="462942666">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam1" ID="{0FA70C48-2DAF-4745-A01A-2E97FAEFB806}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{6683AB14-6B02-4824-95A0-B9FC1A503CC3}" ShortID="40486039">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam3" ID="{A35A43FD-4393-407A-A3EC-E00D467BDD82}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{62FB31C8-EDB6-49EB-A0C6-71EDFB6852EA}" ShortID="652460209">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam5" ID="{8457E47D-8986-4DFC-A925-58BD49C97A6C}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{5D143B3B-F84A-4C9B-9A95-6AF131FE702A}" ShortID="314464182">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam2" ID="{1FE5E723-B00A-48D1-B1B4-F9DF7B735687}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{A738F3CD-4667-4B98-8F98-6035D9D13F04}" ShortID="150876687">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam4" ID="{64EFE454-F79B-4C43-B78E-A6BC5C81158F}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{CC155FFA-D113-4484-A910-B9A49EDE84F4}" ShortID="679864856">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_camtop" ID="{9F4FC2E2-C507-4F2F-8DFF-B45340217509}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{2E143A80-4A4A-4D2A-AF0C-173D2B27C34C}" ShortID="29513021">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_CamChange1" ID="{B89A90F0-C238-4D0D-ABF4-107E9631A606}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{AA8540A9-6200-4BCD-8378-B5FC2A1DFE5D}" ShortID="134275739">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam5" ID="{8457E47D-8986-4DFC-A925-58BD49C97A6C}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Camera_top" ID="{9642846D-E7DF-494D-9216-2686DA19E09E}">
+							<ChildrenList>
+								<Action Name="" ID="{19ABE23F-2F2D-4C6D-8056-746C1DD18D14}" ShortID="170033322">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam1" ID="{0FA70C48-2DAF-4745-A01A-2E97FAEFB806}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{618DB9AB-C092-4A31-A6A5-F46888F24743}" ShortID="203525846">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam3" ID="{A35A43FD-4393-407A-A3EC-E00D467BDD82}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{E0CEC20C-AAC2-46C9-9088-D4DF4D2F8F60}" ShortID="609346548">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam5" ID="{8457E47D-8986-4DFC-A925-58BD49C97A6C}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{AF51C7AD-7742-41E4-A7A5-52ED142F6D6A}" ShortID="535119092">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam2" ID="{1FE5E723-B00A-48D1-B1B4-F9DF7B735687}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{81B8BF9E-6AAF-447E-8EE4-B0E16E53BE70}" ShortID="987217430">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam4" ID="{64EFE454-F79B-4C43-B78E-A6BC5C81158F}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{F140819F-E61A-4A0B-BFB4-877A843C6494}" ShortID="97889269">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_camtop" ID="{9F4FC2E2-C507-4F2F-8DFF-B45340217509}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{81BC1114-EF19-4F9D-AE2C-471F19ADB3A9}" ShortID="366282312">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_CamChange1" ID="{B89A90F0-C238-4D0D-ABF4-107E9631A606}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{76FC73F5-0247-4DDF-901E-E96AB2218CA2}" ShortID="875465944">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_camtop" ID="{9F4FC2E2-C507-4F2F-8DFF-B45340217509}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Camera_multi" ID="{27AE714A-5C3F-4B22-86FD-DA61AFCAE343}">
+							<ChildrenList>
+								<Action Name="" ID="{94AE71ED-85A2-41AA-BC4C-423ADF19A565}" ShortID="715039943">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam1" ID="{0FA70C48-2DAF-4745-A01A-2E97FAEFB806}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{D2C0CC97-0F54-4565-A2F9-25F8E2C8CBD4}" ShortID="746863624">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam3" ID="{A35A43FD-4393-407A-A3EC-E00D467BDD82}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{19347113-46DE-419E-91B6-13F4BD77CD13}" ShortID="312750949">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam5" ID="{8457E47D-8986-4DFC-A925-58BD49C97A6C}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{97713C68-65BB-44E5-9D0D-F9BF61D05AF7}" ShortID="618004399">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam2" ID="{1FE5E723-B00A-48D1-B1B4-F9DF7B735687}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{25BC3FBD-FD16-42D9-BDB6-BC9EB5BEB3C8}" ShortID="185025133">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam4" ID="{64EFE454-F79B-4C43-B78E-A6BC5C81158F}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{FB8D9633-26EE-4603-AC6D-28A0CCDE4CCE}" ShortID="953254452">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_camtop" ID="{9F4FC2E2-C507-4F2F-8DFF-B45340217509}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{1CB54C2E-5211-41BB-A7F6-930F0F88637B}" ShortID="481702291">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_CamChange1" ID="{B89A90F0-C238-4D0D-ABF4-107E9631A606}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{7E77108A-DA5A-469D-855A-F93235703EF7}" ShortID="9412353">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam1" ID="{0FA70C48-2DAF-4745-A01A-2E97FAEFB806}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{A3098B49-D259-48E2-8C45-B86A32B9F2EF}" ShortID="725254652">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam2" ID="{1FE5E723-B00A-48D1-B1B4-F9DF7B735687}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{90191BB3-3ED0-45A7-8299-1B7D4E4E957D}" ShortID="9078785">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam3" ID="{A35A43FD-4393-407A-A3EC-E00D467BDD82}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{246597B1-06DB-43EF-95E0-1AA67CE22615}" ShortID="340748307">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam4" ID="{64EFE454-F79B-4C43-B78E-A6BC5C81158F}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{420366B0-4F0D-4E88-AB73-78774DE9F4FF}" ShortID="217838047">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_cam5" ID="{8457E47D-8986-4DFC-A925-58BD49C97A6C}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{9DE7E2ED-AB83-4DA3-B8B6-F42C4F94FD3A}" ShortID="382066592">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="amb_camtop" ID="{9F4FC2E2-C507-4F2F-8DFF-B45340217509}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
-				<Event Name="Camera_Activation" ID="{925F45B8-5836-4590-86CD-C30C8D33C708}">
+				<Folder Name="Musique" ID="{12D37E3D-8527-4389-A307-7D1136AD93BC}" ShortID="174622266">
 					<ChildrenList>
-						<Action Name="" ID="{1F556426-75B3-4F3F-BE94-11B67C167CE2}" ShortID="389876385">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="amb_cam1" ID="{0FA70C48-2DAF-4745-A01A-2E97FAEFB806}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{64757B33-8F7B-47AD-871E-B9FA2D38E9AF}" ShortID="538072742">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="amb_cam3" ID="{A35A43FD-4393-407A-A3EC-E00D467BDD82}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{CAF97391-E1F4-421E-9CF1-7BAAF54ED36F}" ShortID="686018762">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="amb_cam5" ID="{8457E47D-8986-4DFC-A925-58BD49C97A6C}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{BDCE02C5-01F3-4166-B405-4FB5BE3500A9}" ShortID="87792">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="amb_cam2" ID="{1FE5E723-B00A-48D1-B1B4-F9DF7B735687}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{1256A3A1-6374-44D1-89E3-E012B0CE88A5}" ShortID="756726439">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="amb_cam4" ID="{64EFE454-F79B-4C43-B78E-A6BC5C81158F}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{01BCFD0E-A417-425B-9CC3-7BBD2312C238}" ShortID="665086002">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="amb_camtop" ID="{9F4FC2E2-C507-4F2F-8DFF-B45340217509}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{084F1058-0F1A-4649-A73C-634F1F0541F9}" ShortID="755041771">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="sfx_CamChange1" ID="{B89A90F0-C238-4D0D-ABF4-107E9631A606}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{DF004354-3C02-4033-937F-D119CBDF7820}" ShortID="891575957">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="amb_cam1" ID="{0FA70C48-2DAF-4745-A01A-2E97FAEFB806}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{37A49FE9-41F9-44CE-807E-DE88C98B6CC6}" ShortID="529223287">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="amb_cam2" ID="{1FE5E723-B00A-48D1-B1B4-F9DF7B735687}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{27CFC143-EABB-415B-ABEA-A936C0EEC138}" ShortID="805525257">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="amb_cam3" ID="{A35A43FD-4393-407A-A3EC-E00D467BDD82}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{99E3C38A-4E54-46EC-919A-6C06F423A0DE}" ShortID="419089405">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="amb_cam4" ID="{64EFE454-F79B-4C43-B78E-A6BC5C81158F}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{2BCEDC1A-8B80-4587-8C42-A2B118B803ED}" ShortID="140663030">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="amb_cam5" ID="{8457E47D-8986-4DFC-A925-58BD49C97A6C}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{42B727F7-2BBD-4FB7-B2BB-F13DFB458B94}" ShortID="518522777">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="amb_camtop" ID="{9F4FC2E2-C507-4F2F-8DFF-B45340217509}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
+						<Event Name="Play_MusicGroceryStore1" ID="{48FCE50B-C4C3-4520-96DB-63B26B4450C2}">
+							<ChildrenList>
+								<Action Name="" ID="{F98A93FB-8E27-4D73-9242-158CF47BBCDC}" ShortID="667717392">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MusicGroceryStore1" ID="{AA6113C9-0419-45CD-BF67-4A0111623309}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_MusicVictory" ID="{5A170784-6089-40C8-81ED-29DF1DA5606B}"/>
+						<Event Name="Play_MusicGameOver" ID="{0EEF4750-B378-4E2B-9A46-6687B65B48A5}"/>
 					</ChildrenList>
-				</Event>
-				<Event Name="Play_footsteps_mcSlowed" ID="{087BFF17-8DFB-4F50-A2FB-E5136E4955AE}">
-					<ChildrenList>
-						<Action Name="" ID="{F3D84338-2263-4E43-84ED-C012DE6F1EE2}" ShortID="464736919">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="footsteps-mcSlowed" ID="{71F72664-5F75-41ED-BD31-697C0109A71F}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{46C0B4CE-DC4E-4E03-847A-D668273D56BF}" ShortID="884190104">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="footsteps_mc" ID="{ECACD5D8-067C-4B5E-980D-6FC86833427B}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_MusicGroceryStore1" ID="{48FCE50B-C4C3-4520-96DB-63B26B4450C2}">
-					<ChildrenList>
-						<Action Name="" ID="{F98A93FB-8E27-4D73-9242-158CF47BBCDC}" ShortID="667717392">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="MusicGroceryStore1" ID="{AA6113C9-0419-45CD-BF67-4A0111623309}" WorkUnitID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
