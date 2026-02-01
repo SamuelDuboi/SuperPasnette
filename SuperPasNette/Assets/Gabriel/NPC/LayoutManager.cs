@@ -12,7 +12,14 @@ public class LayoutManager : MonoBehaviour
 		for (int i = 0; i < shelfToMove.Count; i++)
 		{
 			currentGO = shelfToMove[i];
-			currentTR = currentGO.transform.GetChild(0);
+			currentTR = currentGO.transform;
+			
+			for (int j = 0; j < currentGO.transform.childCount; j++)
+			{
+				if (currentGO.transform.GetChild(j).CompareTag("TransformObj"))
+					currentTR = currentGO.transform.GetChild(j);
+			}
+
 			currentGO.transform.position = currentTR.position;
 			currentGO.transform.rotation = currentTR.rotation;
 			currentGO.transform.localScale = currentTR.localScale;

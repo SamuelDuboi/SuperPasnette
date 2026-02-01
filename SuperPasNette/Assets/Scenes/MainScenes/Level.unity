@@ -390,6 +390,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 210226346354301095, guid: fb0ff34bfea2a254c97d5c914492c179, type: 3}
+      propertyPath: m_TagString
+      value: TransformObj
+      objectReference: {fileID: 0}
+    - target: {fileID: 1025190437251423614, guid: fb0ff34bfea2a254c97d5c914492c179, type: 3}
+      propertyPath: m_TagString
+      value: TransformObj
+      objectReference: {fileID: 0}
+    - target: {fileID: 5853227830054577976, guid: fb0ff34bfea2a254c97d5c914492c179, type: 3}
+      propertyPath: m_TagString
+      value: TransformObj
+      objectReference: {fileID: 0}
+    - target: {fileID: 5926352571165197686, guid: fb0ff34bfea2a254c97d5c914492c179, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7272874967159265116, guid: fb0ff34bfea2a254c97d5c914492c179, type: 3}
+      propertyPath: m_TagString
+      value: TransformObj
+      objectReference: {fileID: 0}
     - target: {fileID: 8088952390811219064, guid: fb0ff34bfea2a254c97d5c914492c179, type: 3}
       propertyPath: m_Name
       value: LAYOUT
@@ -436,6 +456,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8088952390811219065, guid: fb0ff34bfea2a254c97d5c914492c179, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8284780635888965477, guid: fb0ff34bfea2a254c97d5c914492c179, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
