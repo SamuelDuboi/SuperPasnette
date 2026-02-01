@@ -114,7 +114,7 @@ public class GameManager : MonoBehaviour
                 Debug.Log("Blinking Lights");
                 break;
             case 4:
-                layoutManager?.ChangeLayout();
+                //layoutManager?.ChangeLayout();
                 //AkSoundEngine.SetState("Paranormal", "Layout_04");
                 break;
             case 5:
