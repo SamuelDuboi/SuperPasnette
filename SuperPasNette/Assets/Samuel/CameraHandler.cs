@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraHandler : MonoBehaviour
@@ -10,28 +8,29 @@ public class CameraHandler : MonoBehaviour
     [HideInInspector]
     public bool bWasMaxLenght = false;
     public bool canGodUseGodCam = false;
-    public  GameObject hidingplane;
+    public GameObject hidingplane;
     [HideInInspector]
     public GameObject activeCam;
     void Start()
     {
         cameras = GetComponentsInChildren<Camera>();
         activeCam = cameras[0].gameObject;
+        AkSoundEngine.SetState("Camera_POV", "Cam1");
     }
 
     // Update is called once per frame
     void Update()
     {
         hidingplane.SetActive(!canGodUseGodCam); // c'est degeu mais il est tard
-        if(Input.anyKey == false) 
+        if (Input.anyKey == false)
         {
             keydown = false;
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Alpha1)) 
+        if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Alpha1))
         {
-            if (!keydown) 
+            if (!keydown)
             {
                 SwitchCamera(0);
             }
@@ -112,48 +111,48 @@ public class CameraHandler : MonoBehaviour
         }
     }
 
-    void SwitchCamera(int iIndex) 
+    void SwitchCamera(int iIndex)
     {
-        if(iIndex> cameras.Length-1) 
+        if (iIndex > cameras.Length - 1)
         {
             return;
         }
 
         bool bIsEven = cameras.Length % 2 == 0;
         int camlenght = cameras.Length + (bIsEven ? 0 : 1);
-        bool bIsMaxLenght = iIndex == cameras.Length-1; // minus one for god mode
+        bool bIsMaxLenght = iIndex == cameras.Length - 1; // minus one for god mode
         bool needReset = bWasMaxLenght;
         for (float i = 0; i < cameras.Length; i++)
         {
-            if (bIsMaxLenght && !needReset) 
+            if (bIsMaxLenght && !needReset)
             {
                 bWasMaxLenght = true;
                 cameras[(int)i].enabled = true;
-               
+
                 float x = 0;
-                if (i >= 4) 
+                if (i >= 4)
                 {
-                    x = (1f / (camlenght/2f))*2;
+                    x = (1f / (camlenght / 2f)) * 2;
 
                 }
-                else if (i >= 2) 
+                else if (i >= 2)
                 {
-                    x = 1f / (camlenght/2f);
+                    x = 1f / (camlenght / 2f);
 
                 }
-                cameras[(int)i].rect = new Rect(x, (i+1)%2 == 0? 0 : 0.5f, 1.0f/ (camlenght/2f), 0.5f);
+                cameras[(int)i].rect = new Rect(x, (i + 1) % 2 == 0 ? 0 : 0.5f, 1.0f / (camlenght / 2f), 0.5f);
             }
-            else 
+            else
             {
-                if (needReset) 
+                if (needReset)
                 {
                     bWasMaxLenght = false;
                     cameras[(int)i].rect = new Rect(0, 0, 1, 1);
                 }
-                if( i != cameras.Length || canGodUseGodCam) 
+                if (i != cameras.Length || canGodUseGodCam)
                 {
-                cameras[(int)i].enabled = i == iIndex;
-                    if(i == iIndex) 
+                    cameras[(int)i].enabled = i == iIndex;
+                    if (i == iIndex)
                     {
                         activeCam = cameras[(int)i].gameObject;
                     }

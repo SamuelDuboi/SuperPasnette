@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -9,11 +8,11 @@ public class HudScreen : MonoBehaviour
 {
     public Button pauseBtn;
     public GameObject list;
-	public GameObject listContainer;
-	[SerializeField] private GameObject interactionObject;
-	[SerializeField] private GameObject interactionTalkingObject;
-	public Image fillBarSanity;
-	public GameObject dialogueBox;
+    public GameObject listContainer;
+    [SerializeField] private GameObject interactionObject;
+    [SerializeField] private GameObject interactionTalkingObject;
+    public Image fillBarSanity;
+    public GameObject dialogueBox;
     public Animator anim;
     public Animator animList;
 
@@ -26,70 +25,91 @@ public class HudScreen : MonoBehaviour
     void Start()
     {
         pauseBtn.onClick.AddListener(OnPause);
-		for (int i = 0; i < listContainer.transform.childCount; i++)
-		{
-			listTexts.Add(listContainer.transform.GetChild(i).GetComponent<TMP_Text>());
-		}
+        for (int i = 0; i < listContainer.transform.childCount; i++)
+        {
+            listTexts.Add(listContainer.transform.GetChild(i).GetComponent<TMP_Text>());
+        }
     }
 
-	private void OnEnable()
-	{
+    private void OnEnable()
+    {
         anim.SetBool("isClosing", false);
-	}
+    }
 
-	public void UpdateSanity(float newFillAmount)
-	{
-		fillBarSanity.fillAmount = newFillAmount;
-	}
+    public void UpdateSanity(float newFillAmount)
+    {
+        fillBarSanity.fillAmount = newFillAmount;
 
-	private void OnPause()
-	{
-		onPause?.Invoke();
-	}
+        if (fillBarSanity.fillAmount >= 0.99f)
+        {
+            AkSoundEngine.SetState("MentalState", "Mental0");
+        }
+        else if (fillBarSanity.fillAmount <= 75f)
+        {
+            AkSoundEngine.SetState("MentalState", "Mental25");
+        }
+        else if (fillBarSanity.fillAmount <= 50f)
+        {
+            AkSoundEngine.SetState("MentalState", "Mental50");
+        }
+        else if (fillBarSanity.fillAmount <= 25f)
+        {
+            AkSoundEngine.SetState("MentalState", "Mental75");
+        }
+        else if (fillBarSanity.fillAmount <= 0.1f)
+        {
+            AkSoundEngine.SetState("MentalState", "Mental100");
+        }
+    }
 
-	public void ToggleInteraction (bool bActive)
-	{
-		interactionObject.SetActive(bActive);
-	}
+    private void OnPause()
+    {
+        onPause?.Invoke();
+    }
 
-	public void ToggleTalkInteraction (bool bActive)
-	{
-		interactionTalkingObject.SetActive(bActive);
-	}
+    public void ToggleInteraction(bool bActive)
+    {
+        interactionObject.SetActive(bActive);
+    }
 
-	public void ToggleDialogueBox (bool isActive)
-	{
-		dialogueBox.gameObject.SetActive(isActive);
-	}
+    public void ToggleTalkInteraction(bool bActive)
+    {
+        interactionTalkingObject.SetActive(bActive);
+    }
+
+    public void ToggleDialogueBox(bool isActive)
+    {
+        dialogueBox.gameObject.SetActive(isActive);
+    }
 
 
-	public void FillList(List<string> groceries)
-	{
-		for (int i = 0; i < groceries.Count; i++)
-		{
+    public void FillList(List<string> groceries)
+    {
+        for (int i = 0; i < groceries.Count; i++)
+        {
             listTexts[i].text = groceries[i];
-		}
-	}
+        }
+    }
 
-	public void UpdateItem(int index)
-	{
-		listTexts[index].fontStyle = FontStyles.Strikethrough;
-	}
+    public void UpdateItem(int index)
+    {
+        listTexts[index].fontStyle = FontStyles.Strikethrough;
+    }
 
-	public void ShowList(bool isShowing)
-	{
+    public void ShowList(bool isShowing)
+    {
         list.SetActive(isShowing);
         animList.SetBool("isClosing", !isShowing);
-	}
+    }
 
     public void Close()
-	{
+    {
         anim.SetBool("isClosing", true);
-	}
+    }
 
     public void Closed()
-	{
+    {
         gameObject.SetActive(false);
         closed?.Invoke();
-	}
+    }
 }
