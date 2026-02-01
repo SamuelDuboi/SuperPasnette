@@ -3,28 +3,6 @@
 	<Containers>
 		<WorkUnit Name="Default Work Unit" ID="{B3E8DA47-093A-4C74-ADCE-12FF17C1D8BF}" PersistMode="Standalone">
 			<ChildrenList>
-				<Sound Name="SD_SFX_Meow_1_V1" ID="{C04DB2C4-E63F-47DB-95AE-A9364841B2A8}" ShortID="439673411">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="SD_SFX_Meow_1_V1" ID="{A9F4B92F-93DB-4073-AC4B-828722EEEB5E}">
-							<Language>SFX</Language>
-							<AudioFile>SD_SFX_Meow_1_V1.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="847334885"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="SD_SFX_Meow_1_V1" ID="{A9F4B92F-93DB-4073-AC4B-828722EEEB5E}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
 				<Folder Name="Bouttons" ID="{8417A40C-0457-4E9A-A6DB-721022337F99}" ShortID="948306806">
 					<ChildrenList>
 						<Sound Name="Boutton1_V1" ID="{43EA58E9-5D22-4D55-82F5-75325104048E}" ShortID="689604917">
@@ -116,6 +94,25 @@
 				<Folder Name="Footsteps" ID="{AE3A552F-49BC-49AC-8A42-DCF0DC29537F}" ShortID="333280813">
 					<ChildrenList>
 						<RandomSequenceContainer Name="footsteps-mcSlowed" ID="{71F72664-5F75-41ED-BD31-697C0109A71F}" ShortID="428455401">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{EFED6E7A-6AA9-43F1-9B8C-C5D44CA981CA}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="300"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-200</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
@@ -238,28 +235,64 @@
 							<StateInfo>
 								<StateGroupList>
 									<StateGroupInfo>
-										<StateGroupRef Name="Speed" ID="{57AEB422-C831-462C-BED0-58BAE269F448}"/>
-										<StateGroupInfo Name="" ID="{BEAFDFC9-D5EE-48B4-9CAD-332C549AF461}" ShortID="999434993"/>
+										<StateGroupRef Name="Paranormal" ID="{43DB557B-A809-4DD5-8C4D-462D4EC33DE2}"/>
+										<StateGroupInfo Name="" ID="{2417991A-FDDC-4A62-8B65-4EADCA10EFA8}" ShortID="252307658"/>
 									</StateGroupInfo>
 								</StateGroupList>
 								<CustomStateList>
 									<CustomState>
-										<StateRef Name="SpeedLow" ID="{67649101-D375-414C-B2F1-30F6E810C537}"/>
-										<CustomState Name="" ID="{48F7EE96-8B3D-4863-9AC7-273C9D2EA9E0}" ShortID="72169573"/>
-									</CustomState>
-									<CustomState>
-										<StateRef Name="None" ID="{0C1FD3F5-EBF8-42FE-9E11-76BCE76C476C}"/>
-										<CustomState Name="" ID="{306D8A27-8058-4F0A-9536-027F7C59714D}" ShortID="1073146317">
+										<StateRef Name="None" ID="{EAC474D8-A31B-4342-86FE-4FE6173D9B26}"/>
+										<CustomState Name="" ID="{73D7291A-3FD1-4687-B33D-4EC17A8C756D}" ShortID="89289616">
 											<PropertyList>
-												<Property Name="Volume" Type="Real64" Value="-108"/>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
 											</PropertyList>
 										</CustomState>
 									</CustomState>
 									<CustomState>
-										<StateRef Name="Speedhigh" ID="{1C0117E9-8B4E-4D2A-8884-FEAAEFF3A325}"/>
-										<CustomState Name="" ID="{130FF168-5D54-47DD-B231-A3234BB6F290}" ShortID="67136577">
+										<StateRef Name="Normal_00" ID="{004DB45E-6AD3-4555-BCB6-DBE1537069D7}"/>
+										<CustomState Name="" ID="{78A791EF-3173-4368-92EE-3F9AB73EF7EC}" ShortID="595094510"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Lights_03" ID="{6F5A41CC-2390-4695-A85C-02312BF47A65}"/>
+										<CustomState Name="" ID="{480854A3-5372-4CB1-AF23-69A5D8CCE96F}" ShortID="379256420">
 											<PropertyList>
-												<Property Name="Volume" Type="Real64" Value="-108"/>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Layout_04" ID="{1CC5687D-4CB7-4AB6-A92B-F6D3A94A01FE}"/>
+										<CustomState Name="" ID="{9237C15A-2DB0-49AC-A31E-802990B468B9}" ShortID="716064494">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Slowed_06" ID="{ADF4CF2E-CF42-4C88-9B7F-38A903BBB33F}"/>
+										<CustomState Name="" ID="{399F5A71-37B7-4E3E-B428-14D622500006}" ShortID="383274351"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="mrX_05" ID="{FCBABB9D-FE78-4DF2-A5A7-4BFE51EA2A02}"/>
+										<CustomState Name="" ID="{281E4331-21F3-4127-BBB5-FF11AB24568E}" ShortID="471601238">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Roamers_02" ID="{1DEBA9D2-4386-4E78-BF26-514253EEB63A}"/>
+										<CustomState Name="" ID="{C957F2D9-FE39-4313-8DC8-8CD9B604BD17}" ShortID="122418386">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Customers_01" ID="{21270C67-9F8C-4F83-90DB-AEB4A415FBCE}"/>
+										<CustomState Name="" ID="{EA5039A4-38A4-4664-868E-1BD2475E842E}" ShortID="181063630">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
 											</PropertyList>
 										</CustomState>
 									</CustomState>
@@ -267,6 +300,20 @@
 							</StateInfo>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="footsteps_mc" ID="{ECACD5D8-067C-4B5E-980D-6FC86833427B}" ShortID="753353385">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{71DD4B4E-550F-4F5B-B84E-21F9D27EA0F7}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="300"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
@@ -368,31 +415,70 @@
 							<StateInfo>
 								<StateGroupList>
 									<StateGroupInfo>
-										<StateGroupRef Name="Speed" ID="{57AEB422-C831-462C-BED0-58BAE269F448}"/>
-										<StateGroupInfo Name="" ID="{7A4EFED4-BF19-4C0C-A8B9-C28EA86A1791}" ShortID="169359451"/>
+										<StateGroupRef Name="Paranormal" ID="{43DB557B-A809-4DD5-8C4D-462D4EC33DE2}"/>
+										<StateGroupInfo Name="" ID="{2F723629-065A-4A6F-830D-7F0E5DDFE132}" ShortID="536897962"/>
 									</StateGroupInfo>
 								</StateGroupList>
 								<CustomStateList>
 									<CustomState>
-										<StateRef Name="SpeedLow" ID="{67649101-D375-414C-B2F1-30F6E810C537}"/>
-										<CustomState Name="" ID="{98B20C5A-95DC-49CD-9143-33E9DB54DE7C}" ShortID="1068992630">
+										<StateRef Name="None" ID="{EAC474D8-A31B-4342-86FE-4FE6173D9B26}"/>
+										<CustomState Name="" ID="{D622D8ED-7BD3-4350-BF7E-72EC3EEC43B7}" ShortID="515665999"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Normal_00" ID="{004DB45E-6AD3-4555-BCB6-DBE1537069D7}"/>
+										<CustomState Name="" ID="{BD15A42B-DD44-4707-B367-9D0E5C2AA256}" ShortID="596662581"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Lights_03" ID="{6F5A41CC-2390-4695-A85C-02312BF47A65}"/>
+										<CustomState Name="" ID="{F51E0A6A-1412-48CE-BEEA-F8A0AD53ABEB}" ShortID="24877873"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Layout_04" ID="{1CC5687D-4CB7-4AB6-A92B-F6D3A94A01FE}"/>
+										<CustomState Name="" ID="{379483E0-C70A-4722-82FB-02E6DA15F1E3}" ShortID="657664507"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Slowed_06" ID="{ADF4CF2E-CF42-4C88-9B7F-38A903BBB33F}"/>
+										<CustomState Name="" ID="{3A545166-F4D4-4E48-9FE9-FDC20658688F}" ShortID="615299089">
 											<PropertyList>
-												<Property Name="Volume" Type="Real64" Value="-108"/>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
 											</PropertyList>
 										</CustomState>
 									</CustomState>
 									<CustomState>
-										<StateRef Name="None" ID="{0C1FD3F5-EBF8-42FE-9E11-76BCE76C476C}"/>
-										<CustomState Name="" ID="{E6407BBE-6C5A-4861-9EA3-6691352C2934}" ShortID="550777966"/>
+										<StateRef Name="mrX_05" ID="{FCBABB9D-FE78-4DF2-A5A7-4BFE51EA2A02}"/>
+										<CustomState Name="" ID="{52E02AEA-BB5F-4629-8F5B-EF0137547AFB}" ShortID="757868502"/>
 									</CustomState>
 									<CustomState>
-										<StateRef Name="Speedhigh" ID="{1C0117E9-8B4E-4D2A-8884-FEAAEFF3A325}"/>
-										<CustomState Name="" ID="{39F80EA2-B282-417A-B721-9E212A06106A}" ShortID="493413540"/>
+										<StateRef Name="Roamers_02" ID="{1DEBA9D2-4386-4E78-BF26-514253EEB63A}"/>
+										<CustomState Name="" ID="{096E1D31-E50B-4CDC-9017-E3E4F6E089C7}" ShortID="485267767"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Customers_01" ID="{21270C67-9F8C-4F83-90DB-AEB4A415FBCE}"/>
+										<CustomState Name="" ID="{72EF60F1-8517-4391-A6AD-0B27DC1D6F79}" ShortID="256822482"/>
 									</CustomState>
 								</CustomStateList>
 							</StateInfo>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="footsteps_roamer" ID="{9934B3C2-3053-4604-AEE9-6B006367C53C}" ShortID="353766771">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{8CF07AC5-002D-4433-804C-A62DE5ADC181}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="300"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-200</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
@@ -413,6 +499,10 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="sfx_footstepsRoamer1" ID="{6E1CFE41-3FF9-4F6D-B2F7-029ABB88B963}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0371914311134314"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>footsteps_roamer\sfx_footstepsRoamer1.wav</AudioFile>
 											<MediaIDList>
@@ -435,6 +525,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="sfx_footstepsRoamer2" ID="{5B56DE94-87B1-4D70-9B1D-615BAAB000A3}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0500161773821554"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0595647203369305"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>footsteps_roamer\sfx_footstepsRoamer2.wav</AudioFile>
 											<MediaIDList>
@@ -457,6 +552,12 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="sfx_footstepsRoamer3" ID="{25D2A195-F27B-4757-8466-6CC5689CC738}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0498808886626778"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0.0997617773253555"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0420734452198239"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>footsteps_roamer\sfx_footstepsRoamer3.wav</AudioFile>
 											<MediaIDList>
@@ -479,6 +580,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="sfx_footstepsRoamer4" ID="{65E39AE8-1C2B-49DB-9863-FC90BFE746F5}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0294563114450202"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.00245469262041835"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>footsteps_roamer\sfx_footstepsRoamer4.wav</AudioFile>
 											<MediaIDList>
@@ -491,8 +597,77 @@
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Paranormal" ID="{43DB557B-A809-4DD5-8C4D-462D4EC33DE2}"/>
+										<StateGroupInfo Name="" ID="{DCEA84CE-1D68-48E8-B130-98B2EFB1C33C}" ShortID="20316375"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="None" ID="{EAC474D8-A31B-4342-86FE-4FE6173D9B26}"/>
+										<CustomState Name="" ID="{CCEC8A0D-D7B4-4BC1-8A40-0595C8FBE919}" ShortID="577123475">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Normal_00" ID="{004DB45E-6AD3-4555-BCB6-DBE1537069D7}"/>
+										<CustomState Name="" ID="{1DDDDA07-7593-4D63-ABBF-ABC261F3BD87}" ShortID="1056929725"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Lights_03" ID="{6F5A41CC-2390-4695-A85C-02312BF47A65}"/>
+										<CustomState Name="" ID="{C75AAEC3-B927-462C-B54B-1CB83C804AC8}" ShortID="205527217"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Layout_04" ID="{1CC5687D-4CB7-4AB6-A92B-F6D3A94A01FE}"/>
+										<CustomState Name="" ID="{DC1A3148-9948-418C-A247-D480028CAE83}" ShortID="1066757077"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Slowed_06" ID="{ADF4CF2E-CF42-4C88-9B7F-38A903BBB33F}"/>
+										<CustomState Name="" ID="{E226B806-DDED-421C-BC78-763DC358A396}" ShortID="739432416"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="mrX_05" ID="{FCBABB9D-FE78-4DF2-A5A7-4BFE51EA2A02}"/>
+										<CustomState Name="" ID="{74DD33DD-AA35-45AE-84FF-194966B8DAE3}" ShortID="994048231"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Roamers_02" ID="{1DEBA9D2-4386-4E78-BF26-514253EEB63A}"/>
+										<CustomState Name="" ID="{303F23ED-6B43-47ED-9EEC-55F7EF5FB3F2}" ShortID="895814141"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Customers_01" ID="{21270C67-9F8C-4F83-90DB-AEB4A415FBCE}"/>
+										<CustomState Name="" ID="{333A6CB7-D7A9-4135-A920-ACC409ACBB43}" ShortID="443160322">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="footsteps_X" ID="{B65E0DCF-E6B7-4EA1-B96A-C6DC4A43CECB}" ShortID="324686362">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{4EC1FAEC-E3E6-41F6-93CF-FA1AEC4D6EF5}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="300"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-200</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
@@ -503,6 +678,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<Sound Name="sfx_footstepsX1" ID="{25C9FFD6-2542-4D9B-B3C8-AEE8E27D76C4}" ShortID="733012453">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-1</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
@@ -513,6 +695,10 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="sfx_footstepsX1" ID="{3E1434E3-F246-433D-96B4-3B0276C839D0}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.117943181124834"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>footsteps_X\sfx_footstepsX1.wav</AudioFile>
 											<MediaIDList>
@@ -525,6 +711,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="sfx_footstepsX2" ID="{ECF9FBD7-07A3-48F2-8C0E-EE4190F1AE7A}" ShortID="910584925">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
@@ -535,6 +728,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="sfx_footstepsX2" ID="{ECD371B3-CBC3-4586-873F-2E0C158DD1E1}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0937907289404185"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0859201782601037"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>footsteps_X\sfx_footstepsX2.wav</AudioFile>
 											<MediaIDList>
@@ -547,6 +745,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="sfx_footstepsX3" ID="{404B638C-2DE7-46D8-9CB4-949198D36555}" ShortID="59628867">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
@@ -557,6 +762,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="sfx_footstepsX3" ID="{4141E533-5349-40CB-9E76-7EDB9BA4A6D0}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.140181612556935"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>footsteps_X\sfx_footstepsX3.wav</AudioFile>
 											<MediaIDList>
@@ -569,6 +779,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="sfx_footstepsX4" ID="{88A05357-6F7E-4E99-98A4-23511EF81D4B}" ShortID="534233191">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
@@ -579,6 +796,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="sfx_footstepsX4" ID="{770D47C5-D371-4606-BE6C-F4A4BC322EAD}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.124652957967699"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0105129000695649"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>footsteps_X\sfx_footstepsX4.wav</AudioFile>
 											<MediaIDList>
@@ -591,54 +813,75 @@
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Paranormal" ID="{43DB557B-A809-4DD5-8C4D-462D4EC33DE2}"/>
+										<StateGroupInfo Name="" ID="{FBE1371D-E334-4EDE-A877-91914F18C7E8}" ShortID="564252292"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="None" ID="{EAC474D8-A31B-4342-86FE-4FE6173D9B26}"/>
+										<CustomState Name="" ID="{B4C05D64-0D67-473E-AB94-B2FF8D85C82C}" ShortID="24453531">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Normal_00" ID="{004DB45E-6AD3-4555-BCB6-DBE1537069D7}"/>
+										<CustomState Name="" ID="{416B510A-8EC8-4043-B2C5-FD385D106D2C}" ShortID="322618100"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Lights_03" ID="{6F5A41CC-2390-4695-A85C-02312BF47A65}"/>
+										<CustomState Name="" ID="{7BB08BE9-0FFE-4988-8E74-84E22FC5F4E4}" ShortID="925523353">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Layout_04" ID="{1CC5687D-4CB7-4AB6-A92B-F6D3A94A01FE}"/>
+										<CustomState Name="" ID="{F29F9A1D-5EC1-415B-B3FE-7ADCF846877D}" ShortID="303752043">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Slowed_06" ID="{ADF4CF2E-CF42-4C88-9B7F-38A903BBB33F}"/>
+										<CustomState Name="" ID="{F697A5A2-2B9E-4165-A2D9-7448078D0057}" ShortID="144629176"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="mrX_05" ID="{FCBABB9D-FE78-4DF2-A5A7-4BFE51EA2A02}"/>
+										<CustomState Name="" ID="{2C03B2C8-DBB7-4D0A-99F1-00754340F7A7}" ShortID="56762747"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Roamers_02" ID="{1DEBA9D2-4386-4E78-BF26-514253EEB63A}"/>
+										<CustomState Name="" ID="{DF2B7D92-35C0-41AB-AF17-3D31A20E9CC1}" ShortID="78196258">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Customers_01" ID="{21270C67-9F8C-4F83-90DB-AEB4A415FBCE}"/>
+										<CustomState Name="" ID="{F75ED254-5B0E-4295-BE30-41CCDA3113CE}" ShortID="936245973">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
-				<Sound Name="sfx_AppNotif" ID="{3EAE1D9E-454D-401D-835E-8CDCEE3A32C5}" ShortID="663772875">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="sfx_AppNotif" ID="{E8E4EE06-6134-473C-A6EE-488F78D08FE7}">
-							<Language>SFX</Language>
-							<AudioFile>sfx_AppNotif.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="1022786770"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="sfx_AppNotif" ID="{E8E4EE06-6134-473C-A6EE-488F78D08FE7}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="sfx_AppOpen" ID="{4A20A262-CC46-440D-B659-34F1702320EB}" ShortID="724917742">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="sfx_AppOpen" ID="{AA99B6C7-DA59-486C-8D79-F1F83C803408}">
-							<Language>SFX</Language>
-							<AudioFile>sfx_AppOpen.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="403540757"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="sfx_AppOpen" ID="{AA99B6C7-DA59-486C-8D79-F1F83C803408}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
 				<Sound Name="sfx_CamChange1" ID="{B89A90F0-C238-4D0D-ABF4-107E9631A606}" ShortID="739587838">
+					<PropertyList>
+						<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
@@ -658,50 +901,6 @@
 					</ChildrenList>
 					<ActiveSourceList>
 						<ActiveSource Name="sfx_CamChange1" ID="{ADA8A557-0E5E-448F-91DF-BD138896DC98}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="sfx_eerie1" ID="{19DC4FEE-2E28-45E4-B8F9-73312BBBF85E}" ShortID="490484634">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="sfx_eerie1" ID="{5140FEAC-A493-4BFF-B9C7-FD08FEE69613}">
-							<Language>SFX</Language>
-							<AudioFile>sfx_eerie1.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="396585843"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="sfx_eerie1" ID="{5140FEAC-A493-4BFF-B9C7-FD08FEE69613}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="sfx_eerie2" ID="{BBD32B6A-A039-4ED5-9669-E56AB8835796}" ShortID="350278067">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="sfx_eerie2" ID="{A80FA6B9-F83B-4C39-932E-466953D77EE0}">
-							<Language>SFX</Language>
-							<AudioFile>sfx_eerie2.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="508119624"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="sfx_eerie2" ID="{A80FA6B9-F83B-4C39-932E-466953D77EE0}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="sfx_PickUp1" ID="{DD61C655-96E7-4830-9A3B-4D59EB8FB355}" ShortID="110617065">
@@ -726,84 +925,6 @@
 						<ActiveSource Name="sfx_PickUp1" ID="{00457EF1-8673-4C84-A703-F7672D0C4C47}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<RandomSequenceContainer Name="Sfx_PickupTrail" ID="{0328D998-8D06-4349-950F-013D6186FD9B}" ShortID="208037412">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<Sound Name="sfx_PickUpTrail1" ID="{055AF207-F02A-40F9-B85C-399E183A36CD}" ShortID="770714587">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="sfx_PickUpTrail1" ID="{67DE46D0-280E-44A3-9E7D-F2381362D537}">
-									<Language>SFX</Language>
-									<AudioFile>Sfx_PickupTrail\sfx_PickUpTrail1.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="431771803"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="sfx_PickUpTrail1" ID="{67DE46D0-280E-44A3-9E7D-F2381362D537}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="sfx_PickUpTrail2" ID="{8C874EDA-E015-4095-8742-4391E37CB508}" ShortID="6682056">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="sfx_PickUpTrail2" ID="{4558FC75-863E-45DC-B614-691F26561184}">
-									<Language>SFX</Language>
-									<AudioFile>Sfx_PickupTrail\sfx_PickUpTrail2.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="549630022"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="sfx_PickUpTrail2" ID="{4558FC75-863E-45DC-B614-691F26561184}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="sfx_PickUpTrail3" ID="{E62B84E4-ABA5-4D6D-AF96-1937A32E06C1}" ShortID="149605737">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="sfx_PickUpTrail3" ID="{34C7590E-DA86-4FD6-9268-DF93A1B63478}">
-									<Language>SFX</Language>
-									<AudioFile>Sfx_PickupTrail\sfx_PickUpTrail3.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="388652750"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="sfx_PickUpTrail3" ID="{34C7590E-DA86-4FD6-9268-DF93A1B63478}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-					</ChildrenList>
-				</RandomSequenceContainer>
 				<Sound Name="sfx_Whoosh1" ID="{CE55FCAA-E47E-4BE3-AE85-B2CB1CF914E3}" ShortID="844510144">
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -824,761 +945,6 @@
 					</ChildrenList>
 					<ActiveSourceList>
 						<ActiveSource Name="sfx_Whoosh1" ID="{3AC61DE5-CA2D-4774-9DFC-C117D90242D4}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="MusicGroceryStore1" ID="{AA6113C9-0419-45CD-BF67-4A0111623309}" ShortID="194683466">
-					<PropertyList>
-						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="MusicGroceryStore1" ID="{A38DE95E-2A96-4D7B-9925-8E07E30CC125}">
-							<Language>SFX</Language>
-							<AudioFile>MusicGroceryStore1.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="286748164"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<StateInfo>
-						<StateGroupList>
-							<StateGroupInfo>
-								<StateGroupRef Name="Camera_POV" ID="{5302E343-0790-48B4-B0DF-B3430A29F5FC}"/>
-								<StateGroupInfo Name="" ID="{B95EFE9E-F820-4477-9EBE-AEF50EA5A65C}" ShortID="841280257"/>
-							</StateGroupInfo>
-						</StateGroupList>
-						<CustomStateList>
-							<CustomState>
-								<StateRef Name="cam3" ID="{9AFF6E5E-70C7-41C4-AAE6-DCCAB3C9FCB9}"/>
-								<CustomState Name="" ID="{569338C4-E7D1-49E6-935A-2A2D1E31602E}" ShortID="209781412">
-									<PropertyList>
-										<Property Name="Highpass" Type="int16" Value="50"/>
-										<Property Name="Lowpass" Type="int16" Value="39"/>
-										<Property Name="Volume" Type="Real64" Value="-9"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="cam5" ID="{58ACBC69-1917-449B-A76D-A64094ED8EA4}"/>
-								<CustomState Name="" ID="{5BCC4ED1-B1C8-4552-B87C-7D090B3B49FD}" ShortID="919550945">
-									<PropertyList>
-										<Property Name="Highpass" Type="int16" Value="74"/>
-										<Property Name="Lowpass" Type="int16" Value="65"/>
-										<Property Name="Volume" Type="Real64" Value="-49"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="cam4" ID="{849443B7-73BD-4828-A0DC-A4DD88B3CD7B}"/>
-								<CustomState Name="" ID="{DF9C6C85-7ED7-4D67-BAB7-8322AA2A3F16}" ShortID="990062924">
-									<PropertyList>
-										<Property Name="Highpass" Type="int16" Value="68"/>
-										<Property Name="Lowpass" Type="int16" Value="41"/>
-										<Property Name="Pitch" Type="int32" Value="60"/>
-										<Property Name="Volume" Type="Real64" Value="-11"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="cam1" ID="{5D1F500A-4723-4852-AE4F-85A67784B1D3}"/>
-								<CustomState Name="" ID="{B8AA8399-CD74-4D6B-B585-957499A069BE}" ShortID="722640867">
-									<PropertyList>
-										<Property Name="Highpass" Type="int16" Value="47"/>
-										<Property Name="Lowpass" Type="int16" Value="36"/>
-										<Property Name="Volume" Type="Real64" Value="-10"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="None" ID="{BE17A920-CD24-4879-9E61-C58DABB63420}"/>
-								<CustomState Name="" ID="{631FCCB3-1B9F-4E94-AE0B-B2CCB0507F6F}" ShortID="748445338">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-108"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="cam2" ID="{496A1CD7-7076-4994-A025-A3E5E85E11A5}"/>
-								<CustomState Name="" ID="{EAE490DC-70DF-471C-85A5-F290048F52D8}" ShortID="960909175">
-									<PropertyList>
-										<Property Name="Highpass" Type="int16" Value="35"/>
-										<Property Name="Lowpass" Type="int16" Value="66"/>
-										<Property Name="Volume" Type="Real64" Value="-7"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="cammulti" ID="{E479C36E-D651-4CEE-B6F9-B3001DA5CA15}"/>
-								<CustomState Name="" ID="{5B934953-3645-42BC-AC83-50BA83632D00}" ShortID="358969521">
-									<PropertyList>
-										<Property Name="Highpass" Type="int16" Value="38"/>
-										<Property Name="Lowpass" Type="int16" Value="26"/>
-										<Property Name="Volume" Type="Real64" Value="-5"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="camtop" ID="{E922E281-18A7-4EEA-A5E9-E2F7F5238919}"/>
-								<CustomState Name="" ID="{D1089684-7B34-4E05-BFBE-8BD7AC210395}" ShortID="824894301">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-31"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-						</CustomStateList>
-					</StateInfo>
-					<ActiveSourceList>
-						<ActiveSource Name="MusicGroceryStore1" ID="{A38DE95E-2A96-4D7B-9925-8E07E30CC125}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="amb_cam3" ID="{A35A43FD-4393-407A-A3EC-E00D467BDD82}" ShortID="134118313">
-					<PropertyList>
-						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="amb_cam3" ID="{A3838B63-CE3B-4993-85F0-FA5A29C48AF5}">
-							<PropertyList>
-								<Property Name="FadeInDuration" Type="Real64" Value="0.0588235294117647"/>
-								<Property Name="FadeOutDuration" Type="Real64" Value="0.0761245674740483"/>
-								<Property Name="LoopBegin" Type="Real64" Value="0.0449826989619377"/>
-								<Property Name="LoopEnd" Type="Real64" Value="2.94117647058824"/>
-								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-							</PropertyList>
-							<Language>SFX</Language>
-							<AudioFile>amb_cam3.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="942553665"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<StateInfo>
-						<StateGroupList>
-							<StateGroupInfo>
-								<StateGroupRef Name="Camera_POV" ID="{5302E343-0790-48B4-B0DF-B3430A29F5FC}"/>
-								<StateGroupInfo Name="" ID="{CA6DF051-5673-45FB-AFB6-F9C9952A7A07}" ShortID="934310093"/>
-							</StateGroupInfo>
-						</StateGroupList>
-						<CustomStateList>
-							<CustomState>
-								<StateRef Name="cam3" ID="{9AFF6E5E-70C7-41C4-AAE6-DCCAB3C9FCB9}"/>
-								<CustomState Name="" ID="{A77808A6-A1F8-42D4-A122-FB888889DDCA}" ShortID="570190695">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-35"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="cam5" ID="{58ACBC69-1917-449B-A76D-A64094ED8EA4}"/>
-								<CustomState Name="" ID="{A8253A5F-9466-450B-9516-AEBDB9663E21}" ShortID="565081908">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-120"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="cam4" ID="{849443B7-73BD-4828-A0DC-A4DD88B3CD7B}"/>
-								<CustomState Name="" ID="{361F401B-083B-42A0-9838-95AD555055AE}" ShortID="866898788">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-120"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="cam1" ID="{5D1F500A-4723-4852-AE4F-85A67784B1D3}"/>
-								<CustomState Name="" ID="{8D471EDC-4438-4166-8440-70AF4DB69548}" ShortID="305366154">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-120"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="None" ID="{BE17A920-CD24-4879-9E61-C58DABB63420}"/>
-								<CustomState Name="" ID="{B059482A-4FAB-4FED-BBB6-190A334B2C37}" ShortID="535555993">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-120"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="cam2" ID="{496A1CD7-7076-4994-A025-A3E5E85E11A5}"/>
-								<CustomState Name="" ID="{4DB315E1-D9C0-47C2-B741-2464E0F9C413}" ShortID="298143138">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-120"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="cammulti" ID="{E479C36E-D651-4CEE-B6F9-B3001DA5CA15}"/>
-								<CustomState Name="" ID="{94F591F7-C040-48AB-AD46-5210F7113A29}" ShortID="501712876">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-40"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="camtop" ID="{E922E281-18A7-4EEA-A5E9-E2F7F5238919}"/>
-								<CustomState Name="" ID="{86256591-9798-4B65-8BEF-85047F9A4C1D}" ShortID="259603307">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-120"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-						</CustomStateList>
-					</StateInfo>
-					<ActiveSourceList>
-						<ActiveSource Name="amb_cam3" ID="{A3838B63-CE3B-4993-85F0-FA5A29C48AF5}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="amb_cam4" ID="{64EFE454-F79B-4C43-B78E-A6BC5C81158F}" ShortID="478252678">
-					<PropertyList>
-						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="amb_cam4" ID="{6CA29299-F5C5-49D9-9390-F3739410D806}">
-							<PropertyList>
-								<Property Name="FadeInDuration" Type="Real64" Value="0.103806228373702"/>
-								<Property Name="FadeOutDuration" Type="Real64" Value="0.176470588235294"/>
-								<Property Name="LoopBegin" Type="Real64" Value="0.885813148788927"/>
-								<Property Name="LoopEnd" Type="Real64" Value="2.71280276816609"/>
-								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-								<Property Name="TrimBegin" Type="Real64" Value="0.788927335640139"/>
-								<Property Name="TrimEnd" Type="Real64" Value="2.87543252595156"/>
-							</PropertyList>
-							<Language>SFX</Language>
-							<AudioFile>amb_cam4.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="155130876"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<StateInfo>
-						<StateGroupList>
-							<StateGroupInfo>
-								<StateGroupRef Name="Camera_POV" ID="{5302E343-0790-48B4-B0DF-B3430A29F5FC}"/>
-								<StateGroupInfo Name="" ID="{7AD803DD-43BB-4A15-98AC-E9DB5296F449}" ShortID="347850208"/>
-							</StateGroupInfo>
-						</StateGroupList>
-						<CustomStateList>
-							<CustomState>
-								<StateRef Name="cam3" ID="{9AFF6E5E-70C7-41C4-AAE6-DCCAB3C9FCB9}"/>
-								<CustomState Name="" ID="{4BD19602-B7EE-41A5-8C2A-9B266BDE6A85}" ShortID="946890003">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-120"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="cam5" ID="{58ACBC69-1917-449B-A76D-A64094ED8EA4}"/>
-								<CustomState Name="" ID="{CFB5C422-096A-4AF3-93AA-60E542B394EF}" ShortID="477412939">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-120"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="cam4" ID="{849443B7-73BD-4828-A0DC-A4DD88B3CD7B}"/>
-								<CustomState Name="" ID="{D60168A7-5A25-4046-9E97-4C486399672D}" ShortID="1035615127">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-35"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="cam1" ID="{5D1F500A-4723-4852-AE4F-85A67784B1D3}"/>
-								<CustomState Name="" ID="{9A4A3AEB-6873-446D-BF69-16EF7832414E}" ShortID="444771985">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-120"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="None" ID="{BE17A920-CD24-4879-9E61-C58DABB63420}"/>
-								<CustomState Name="" ID="{E80F032D-295B-4B9D-8267-6D895B51935F}" ShortID="433632018">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-120"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="cam2" ID="{496A1CD7-7076-4994-A025-A3E5E85E11A5}"/>
-								<CustomState Name="" ID="{40F87EFA-D1F5-47E9-AFDD-3B691FCAC964}" ShortID="556337778">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-120"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="cammulti" ID="{E479C36E-D651-4CEE-B6F9-B3001DA5CA15}"/>
-								<CustomState Name="" ID="{EFDAE979-9CB4-462E-A4C4-02A62D236601}" ShortID="166424633">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-40"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="camtop" ID="{E922E281-18A7-4EEA-A5E9-E2F7F5238919}"/>
-								<CustomState Name="" ID="{352015AA-1FEB-4A35-B64E-B9990FCAC01F}" ShortID="473464511">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-120"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-						</CustomStateList>
-					</StateInfo>
-					<ActiveSourceList>
-						<ActiveSource Name="amb_cam4" ID="{6CA29299-F5C5-49D9-9390-F3739410D806}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="amb_cam5" ID="{8457E47D-8986-4DFC-A925-58BD49C97A6C}" ShortID="670907379">
-					<PropertyList>
-						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="amb_cam5" ID="{D9D1D5EE-43CD-46A3-9056-CA22FCC9FB01}">
-							<PropertyList>
-								<Property Name="FadeInDuration" Type="Real64" Value="0.152249134948097"/>
-								<Property Name="FadeOutDuration" Type="Real64" Value="0.200692041522491"/>
-								<Property Name="LoopBegin" Type="Real64" Value="0.14878892733564"/>
-								<Property Name="LoopEnd" Type="Real64" Value="2.80968858131488"/>
-								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-								<Property Name="VolumeOffset" Type="Real64">
-									<ValueList>
-										<Value>7.2</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<Language>SFX</Language>
-							<AudioFile>amb_cam5.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="935354105"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<StateInfo>
-						<StateGroupList>
-							<StateGroupInfo>
-								<StateGroupRef Name="Camera_POV" ID="{5302E343-0790-48B4-B0DF-B3430A29F5FC}"/>
-								<StateGroupInfo Name="" ID="{CECB0051-CF16-43CD-BD71-F7BF2DEBC50E}" ShortID="10913650"/>
-							</StateGroupInfo>
-						</StateGroupList>
-						<CustomStateList>
-							<CustomState>
-								<StateRef Name="cam3" ID="{9AFF6E5E-70C7-41C4-AAE6-DCCAB3C9FCB9}"/>
-								<CustomState Name="" ID="{896F675A-9254-4134-BFD4-12B2CC067633}" ShortID="371851399">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-120"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="cam5" ID="{58ACBC69-1917-449B-A76D-A64094ED8EA4}"/>
-								<CustomState Name="" ID="{C49AE200-3C36-4B57-A48D-BBE4740258C3}" ShortID="785263704">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-35"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="cam4" ID="{849443B7-73BD-4828-A0DC-A4DD88B3CD7B}"/>
-								<CustomState Name="" ID="{98748738-4F69-41E3-BBC9-98730BBE841D}" ShortID="745661096">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-120"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="cam1" ID="{5D1F500A-4723-4852-AE4F-85A67784B1D3}"/>
-								<CustomState Name="" ID="{BC764B9A-89DC-4854-B7F0-900EB9E47B41}" ShortID="990325766">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-120"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="None" ID="{BE17A920-CD24-4879-9E61-C58DABB63420}"/>
-								<CustomState Name="" ID="{91657DBC-F82F-4833-A8D1-AD645D49E620}" ShortID="63488306">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-120"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="cam2" ID="{496A1CD7-7076-4994-A025-A3E5E85E11A5}"/>
-								<CustomState Name="" ID="{3DF85669-0F28-4DC0-B41F-CE6708EE151F}" ShortID="235865730">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-120"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="cammulti" ID="{E479C36E-D651-4CEE-B6F9-B3001DA5CA15}"/>
-								<CustomState Name="" ID="{63B25EEF-7641-4AB2-A9C0-654BD6C99006}" ShortID="493669015">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-40"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="camtop" ID="{E922E281-18A7-4EEA-A5E9-E2F7F5238919}"/>
-								<CustomState Name="" ID="{B423CF76-B1D9-4073-AF05-C5076415BAF2}" ShortID="396238209">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-120"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-						</CustomStateList>
-					</StateInfo>
-					<ActiveSourceList>
-						<ActiveSource Name="amb_cam5" ID="{D9D1D5EE-43CD-46A3-9056-CA22FCC9FB01}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="amb_camtop" ID="{9F4FC2E2-C507-4F2F-8DFF-B45340217509}" ShortID="77300419">
-					<PropertyList>
-						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="amb_camtop" ID="{37C9C8A2-16B8-4B5D-BCFE-9945DB533338}">
-							<PropertyList>
-								<Property Name="FadeInDuration" Type="Real64" Value="0.121107266435986"/>
-								<Property Name="FadeOutDuration" Type="Real64" Value="0.0899653979238755"/>
-								<Property Name="LoopBegin" Type="Real64" Value="0.114186851211073"/>
-								<Property Name="LoopEnd" Type="Real64" Value="2.91349480968858"/>
-								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-							</PropertyList>
-							<Language>SFX</Language>
-							<AudioFile>amb_camtop.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="252033964"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<StateInfo>
-						<StateGroupList>
-							<StateGroupInfo>
-								<StateGroupRef Name="Camera_POV" ID="{5302E343-0790-48B4-B0DF-B3430A29F5FC}"/>
-								<StateGroupInfo Name="" ID="{3431B1BB-1FD9-467C-BB38-A7EAAC95066F}" ShortID="18942848"/>
-							</StateGroupInfo>
-						</StateGroupList>
-						<CustomStateList>
-							<CustomState>
-								<StateRef Name="cam3" ID="{9AFF6E5E-70C7-41C4-AAE6-DCCAB3C9FCB9}"/>
-								<CustomState Name="" ID="{4D3B0202-CF10-459E-9736-2607906FF2EF}" ShortID="466709475">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-120"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="cam5" ID="{58ACBC69-1917-449B-A76D-A64094ED8EA4}"/>
-								<CustomState Name="" ID="{ACE1E320-D662-401E-872B-A5AB8B63CBF6}" ShortID="749429318">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-120"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="cam4" ID="{849443B7-73BD-4828-A0DC-A4DD88B3CD7B}"/>
-								<CustomState Name="" ID="{CF8D23D1-55B9-47CC-8BEC-7F85B633A867}" ShortID="860798313">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-120"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="cam1" ID="{5D1F500A-4723-4852-AE4F-85A67784B1D3}"/>
-								<CustomState Name="" ID="{D79D057B-E9B3-4365-BEE0-F9BB84E75909}" ShortID="472093114">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-120"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="None" ID="{BE17A920-CD24-4879-9E61-C58DABB63420}"/>
-								<CustomState Name="" ID="{3894EAFB-696B-43EB-ADB5-D34A6F6880FC}" ShortID="774392974">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-120"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="cam2" ID="{496A1CD7-7076-4994-A025-A3E5E85E11A5}"/>
-								<CustomState Name="" ID="{467FD805-B08C-4026-BE02-3E32A0B8FF03}" ShortID="270935024">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-120"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="cammulti" ID="{E479C36E-D651-4CEE-B6F9-B3001DA5CA15}"/>
-								<CustomState Name="" ID="{AD52B004-7051-4CFD-A3B9-B53F2919A85D}" ShortID="448619269">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-120"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="camtop" ID="{E922E281-18A7-4EEA-A5E9-E2F7F5238919}"/>
-								<CustomState Name="" ID="{7C82D0CF-A3C2-4427-9BAA-B9D64C018653}" ShortID="1019797478">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-35"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-						</CustomStateList>
-					</StateInfo>
-					<ActiveSourceList>
-						<ActiveSource Name="amb_camtop" ID="{37C9C8A2-16B8-4B5D-BCFE-9945DB533338}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="amb_cam2" ID="{1FE5E723-B00A-48D1-B1B4-F9DF7B735687}" ShortID="868497391">
-					<PropertyList>
-						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="amb_cam2" ID="{11B17F8D-D950-4AB3-A86D-9742D35C31E9}">
-							<PropertyList>
-								<Property Name="FadeInDuration" Type="Real64" Value="0.096885813148789"/>
-								<Property Name="FadeOutDuration" Type="Real64" Value="0.062283737024222"/>
-								<Property Name="LoopBegin" Type="Real64" Value="0.069204152249135"/>
-								<Property Name="LoopEnd" Type="Real64" Value="2.94117647058824"/>
-								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-							</PropertyList>
-							<Language>SFX</Language>
-							<AudioFile>amb_cam2.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="77465671"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<StateInfo>
-						<StateGroupList>
-							<StateGroupInfo>
-								<StateGroupRef Name="Camera_POV" ID="{5302E343-0790-48B4-B0DF-B3430A29F5FC}"/>
-								<StateGroupInfo Name="" ID="{25E1CFB6-2FCA-45B0-BB93-AA3F6D86A5ED}" ShortID="810148935"/>
-							</StateGroupInfo>
-						</StateGroupList>
-						<CustomStateList>
-							<CustomState>
-								<StateRef Name="cam3" ID="{9AFF6E5E-70C7-41C4-AAE6-DCCAB3C9FCB9}"/>
-								<CustomState Name="" ID="{BE9FF51F-0283-41CE-8B95-4795F0260181}" ShortID="214121151">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-120"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="cam5" ID="{58ACBC69-1917-449B-A76D-A64094ED8EA4}"/>
-								<CustomState Name="" ID="{6F6B0CA4-80B5-4DD9-B30A-EA8FE0702604}" ShortID="65059085">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-120"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="cam4" ID="{849443B7-73BD-4828-A0DC-A4DD88B3CD7B}"/>
-								<CustomState Name="" ID="{D7EA6B01-44C2-465C-974E-102BE9CE85D3}" ShortID="768788771">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-120"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="cam1" ID="{5D1F500A-4723-4852-AE4F-85A67784B1D3}"/>
-								<CustomState Name="" ID="{3C2C6AA1-9104-4E16-B14F-AFFD972093DE}" ShortID="843186644">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-120"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="None" ID="{BE17A920-CD24-4879-9E61-C58DABB63420}"/>
-								<CustomState Name="" ID="{BA44FC9E-8A25-4A1E-8F41-94F182C8E383}" ShortID="108549375">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-120"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="cam2" ID="{496A1CD7-7076-4994-A025-A3E5E85E11A5}"/>
-								<CustomState Name="" ID="{3F1F36B4-B635-4C48-9D08-61573EBAB437}" ShortID="881814942">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-35"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="cammulti" ID="{E479C36E-D651-4CEE-B6F9-B3001DA5CA15}"/>
-								<CustomState Name="" ID="{93F0CCDC-36DD-4479-B86B-CB3E581B9D71}" ShortID="954340874">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-40"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="camtop" ID="{E922E281-18A7-4EEA-A5E9-E2F7F5238919}"/>
-								<CustomState Name="" ID="{2CE0FE7D-09BF-415B-B795-B9F868945813}" ShortID="815248982">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-120"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-						</CustomStateList>
-					</StateInfo>
-					<ActiveSourceList>
-						<ActiveSource Name="amb_cam2" ID="{11B17F8D-D950-4AB3-A86D-9742D35C31E9}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="amb_cam1" ID="{0FA70C48-2DAF-4745-A01A-2E97FAEFB806}" ShortID="391556106">
-					<PropertyList>
-						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="amb_cam1" ID="{DACB65F4-7023-4C54-9E3D-84C0332AE6F3}">
-							<PropertyList>
-								<Property Name="FadeInDuration" Type="Real64" Value="0.0311418685121107"/>
-								<Property Name="FadeOutDuration" Type="Real64" Value="0.0795847750865053"/>
-								<Property Name="LoopBegin" Type="Real64" Value="0.0311418685121107"/>
-								<Property Name="LoopEnd" Type="Real64" Value="2.92733564013841"/>
-								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-							</PropertyList>
-							<Language>SFX</Language>
-							<AudioFile>amb_cam1.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="161799418"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<StateInfo>
-						<StateGroupList>
-							<StateGroupInfo>
-								<StateGroupRef Name="Camera_POV" ID="{5302E343-0790-48B4-B0DF-B3430A29F5FC}"/>
-								<StateGroupInfo Name="" ID="{08FD46E8-BBC2-4038-8A3C-B3F2F14EF4B1}" ShortID="97126410"/>
-							</StateGroupInfo>
-						</StateGroupList>
-						<CustomStateList>
-							<CustomState>
-								<StateRef Name="cam3" ID="{9AFF6E5E-70C7-41C4-AAE6-DCCAB3C9FCB9}"/>
-								<CustomState Name="" ID="{2A6D7AEA-A73E-4046-84AA-99C10D543A2C}" ShortID="644632996">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-120"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="cam5" ID="{58ACBC69-1917-449B-A76D-A64094ED8EA4}"/>
-								<CustomState Name="" ID="{46988573-FAC6-4EB1-9FBE-87AA26BD20C7}" ShortID="1058798183">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-120"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="cam4" ID="{849443B7-73BD-4828-A0DC-A4DD88B3CD7B}"/>
-								<CustomState Name="" ID="{66E3675D-6307-4394-A257-DA5BCF923535}" ShortID="703920923">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-120"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="cam1" ID="{5D1F500A-4723-4852-AE4F-85A67784B1D3}"/>
-								<CustomState Name="" ID="{2FCAD93D-8B86-4666-B649-2DE4A0F847C1}" ShortID="231753980">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-12"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="None" ID="{BE17A920-CD24-4879-9E61-C58DABB63420}"/>
-								<CustomState Name="" ID="{68C24A55-CC9A-41DC-89CC-0FCD1A30345F}" ShortID="315170671">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-120"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="cam2" ID="{496A1CD7-7076-4994-A025-A3E5E85E11A5}"/>
-								<CustomState Name="" ID="{F0F8C852-B6B3-44BD-9F59-F3728AA9B7C9}" ShortID="211915286">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-120"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="cammulti" ID="{E479C36E-D651-4CEE-B6F9-B3001DA5CA15}"/>
-								<CustomState Name="" ID="{F5B50D8B-AF88-4AE1-B30C-DB7E41DF8781}" ShortID="229974965">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-40"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="camtop" ID="{E922E281-18A7-4EEA-A5E9-E2F7F5238919}"/>
-								<CustomState Name="" ID="{0EAC4CFE-FA73-4699-A985-E3B2DDFC88FB}" ShortID="525578519">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-120"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-						</CustomStateList>
-					</StateInfo>
-					<ActiveSourceList>
-						<ActiveSource Name="amb_cam1" ID="{DACB65F4-7023-4C54-9E3D-84C0332AE6F3}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 				<RandomSequenceContainer Name="Aura_XChord" ID="{23B0297E-F247-4A1D-BFAA-240E8D9463DE}" ShortID="889480469">
@@ -1712,6 +1078,72 @@
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Paranormal" ID="{43DB557B-A809-4DD5-8C4D-462D4EC33DE2}"/>
+								<StateGroupInfo Name="" ID="{F8093040-B4F1-40A9-80FE-69AD51608C37}" ShortID="608723027"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="None" ID="{EAC474D8-A31B-4342-86FE-4FE6173D9B26}"/>
+								<CustomState Name="" ID="{71D38B26-9736-4DDE-891E-070076C3B5EA}" ShortID="881775819">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-200"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Normal_00" ID="{004DB45E-6AD3-4555-BCB6-DBE1537069D7}"/>
+								<CustomState Name="" ID="{39DDFA14-415B-46C7-85F7-1677DDCC6140}" ShortID="273249103">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-200"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Lights_03" ID="{6F5A41CC-2390-4695-A85C-02312BF47A65}"/>
+								<CustomState Name="" ID="{EC926D58-5844-4453-BE63-5A7718D4C8FE}" ShortID="263192689">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-200"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Layout_04" ID="{1CC5687D-4CB7-4AB6-A92B-F6D3A94A01FE}"/>
+								<CustomState Name="" ID="{69CB66F7-CD9D-4335-A417-FFD0D23F4A6C}" ShortID="320592229">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-200"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Slowed_06" ID="{ADF4CF2E-CF42-4C88-9B7F-38A903BBB33F}"/>
+								<CustomState Name="" ID="{A2166242-AE4B-4F80-9FC0-D9294A757CB3}" ShortID="975507008"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="mrX_05" ID="{FCBABB9D-FE78-4DF2-A5A7-4BFE51EA2A02}"/>
+								<CustomState Name="" ID="{4500840D-7423-43C3-86EE-3FC98BFD316E}" ShortID="206671850"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Roamers_02" ID="{1DEBA9D2-4386-4E78-BF26-514253EEB63A}"/>
+								<CustomState Name="" ID="{96A37AA8-D803-448D-95B2-B39032EDC98B}" ShortID="754169208">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-200"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Customers_01" ID="{21270C67-9F8C-4F83-90DB-AEB4A415FBCE}"/>
+								<CustomState Name="" ID="{F28C0833-4C56-4E57-8ACD-388431DEDDD4}" ShortID="613926789">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-200"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 					<ObjectLists>
 						<ObjectList Name="Playlist">
 							<PluginInnerObject Name="" ID="{5024458A-9D87-416F-8C82-A4C1F244D9D1}" PluginName="PlaylistSlot" CompanyID="0" PluginID="86">
@@ -1754,6 +1186,1953 @@
 							</RTPC>
 						</ObjectList>
 					</ObjectLists>
+				</RandomSequenceContainer>
+				<Folder Name="Ambiance" ID="{B476F8B3-8EBC-45F5-9BF5-BA5C7F41D0EB}" ShortID="578760630">
+					<ChildrenList>
+						<Sound Name="amb_MartCrowded1" ID="{08A8636A-DB44-411E-92F4-EF3A4CB945D2}" ShortID="568486471">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="amb_MartCrowded1" ID="{E5CAB5CE-6533-43AD-B8C0-C3528EA679ED}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="1.07011866235167"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.00107874865156"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0.96655879180151"/>
+										<Property Name="LoopEnd" Type="Real64" Value="31.1370010787486"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>amb_MartCrowded1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="168848581"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Paranormal" ID="{43DB557B-A809-4DD5-8C4D-462D4EC33DE2}"/>
+										<StateGroupInfo Name="" ID="{77558206-6ABA-45B6-A566-77381BE7D578}" ShortID="169689764"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="None" ID="{EAC474D8-A31B-4342-86FE-4FE6173D9B26}"/>
+										<CustomState Name="" ID="{9E185A9C-4491-4663-85E1-A918B9214053}" ShortID="51481758"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Normal_00" ID="{004DB45E-6AD3-4555-BCB6-DBE1537069D7}"/>
+										<CustomState Name="" ID="{E432804A-B9BA-4700-BB5B-DD3937F230DB}" ShortID="107513229"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Lights_03" ID="{6F5A41CC-2390-4695-A85C-02312BF47A65}"/>
+										<CustomState Name="" ID="{96645043-5F50-471D-91E0-901612ACE9D5}" ShortID="786415445">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Layout_04" ID="{1CC5687D-4CB7-4AB6-A92B-F6D3A94A01FE}"/>
+										<CustomState Name="" ID="{FD3B5FC7-BC8F-4D8C-A3AB-ABE32E09AFE4}" ShortID="816028713">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Slowed_06" ID="{ADF4CF2E-CF42-4C88-9B7F-38A903BBB33F}"/>
+										<CustomState Name="" ID="{160974DB-9E62-46B4-BD73-D26DF335F05A}" ShortID="745265020">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="mrX_05" ID="{FCBABB9D-FE78-4DF2-A5A7-4BFE51EA2A02}"/>
+										<CustomState Name="" ID="{D7F5CD44-6644-4F90-A5B2-C0ED26C5087E}" ShortID="1020737984">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Roamers_02" ID="{1DEBA9D2-4386-4E78-BF26-514253EEB63A}"/>
+										<CustomState Name="" ID="{581ACFC4-6ED0-4ACD-9940-A5CB36CE0EB7}" ShortID="928819081">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Customers_01" ID="{21270C67-9F8C-4F83-90DB-AEB4A415FBCE}"/>
+										<CustomState Name="" ID="{918AC925-88DC-45A4-B3DF-54FF473A2DEA}" ShortID="716688695">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="amb_MartCrowded1" ID="{E5CAB5CE-6533-43AD-B8C0-C3528EA679ED}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="amb_MartEmpty1" ID="{56E6E7E5-9C78-4168-8967-58AFF3F6EC4B}" ShortID="377936168">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="amb_MartEmpty1" ID="{6F9B9395-A97A-4DA4-82FA-F84A7951D53A}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="1.10032362459547"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.938511326860841"/>
+										<Property Name="LoopBegin" Type="Real64" Value="1.00323624595469"/>
+										<Property Name="LoopEnd" Type="Real64" Value="29.0938511326861"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>amb_MartEmpty1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="600879234"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Paranormal" ID="{43DB557B-A809-4DD5-8C4D-462D4EC33DE2}"/>
+										<StateGroupInfo Name="" ID="{9DBA1B16-EB13-4641-9C3B-70E804A031CD}" ShortID="732604513"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="None" ID="{EAC474D8-A31B-4342-86FE-4FE6173D9B26}"/>
+										<CustomState Name="" ID="{4D053513-8CB5-4477-B065-FA4D7E79DCC8}" ShortID="973729513"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Normal_00" ID="{004DB45E-6AD3-4555-BCB6-DBE1537069D7}"/>
+										<CustomState Name="" ID="{F4C28265-F030-4AFB-B748-90F88B3C6ED6}" ShortID="709468129"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Lights_03" ID="{6F5A41CC-2390-4695-A85C-02312BF47A65}"/>
+										<CustomState Name="" ID="{70769D04-E270-4C4F-9537-8A5A59038A54}" ShortID="630701769"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Layout_04" ID="{1CC5687D-4CB7-4AB6-A92B-F6D3A94A01FE}"/>
+										<CustomState Name="" ID="{3F3BD893-1694-4BB7-B8FF-6A31A6C8CF07}" ShortID="286564353"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Slowed_06" ID="{ADF4CF2E-CF42-4C88-9B7F-38A903BBB33F}"/>
+										<CustomState Name="" ID="{BB86E28A-4129-42CB-8482-750EEFD4B441}" ShortID="586662545"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="mrX_05" ID="{FCBABB9D-FE78-4DF2-A5A7-4BFE51EA2A02}"/>
+										<CustomState Name="" ID="{E28B51AB-6CF1-435C-A8E1-B11EB6F0F983}" ShortID="402623300"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Roamers_02" ID="{1DEBA9D2-4386-4E78-BF26-514253EEB63A}"/>
+										<CustomState Name="" ID="{0FF9F39F-4173-4A45-A651-945664101793}" ShortID="280741475"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Customers_01" ID="{21270C67-9F8C-4F83-90DB-AEB4A415FBCE}"/>
+										<CustomState Name="" ID="{A4D14332-A99E-4DA0-945D-16D944BBA128}" ShortID="993269685"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="amb_MartEmpty1" ID="{6F9B9395-A97A-4DA4-82FA-F84A7951D53A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="amb_cam4" ID="{64EFE454-F79B-4C43-B78E-A6BC5C81158F}" ShortID="478252678">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="amb_cam4" ID="{6CA29299-F5C5-49D9-9390-F3739410D806}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.103806228373702"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.176470588235294"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0.885813148788927"/>
+										<Property Name="LoopEnd" Type="Real64" Value="2.71280276816609"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.788927335640139"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.87543252595156"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>amb_cam4.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="155130876"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Camera_POV" ID="{5302E343-0790-48B4-B0DF-B3430A29F5FC}"/>
+										<StateGroupInfo Name="" ID="{7AD803DD-43BB-4A15-98AC-E9DB5296F449}" ShortID="347850208"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="cam3" ID="{9AFF6E5E-70C7-41C4-AAE6-DCCAB3C9FCB9}"/>
+										<CustomState Name="" ID="{4BD19602-B7EE-41A5-8C2A-9B266BDE6A85}" ShortID="946890003">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-120"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="cam5" ID="{58ACBC69-1917-449B-A76D-A64094ED8EA4}"/>
+										<CustomState Name="" ID="{CFB5C422-096A-4AF3-93AA-60E542B394EF}" ShortID="477412939">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-120"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="cam4" ID="{849443B7-73BD-4828-A0DC-A4DD88B3CD7B}"/>
+										<CustomState Name="" ID="{D60168A7-5A25-4046-9E97-4C486399672D}" ShortID="1035615127">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-35"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="cam1" ID="{5D1F500A-4723-4852-AE4F-85A67784B1D3}"/>
+										<CustomState Name="" ID="{9A4A3AEB-6873-446D-BF69-16EF7832414E}" ShortID="444771985">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-120"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="None" ID="{BE17A920-CD24-4879-9E61-C58DABB63420}"/>
+										<CustomState Name="" ID="{E80F032D-295B-4B9D-8267-6D895B51935F}" ShortID="433632018">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-120"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="cam2" ID="{496A1CD7-7076-4994-A025-A3E5E85E11A5}"/>
+										<CustomState Name="" ID="{40F87EFA-D1F5-47E9-AFDD-3B691FCAC964}" ShortID="556337778">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-120"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="cammulti" ID="{E479C36E-D651-4CEE-B6F9-B3001DA5CA15}"/>
+										<CustomState Name="" ID="{EFDAE979-9CB4-462E-A4C4-02A62D236601}" ShortID="166424633">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-40"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="camtop" ID="{E922E281-18A7-4EEA-A5E9-E2F7F5238919}"/>
+										<CustomState Name="" ID="{352015AA-1FEB-4A35-B64E-B9990FCAC01F}" ShortID="473464511">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-120"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="amb_cam4" ID="{6CA29299-F5C5-49D9-9390-F3739410D806}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="amb_cam5" ID="{8457E47D-8986-4DFC-A925-58BD49C97A6C}" ShortID="670907379">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="amb_cam5" ID="{D9D1D5EE-43CD-46A3-9056-CA22FCC9FB01}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.152249134948097"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.200692041522491"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0.14878892733564"/>
+										<Property Name="LoopEnd" Type="Real64" Value="2.80968858131488"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="VolumeOffset" Type="Real64">
+											<ValueList>
+												<Value>7.2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>amb_cam5.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="935354105"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Camera_POV" ID="{5302E343-0790-48B4-B0DF-B3430A29F5FC}"/>
+										<StateGroupInfo Name="" ID="{CECB0051-CF16-43CD-BD71-F7BF2DEBC50E}" ShortID="10913650"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="cam3" ID="{9AFF6E5E-70C7-41C4-AAE6-DCCAB3C9FCB9}"/>
+										<CustomState Name="" ID="{896F675A-9254-4134-BFD4-12B2CC067633}" ShortID="371851399">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-120"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="cam5" ID="{58ACBC69-1917-449B-A76D-A64094ED8EA4}"/>
+										<CustomState Name="" ID="{C49AE200-3C36-4B57-A48D-BBE4740258C3}" ShortID="785263704">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-35"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="cam4" ID="{849443B7-73BD-4828-A0DC-A4DD88B3CD7B}"/>
+										<CustomState Name="" ID="{98748738-4F69-41E3-BBC9-98730BBE841D}" ShortID="745661096">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-120"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="cam1" ID="{5D1F500A-4723-4852-AE4F-85A67784B1D3}"/>
+										<CustomState Name="" ID="{BC764B9A-89DC-4854-B7F0-900EB9E47B41}" ShortID="990325766">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-120"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="None" ID="{BE17A920-CD24-4879-9E61-C58DABB63420}"/>
+										<CustomState Name="" ID="{91657DBC-F82F-4833-A8D1-AD645D49E620}" ShortID="63488306">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-120"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="cam2" ID="{496A1CD7-7076-4994-A025-A3E5E85E11A5}"/>
+										<CustomState Name="" ID="{3DF85669-0F28-4DC0-B41F-CE6708EE151F}" ShortID="235865730">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-120"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="cammulti" ID="{E479C36E-D651-4CEE-B6F9-B3001DA5CA15}"/>
+										<CustomState Name="" ID="{63B25EEF-7641-4AB2-A9C0-654BD6C99006}" ShortID="493669015">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-40"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="camtop" ID="{E922E281-18A7-4EEA-A5E9-E2F7F5238919}"/>
+										<CustomState Name="" ID="{B423CF76-B1D9-4073-AF05-C5076415BAF2}" ShortID="396238209">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-120"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="amb_cam5" ID="{D9D1D5EE-43CD-46A3-9056-CA22FCC9FB01}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="amb_cam3" ID="{A35A43FD-4393-407A-A3EC-E00D467BDD82}" ShortID="134118313">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="amb_cam3" ID="{A3838B63-CE3B-4993-85F0-FA5A29C48AF5}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0588235294117647"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0761245674740483"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0.0449826989619377"/>
+										<Property Name="LoopEnd" Type="Real64" Value="2.94117647058824"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>amb_cam3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="942553665"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Camera_POV" ID="{5302E343-0790-48B4-B0DF-B3430A29F5FC}"/>
+										<StateGroupInfo Name="" ID="{CA6DF051-5673-45FB-AFB6-F9C9952A7A07}" ShortID="934310093"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="cam3" ID="{9AFF6E5E-70C7-41C4-AAE6-DCCAB3C9FCB9}"/>
+										<CustomState Name="" ID="{A77808A6-A1F8-42D4-A122-FB888889DDCA}" ShortID="570190695">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-35"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="cam5" ID="{58ACBC69-1917-449B-A76D-A64094ED8EA4}"/>
+										<CustomState Name="" ID="{A8253A5F-9466-450B-9516-AEBDB9663E21}" ShortID="565081908">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-120"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="cam4" ID="{849443B7-73BD-4828-A0DC-A4DD88B3CD7B}"/>
+										<CustomState Name="" ID="{361F401B-083B-42A0-9838-95AD555055AE}" ShortID="866898788">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-120"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="cam1" ID="{5D1F500A-4723-4852-AE4F-85A67784B1D3}"/>
+										<CustomState Name="" ID="{8D471EDC-4438-4166-8440-70AF4DB69548}" ShortID="305366154">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-120"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="None" ID="{BE17A920-CD24-4879-9E61-C58DABB63420}"/>
+										<CustomState Name="" ID="{B059482A-4FAB-4FED-BBB6-190A334B2C37}" ShortID="535555993">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-120"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="cam2" ID="{496A1CD7-7076-4994-A025-A3E5E85E11A5}"/>
+										<CustomState Name="" ID="{4DB315E1-D9C0-47C2-B741-2464E0F9C413}" ShortID="298143138">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-120"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="cammulti" ID="{E479C36E-D651-4CEE-B6F9-B3001DA5CA15}"/>
+										<CustomState Name="" ID="{94F591F7-C040-48AB-AD46-5210F7113A29}" ShortID="501712876">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-40"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="camtop" ID="{E922E281-18A7-4EEA-A5E9-E2F7F5238919}"/>
+										<CustomState Name="" ID="{86256591-9798-4B65-8BEF-85047F9A4C1D}" ShortID="259603307">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-120"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="amb_cam3" ID="{A3838B63-CE3B-4993-85F0-FA5A29C48AF5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="amb_cam2" ID="{1FE5E723-B00A-48D1-B1B4-F9DF7B735687}" ShortID="868497391">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="amb_cam2" ID="{11B17F8D-D950-4AB3-A86D-9742D35C31E9}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.096885813148789"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.062283737024222"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0.069204152249135"/>
+										<Property Name="LoopEnd" Type="Real64" Value="2.94117647058824"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>amb_cam2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="77465671"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Camera_POV" ID="{5302E343-0790-48B4-B0DF-B3430A29F5FC}"/>
+										<StateGroupInfo Name="" ID="{25E1CFB6-2FCA-45B0-BB93-AA3F6D86A5ED}" ShortID="810148935"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="cam3" ID="{9AFF6E5E-70C7-41C4-AAE6-DCCAB3C9FCB9}"/>
+										<CustomState Name="" ID="{BE9FF51F-0283-41CE-8B95-4795F0260181}" ShortID="214121151">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-120"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="cam5" ID="{58ACBC69-1917-449B-A76D-A64094ED8EA4}"/>
+										<CustomState Name="" ID="{6F6B0CA4-80B5-4DD9-B30A-EA8FE0702604}" ShortID="65059085">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-120"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="cam4" ID="{849443B7-73BD-4828-A0DC-A4DD88B3CD7B}"/>
+										<CustomState Name="" ID="{D7EA6B01-44C2-465C-974E-102BE9CE85D3}" ShortID="768788771">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-120"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="cam1" ID="{5D1F500A-4723-4852-AE4F-85A67784B1D3}"/>
+										<CustomState Name="" ID="{3C2C6AA1-9104-4E16-B14F-AFFD972093DE}" ShortID="843186644">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-120"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="None" ID="{BE17A920-CD24-4879-9E61-C58DABB63420}"/>
+										<CustomState Name="" ID="{BA44FC9E-8A25-4A1E-8F41-94F182C8E383}" ShortID="108549375">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-120"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="cam2" ID="{496A1CD7-7076-4994-A025-A3E5E85E11A5}"/>
+										<CustomState Name="" ID="{3F1F36B4-B635-4C48-9D08-61573EBAB437}" ShortID="881814942">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-35"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="cammulti" ID="{E479C36E-D651-4CEE-B6F9-B3001DA5CA15}"/>
+										<CustomState Name="" ID="{93F0CCDC-36DD-4479-B86B-CB3E581B9D71}" ShortID="954340874">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-40"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="camtop" ID="{E922E281-18A7-4EEA-A5E9-E2F7F5238919}"/>
+										<CustomState Name="" ID="{2CE0FE7D-09BF-415B-B795-B9F868945813}" ShortID="815248982">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-120"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="amb_cam2" ID="{11B17F8D-D950-4AB3-A86D-9742D35C31E9}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="amb_camtop" ID="{9F4FC2E2-C507-4F2F-8DFF-B45340217509}" ShortID="77300419">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="amb_camtop" ID="{37C9C8A2-16B8-4B5D-BCFE-9945DB533338}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.121107266435986"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0899653979238755"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0.114186851211073"/>
+										<Property Name="LoopEnd" Type="Real64" Value="2.91349480968858"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>amb_camtop.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="252033964"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Camera_POV" ID="{5302E343-0790-48B4-B0DF-B3430A29F5FC}"/>
+										<StateGroupInfo Name="" ID="{3431B1BB-1FD9-467C-BB38-A7EAAC95066F}" ShortID="18942848"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="cam3" ID="{9AFF6E5E-70C7-41C4-AAE6-DCCAB3C9FCB9}"/>
+										<CustomState Name="" ID="{4D3B0202-CF10-459E-9736-2607906FF2EF}" ShortID="466709475">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-120"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="cam5" ID="{58ACBC69-1917-449B-A76D-A64094ED8EA4}"/>
+										<CustomState Name="" ID="{ACE1E320-D662-401E-872B-A5AB8B63CBF6}" ShortID="749429318">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-120"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="cam4" ID="{849443B7-73BD-4828-A0DC-A4DD88B3CD7B}"/>
+										<CustomState Name="" ID="{CF8D23D1-55B9-47CC-8BEC-7F85B633A867}" ShortID="860798313">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-120"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="cam1" ID="{5D1F500A-4723-4852-AE4F-85A67784B1D3}"/>
+										<CustomState Name="" ID="{D79D057B-E9B3-4365-BEE0-F9BB84E75909}" ShortID="472093114">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-120"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="None" ID="{BE17A920-CD24-4879-9E61-C58DABB63420}"/>
+										<CustomState Name="" ID="{3894EAFB-696B-43EB-ADB5-D34A6F6880FC}" ShortID="774392974">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-120"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="cam2" ID="{496A1CD7-7076-4994-A025-A3E5E85E11A5}"/>
+										<CustomState Name="" ID="{467FD805-B08C-4026-BE02-3E32A0B8FF03}" ShortID="270935024">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-120"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="cammulti" ID="{E479C36E-D651-4CEE-B6F9-B3001DA5CA15}"/>
+										<CustomState Name="" ID="{AD52B004-7051-4CFD-A3B9-B53F2919A85D}" ShortID="448619269">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-120"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="camtop" ID="{E922E281-18A7-4EEA-A5E9-E2F7F5238919}"/>
+										<CustomState Name="" ID="{7C82D0CF-A3C2-4427-9BAA-B9D64C018653}" ShortID="1019797478">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-35"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="amb_camtop" ID="{37C9C8A2-16B8-4B5D-BCFE-9945DB533338}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="amb_cam1" ID="{0FA70C48-2DAF-4745-A01A-2E97FAEFB806}" ShortID="391556106">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="amb_cam1" ID="{DACB65F4-7023-4C54-9E3D-84C0332AE6F3}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0311418685121107"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0795847750865053"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0.0311418685121107"/>
+										<Property Name="LoopEnd" Type="Real64" Value="2.92733564013841"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>amb_cam1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="161799418"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Camera_POV" ID="{5302E343-0790-48B4-B0DF-B3430A29F5FC}"/>
+										<StateGroupInfo Name="" ID="{08FD46E8-BBC2-4038-8A3C-B3F2F14EF4B1}" ShortID="97126410"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="cam3" ID="{9AFF6E5E-70C7-41C4-AAE6-DCCAB3C9FCB9}"/>
+										<CustomState Name="" ID="{2A6D7AEA-A73E-4046-84AA-99C10D543A2C}" ShortID="644632996">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-120"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="cam5" ID="{58ACBC69-1917-449B-A76D-A64094ED8EA4}"/>
+										<CustomState Name="" ID="{46988573-FAC6-4EB1-9FBE-87AA26BD20C7}" ShortID="1058798183">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-120"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="cam4" ID="{849443B7-73BD-4828-A0DC-A4DD88B3CD7B}"/>
+										<CustomState Name="" ID="{66E3675D-6307-4394-A257-DA5BCF923535}" ShortID="703920923">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-120"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="cam1" ID="{5D1F500A-4723-4852-AE4F-85A67784B1D3}"/>
+										<CustomState Name="" ID="{2FCAD93D-8B86-4666-B649-2DE4A0F847C1}" ShortID="231753980">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-12"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="None" ID="{BE17A920-CD24-4879-9E61-C58DABB63420}"/>
+										<CustomState Name="" ID="{68C24A55-CC9A-41DC-89CC-0FCD1A30345F}" ShortID="315170671">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-120"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="cam2" ID="{496A1CD7-7076-4994-A025-A3E5E85E11A5}"/>
+										<CustomState Name="" ID="{F0F8C852-B6B3-44BD-9F59-F3728AA9B7C9}" ShortID="211915286">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-120"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="cammulti" ID="{E479C36E-D651-4CEE-B6F9-B3001DA5CA15}"/>
+										<CustomState Name="" ID="{F5B50D8B-AF88-4AE1-B30C-DB7E41DF8781}" ShortID="229974965">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-40"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="camtop" ID="{E922E281-18A7-4EEA-A5E9-E2F7F5238919}"/>
+										<CustomState Name="" ID="{0EAC4CFE-FA73-4699-A985-E3B2DDFC88FB}" ShortID="525578519">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-120"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="amb_cam1" ID="{DACB65F4-7023-4C54-9E3D-84C0332AE6F3}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Musiques" ID="{988DC172-F6B2-4972-9B23-9466638EC52C}" ShortID="418705705">
+					<ChildrenList>
+						<Sound Name="MusicGroceryStore1" ID="{AA6113C9-0419-45CD-BF67-4A0111623309}" ShortID="194683466">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MusicGroceryStore1" ID="{A38DE95E-2A96-4D7B-9925-8E07E30CC125}">
+									<Language>SFX</Language>
+									<AudioFile>MusicGroceryStore1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="286748164"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Camera_POV" ID="{5302E343-0790-48B4-B0DF-B3430A29F5FC}"/>
+										<StateGroupInfo Name="" ID="{B95EFE9E-F820-4477-9EBE-AEF50EA5A65C}" ShortID="841280257"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="cam3" ID="{9AFF6E5E-70C7-41C4-AAE6-DCCAB3C9FCB9}"/>
+										<CustomState Name="" ID="{569338C4-E7D1-49E6-935A-2A2D1E31602E}" ShortID="209781412">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16" Value="50"/>
+												<Property Name="Lowpass" Type="int16" Value="39"/>
+												<Property Name="Volume" Type="Real64" Value="-9"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="cam5" ID="{58ACBC69-1917-449B-A76D-A64094ED8EA4}"/>
+										<CustomState Name="" ID="{5BCC4ED1-B1C8-4552-B87C-7D090B3B49FD}" ShortID="919550945">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16" Value="74"/>
+												<Property Name="Lowpass" Type="int16" Value="65"/>
+												<Property Name="Volume" Type="Real64" Value="-49"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="cam4" ID="{849443B7-73BD-4828-A0DC-A4DD88B3CD7B}"/>
+										<CustomState Name="" ID="{DF9C6C85-7ED7-4D67-BAB7-8322AA2A3F16}" ShortID="990062924">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16" Value="68"/>
+												<Property Name="Lowpass" Type="int16" Value="41"/>
+												<Property Name="Pitch" Type="int32" Value="60"/>
+												<Property Name="Volume" Type="Real64" Value="-11"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="cam1" ID="{5D1F500A-4723-4852-AE4F-85A67784B1D3}"/>
+										<CustomState Name="" ID="{B8AA8399-CD74-4D6B-B585-957499A069BE}" ShortID="722640867">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16" Value="47"/>
+												<Property Name="Lowpass" Type="int16" Value="36"/>
+												<Property Name="Volume" Type="Real64" Value="-10"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="None" ID="{BE17A920-CD24-4879-9E61-C58DABB63420}"/>
+										<CustomState Name="" ID="{631FCCB3-1B9F-4E94-AE0B-B2CCB0507F6F}" ShortID="748445338">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-108"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="cam2" ID="{496A1CD7-7076-4994-A025-A3E5E85E11A5}"/>
+										<CustomState Name="" ID="{EAE490DC-70DF-471C-85A5-F290048F52D8}" ShortID="960909175">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16" Value="35"/>
+												<Property Name="Lowpass" Type="int16" Value="66"/>
+												<Property Name="Volume" Type="Real64" Value="-7"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="cammulti" ID="{E479C36E-D651-4CEE-B6F9-B3001DA5CA15}"/>
+										<CustomState Name="" ID="{5B934953-3645-42BC-AC83-50BA83632D00}" ShortID="358969521">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16" Value="38"/>
+												<Property Name="Lowpass" Type="int16" Value="26"/>
+												<Property Name="Volume" Type="Real64" Value="-5"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="camtop" ID="{E922E281-18A7-4EEA-A5E9-E2F7F5238919}"/>
+										<CustomState Name="" ID="{D1089684-7B34-4E05-BFBE-8BD7AC210395}" ShortID="824894301">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-31"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="MusicGroceryStore1" ID="{A38DE95E-2A96-4D7B-9925-8E07E30CC125}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="gamejam mort folie" ID="{93C2E644-3D2C-4A28-9F58-98DCE2B561BA}" ShortID="965893710">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="gamejam mort folie" ID="{200CFB00-3906-48E1-A3A6-9424DE81C0C1}">
+									<Language>SFX</Language>
+									<AudioFile>gamejam mort folie.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="806233321"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="gamejam mort folie" ID="{200CFB00-3906-48E1-A3A6-9424DE81C0C1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="gamejam mort mr X" ID="{ECCC59CF-ECDA-4A54-9EDA-25B9D1F7C01E}" ShortID="119133975">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="gamejam mort mr X" ID="{9423C415-7486-46FD-A340-BD6057979924}">
+									<Language>SFX</Language>
+									<AudioFile>gamejam mort mr X.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="165958335"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="gamejam mort mr X" ID="{9423C415-7486-46FD-A340-BD6057979924}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Sound Name="sfx_AuraRoamer" ID="{3AFE6A11-D733-488A-93B2-275EAA22F99A}" ShortID="125714689">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="sfx_AuraRoamer" ID="{64872C1A-D270-44D4-A0EF-FEADAF40AB7D}">
+							<Language>SFX</Language>
+							<AudioFile>sfx_AuraRoamer.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="836913746"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="sfx_AuraRoamer" ID="{64872C1A-D270-44D4-A0EF-FEADAF40AB7D}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="sfx_Hurt" ID="{101E5C9E-8778-4D10-B5D9-876809E4F7D3}" ShortID="439027911">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="sfx_Hurt" ID="{41F819C2-1991-4D4E-A8AE-F0165BB35069}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.04638619201726"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.382686084142396"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>sfx_Hurt.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="641242176"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="sfx_Hurt" ID="{41F819C2-1991-4D4E-A8AE-F0165BB35069}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<RandomSequenceContainer Name="Light_bugs" ID="{51ED70C3-774C-4858-B87C-5167BE960D29}" ShortID="1066531694">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="sfx_LightBug1" ID="{5ED49B40-315D-4574-8083-2C69D027BAB0}" ShortID="444162788">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_LightBug1" ID="{C99A7EE3-BF23-492B-94BE-E29978025E24}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.222289644012945"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Light_bugs\sfx_LightBug1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="680701945"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_LightBug1" ID="{C99A7EE3-BF23-492B-94BE-E29978025E24}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx_LightBug2" ID="{EE5E99BA-8AB8-45B4-8616-58C32A254CB1}" ShortID="853922308">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_LightBug2" ID="{3FFED060-2C5F-4D02-B71F-64B4F8145042}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0865695792880259"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Light_bugs\sfx_LightBug2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="481829761"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_LightBug2" ID="{3FFED060-2C5F-4D02-B71F-64B4F8145042}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx_LightBug3" ID="{57348F23-2C59-419C-A3B2-1CDEED21E18A}" ShortID="489751230">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_LightBug3" ID="{36F25AEF-292A-44E6-8C4E-258DF60C1BDB}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.171521035598705"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Light_bugs\sfx_LightBug3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="377146464"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_LightBug3" ID="{36F25AEF-292A-44E6-8C4E-258DF60C1BDB}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx_LightBug4" ID="{61154A73-184F-427D-9E39-C29C7CDA897B}" ShortID="827269475">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_LightBug4" ID="{F414C8BB-F847-4AE3-B8A6-50DAD88D7C3D}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.394552319309601"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.568230852211435"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Light_bugs\sfx_LightBug4.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="106150473"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_LightBug4" ID="{F414C8BB-F847-4AE3-B8A6-50DAD88D7C3D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx_LightBug5" ID="{F764A2FC-6407-4B19-9ED1-ED803D844ED6}" ShortID="74597283">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_LightBug5" ID="{FF9063D4-AF18-4BFC-9410-2DD0BFEAEC28}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.467098166127292"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.855447680690399"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Light_bugs\sfx_LightBug5.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="608578063"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_LightBug5" ID="{FF9063D4-AF18-4BFC-9410-2DD0BFEAEC28}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Paranormal" ID="{43DB557B-A809-4DD5-8C4D-462D4EC33DE2}"/>
+								<StateGroupInfo Name="" ID="{3D5ACF15-76B8-4246-A8EB-695185D5D3C8}" ShortID="630719008"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="None" ID="{EAC474D8-A31B-4342-86FE-4FE6173D9B26}"/>
+								<CustomState Name="" ID="{ACE69B23-BFDB-4F52-B260-43AB3AA5B173}" ShortID="856965463">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-200"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Normal_00" ID="{004DB45E-6AD3-4555-BCB6-DBE1537069D7}"/>
+								<CustomState Name="" ID="{6F2B1123-8726-4F84-8593-29682F9BB327}" ShortID="272011872">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-200"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Lights_03" ID="{6F5A41CC-2390-4695-A85C-02312BF47A65}"/>
+								<CustomState Name="" ID="{A13619CB-526D-4A56-B0B8-0A97F93B63A5}" ShortID="876831045"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Layout_04" ID="{1CC5687D-4CB7-4AB6-A92B-F6D3A94A01FE}"/>
+								<CustomState Name="" ID="{4756A067-545C-47A1-985B-51C589EBF162}" ShortID="312007934"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Slowed_06" ID="{ADF4CF2E-CF42-4C88-9B7F-38A903BBB33F}"/>
+								<CustomState Name="" ID="{F921D6B0-484B-42FE-932E-96F04BE0AC77}" ShortID="513550865"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="mrX_05" ID="{FCBABB9D-FE78-4DF2-A5A7-4BFE51EA2A02}"/>
+								<CustomState Name="" ID="{C6FA05A2-D0F0-4878-82B9-73C65276618E}" ShortID="179725376"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Roamers_02" ID="{1DEBA9D2-4386-4E78-BF26-514253EEB63A}"/>
+								<CustomState Name="" ID="{1FCEF193-4566-44B6-9A72-8BDEC9B2D566}" ShortID="7643555">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-200"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Customers_01" ID="{21270C67-9F8C-4F83-90DB-AEB4A415FBCE}"/>
+								<CustomState Name="" ID="{4FED6BC9-66F7-4368-850C-298FFD72FA42}" ShortID="555767808">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-200"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
+				</RandomSequenceContainer>
+				<Folder Name="Sfx_PickupTrail" ID="{E1CD71B5-A248-4674-BB6E-6B41C1254B34}" ShortID="667735902">
+					<ChildrenList>
+						<Sound Name="sfx_TrailDisparition" ID="{952FBF15-AD98-4291-8E64-17B07320A159}" ShortID="90007258">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_TrailDisparition" ID="{4F3810E3-650E-43DD-AA14-1398542B0AB8}">
+									<Language>SFX</Language>
+									<AudioFile>Sfx_PickupTrail\sfx_TrailDisparition.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="713810811"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Paranormal" ID="{43DB557B-A809-4DD5-8C4D-462D4EC33DE2}"/>
+										<StateGroupInfo Name="" ID="{408733A0-7A04-496C-9F34-F5633E4052A7}" ShortID="387402876"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="None" ID="{EAC474D8-A31B-4342-86FE-4FE6173D9B26}"/>
+										<CustomState Name="" ID="{A949C0B5-AD2E-419B-9F87-1FD793A190C5}" ShortID="652167237">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Normal_00" ID="{004DB45E-6AD3-4555-BCB6-DBE1537069D7}"/>
+										<CustomState Name="" ID="{3BD0AC2C-DCB5-47BE-A16A-9EAFFB143269}" ShortID="871105639">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Lights_03" ID="{6F5A41CC-2390-4695-A85C-02312BF47A65}"/>
+										<CustomState Name="" ID="{D928002C-FD40-467C-B803-95AF6E1E5C9E}" ShortID="585657651">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Layout_04" ID="{1CC5687D-4CB7-4AB6-A92B-F6D3A94A01FE}"/>
+										<CustomState Name="" ID="{6700290B-D6B6-44F5-92F9-9FDD0110A61C}" ShortID="197606185">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Slowed_06" ID="{ADF4CF2E-CF42-4C88-9B7F-38A903BBB33F}"/>
+										<CustomState Name="" ID="{897DA96E-48EF-489C-9356-067957DABFE4}" ShortID="420378366">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="mrX_05" ID="{FCBABB9D-FE78-4DF2-A5A7-4BFE51EA2A02}"/>
+										<CustomState Name="" ID="{041FC71E-1185-4F7E-A25D-F81697DBEEAE}" ShortID="500494616">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Roamers_02" ID="{1DEBA9D2-4386-4E78-BF26-514253EEB63A}"/>
+										<CustomState Name="" ID="{005994A7-8664-49D0-ABE9-D4468B5B574D}" ShortID="706388698">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Customers_01" ID="{21270C67-9F8C-4F83-90DB-AEB4A415FBCE}"/>
+										<CustomState Name="" ID="{75E39874-1FB0-4CC5-823D-D450277E3913}" ShortID="629511804"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_TrailDisparition" ID="{4F3810E3-650E-43DD-AA14-1398542B0AB8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx_trailroaming" ID="{2DEEB37C-C9D9-48B0-90DB-675291D4EA8C}" ShortID="493571720">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_trailroaming" ID="{C98902A4-72F6-495E-9964-AC3D716B308F}">
+									<Language>SFX</Language>
+									<AudioFile>Sfx_PickupTrail\sfx_trailroaming.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="150371925"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Paranormal" ID="{43DB557B-A809-4DD5-8C4D-462D4EC33DE2}"/>
+										<StateGroupInfo Name="" ID="{747329A5-2CE6-4363-B121-2C386119A358}" ShortID="329119422"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="None" ID="{EAC474D8-A31B-4342-86FE-4FE6173D9B26}"/>
+										<CustomState Name="" ID="{014509A5-7351-41F5-9555-94E524333056}" ShortID="995952831">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Normal_00" ID="{004DB45E-6AD3-4555-BCB6-DBE1537069D7}"/>
+										<CustomState Name="" ID="{88AC21FB-5D0B-4100-8778-AED673492B18}" ShortID="568338001">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Lights_03" ID="{6F5A41CC-2390-4695-A85C-02312BF47A65}"/>
+										<CustomState Name="" ID="{03AA7E7C-C48F-4A48-AD38-69E5FEAF3B6F}" ShortID="21320379">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Layout_04" ID="{1CC5687D-4CB7-4AB6-A92B-F6D3A94A01FE}"/>
+										<CustomState Name="" ID="{886F4390-5928-46E9-8EA7-DBC04F1BF665}" ShortID="811239392">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Slowed_06" ID="{ADF4CF2E-CF42-4C88-9B7F-38A903BBB33F}"/>
+										<CustomState Name="" ID="{ADE93F61-78D4-4FD9-A729-045A9B6F1DF4}" ShortID="1042571095">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="mrX_05" ID="{FCBABB9D-FE78-4DF2-A5A7-4BFE51EA2A02}"/>
+										<CustomState Name="" ID="{2AE492CA-576F-48CC-9BFF-6590463ECE88}" ShortID="731031172">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Roamers_02" ID="{1DEBA9D2-4386-4E78-BF26-514253EEB63A}"/>
+										<CustomState Name="" ID="{27ADD146-61DE-4E7F-BE0B-9525BFF4E836}" ShortID="71863968"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Customers_01" ID="{21270C67-9F8C-4F83-90DB-AEB4A415FBCE}"/>
+										<CustomState Name="" ID="{E13543ED-EFE3-465C-A562-972245A7D4E8}" ShortID="203148434">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_trailroaming" ID="{C98902A4-72F6-495E-9964-AC3D716B308F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx_TrailRalentissement" ID="{7A4ABA38-DCB6-4DEB-B132-B175D1B29D63}" ShortID="644185091">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_TrailRalentissement" ID="{07243BA4-BFED-443A-B97C-DFA3EC5C3673}">
+									<Language>SFX</Language>
+									<AudioFile>Sfx_PickupTrail\sfx_TrailRalentissement.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="365676851"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Paranormal" ID="{43DB557B-A809-4DD5-8C4D-462D4EC33DE2}"/>
+										<StateGroupInfo Name="" ID="{D5D9A6D3-4924-4EFB-80F2-9645FAAE7713}" ShortID="369278625"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="None" ID="{EAC474D8-A31B-4342-86FE-4FE6173D9B26}"/>
+										<CustomState Name="" ID="{690D486B-E347-4AF7-BEBF-FB723A6FEABC}" ShortID="95345999">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Normal_00" ID="{004DB45E-6AD3-4555-BCB6-DBE1537069D7}"/>
+										<CustomState Name="" ID="{0DD709D6-D797-4C22-9FD1-9D99A8F0C7DE}" ShortID="19120506">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Lights_03" ID="{6F5A41CC-2390-4695-A85C-02312BF47A65}"/>
+										<CustomState Name="" ID="{0D986F8D-DDDA-44D4-A41A-D5EE75008704}" ShortID="413442190">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Layout_04" ID="{1CC5687D-4CB7-4AB6-A92B-F6D3A94A01FE}"/>
+										<CustomState Name="" ID="{93ECD03E-399E-40BB-AC05-527ECDB398F1}" ShortID="742283713">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Slowed_06" ID="{ADF4CF2E-CF42-4C88-9B7F-38A903BBB33F}"/>
+										<CustomState Name="" ID="{C12476C5-50D9-4DF1-8226-EF0C405BC3E0}" ShortID="233831397"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="mrX_05" ID="{FCBABB9D-FE78-4DF2-A5A7-4BFE51EA2A02}"/>
+										<CustomState Name="" ID="{4F7CFF4E-0AAA-4D76-B0FA-9322B20D84F5}" ShortID="763943959">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Roamers_02" ID="{1DEBA9D2-4386-4E78-BF26-514253EEB63A}"/>
+										<CustomState Name="" ID="{FE2F3D7C-9B79-4A54-9B99-F3889811E19B}" ShortID="797318974">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Customers_01" ID="{21270C67-9F8C-4F83-90DB-AEB4A415FBCE}"/>
+										<CustomState Name="" ID="{B68899A2-2B77-4308-AFA1-20349A89D873}" ShortID="517948549">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_TrailRalentissement" ID="{07243BA4-BFED-443A-B97C-DFA3EC5C3673}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx_TrailX" ID="{A3B15A43-CA8F-4C40-BC16-000A294B4276}" ShortID="638931524">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_TrailX" ID="{C15F65FB-7026-477C-BB46-612CF7FB0D2F}">
+									<Language>SFX</Language>
+									<AudioFile>Sfx_PickupTrail\sfx_TrailX.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="425746930"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Paranormal" ID="{43DB557B-A809-4DD5-8C4D-462D4EC33DE2}"/>
+										<StateGroupInfo Name="" ID="{681A93F1-928A-4D79-8AAB-AFAD6B196CF6}" ShortID="590032101"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="None" ID="{EAC474D8-A31B-4342-86FE-4FE6173D9B26}"/>
+										<CustomState Name="" ID="{3B0668EC-2D28-4C44-BD54-A315453B45CC}" ShortID="55505299">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Normal_00" ID="{004DB45E-6AD3-4555-BCB6-DBE1537069D7}"/>
+										<CustomState Name="" ID="{9B6C9122-3337-424A-B004-A9C1981A670F}" ShortID="280304948">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Lights_03" ID="{6F5A41CC-2390-4695-A85C-02312BF47A65}"/>
+										<CustomState Name="" ID="{07D01ADF-0B6F-4B27-90F9-DF587BA023FC}" ShortID="589596937">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Layout_04" ID="{1CC5687D-4CB7-4AB6-A92B-F6D3A94A01FE}"/>
+										<CustomState Name="" ID="{A361796B-2987-4F86-9CE4-575C8F5E152D}" ShortID="231503296">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Slowed_06" ID="{ADF4CF2E-CF42-4C88-9B7F-38A903BBB33F}"/>
+										<CustomState Name="" ID="{1FD670E9-0D1F-4AD5-962A-BF92E7C13343}" ShortID="99598298">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="mrX_05" ID="{FCBABB9D-FE78-4DF2-A5A7-4BFE51EA2A02}"/>
+										<CustomState Name="" ID="{04868A9B-DB1C-4FD1-826D-59FA89165A21}" ShortID="885156794"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Roamers_02" ID="{1DEBA9D2-4386-4E78-BF26-514253EEB63A}"/>
+										<CustomState Name="" ID="{45C67D8F-0F0C-48BC-BFB1-303D41CAFF63}" ShortID="1072010109">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Customers_01" ID="{21270C67-9F8C-4F83-90DB-AEB4A415FBCE}"/>
+										<CustomState Name="" ID="{79C1C326-BC6E-45DA-A7F5-C31DDE4031E4}" ShortID="576015165">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_TrailX" ID="{C15F65FB-7026-477C-BB46-612CF7FB0D2F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx_TrailLightsOutLayerChange" ID="{49E63832-2955-42C2-96AA-8319424BFFFD}" ShortID="110318679">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_TrailLightsOutLayerChange" ID="{8306B5CA-42E6-4F8C-B23B-864A945CA366}">
+									<Language>SFX</Language>
+									<AudioFile>Sfx_PickupTrail\sfx_TrailLightsOutLayerChange.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="373597562"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Paranormal" ID="{43DB557B-A809-4DD5-8C4D-462D4EC33DE2}"/>
+										<StateGroupInfo Name="" ID="{291442A4-F389-4B01-9906-0AAD4AE765BD}" ShortID="1064639318"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="None" ID="{EAC474D8-A31B-4342-86FE-4FE6173D9B26}"/>
+										<CustomState Name="" ID="{748DFC46-99AC-4A9B-BC52-747CAE756BD8}" ShortID="571373654">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Normal_00" ID="{004DB45E-6AD3-4555-BCB6-DBE1537069D7}"/>
+										<CustomState Name="" ID="{6019388F-06D5-4714-A5A0-4218F320F165}" ShortID="606157317">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Lights_03" ID="{6F5A41CC-2390-4695-A85C-02312BF47A65}"/>
+										<CustomState Name="" ID="{3B3AF693-3843-4371-9847-EE34171F306D}" ShortID="55804505">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Layout_04" ID="{1CC5687D-4CB7-4AB6-A92B-F6D3A94A01FE}"/>
+										<CustomState Name="" ID="{139F5D00-3D56-4752-8DC7-396951EACC94}" ShortID="477015650"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Slowed_06" ID="{ADF4CF2E-CF42-4C88-9B7F-38A903BBB33F}"/>
+										<CustomState Name="" ID="{A0208B9E-B724-405F-99CC-9F3332DAAF30}" ShortID="363983413">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="mrX_05" ID="{FCBABB9D-FE78-4DF2-A5A7-4BFE51EA2A02}"/>
+										<CustomState Name="" ID="{C7F13DA5-138C-4314-A4E8-A47E6960AF45}" ShortID="594317410">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Roamers_02" ID="{1DEBA9D2-4386-4E78-BF26-514253EEB63A}"/>
+										<CustomState Name="" ID="{8FC2134F-18B4-41F9-B13D-27C388532D3C}" ShortID="661502794">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Customers_01" ID="{21270C67-9F8C-4F83-90DB-AEB4A415FBCE}"/>
+										<CustomState Name="" ID="{084D81B5-DB64-4C5D-9E5F-943A80BC8F63}" ShortID="7704585">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_TrailLightsOutLayerChange" ID="{8306B5CA-42E6-4F8C-B23B-864A945CA366}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx_TrailLightBug" ID="{B5BA57B4-5FC7-4858-ADB8-2B6828557CFF}" ShortID="750268181">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_TrailLightBug" ID="{6040A503-0C8B-40C9-A1B7-9C03CE95443B}">
+									<Language>SFX</Language>
+									<AudioFile>Sfx_PickupTrail\sfx_TrailLightBug.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="705496845"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Paranormal" ID="{43DB557B-A809-4DD5-8C4D-462D4EC33DE2}"/>
+										<StateGroupInfo Name="" ID="{B9445228-3EC1-4952-BFDE-96B8FF3FB774}" ShortID="118591744"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="None" ID="{EAC474D8-A31B-4342-86FE-4FE6173D9B26}"/>
+										<CustomState Name="" ID="{6DB8BEF8-2EB5-42D1-99E5-995EEF08DD9F}" ShortID="714551368">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Normal_00" ID="{004DB45E-6AD3-4555-BCB6-DBE1537069D7}"/>
+										<CustomState Name="" ID="{5B2BB026-B200-4E4F-894B-172E7D826646}" ShortID="882016193">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Lights_03" ID="{6F5A41CC-2390-4695-A85C-02312BF47A65}"/>
+										<CustomState Name="" ID="{318C0F03-E519-4B98-91DE-62267EEABA36}" ShortID="104475322"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Layout_04" ID="{1CC5687D-4CB7-4AB6-A92B-F6D3A94A01FE}"/>
+										<CustomState Name="" ID="{2589ABE0-535A-497E-872E-1E955654955A}" ShortID="443864376">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Slowed_06" ID="{ADF4CF2E-CF42-4C88-9B7F-38A903BBB33F}"/>
+										<CustomState Name="" ID="{E7833045-AA17-4537-8D58-AE907182AC8D}" ShortID="609003668">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="mrX_05" ID="{FCBABB9D-FE78-4DF2-A5A7-4BFE51EA2A02}"/>
+										<CustomState Name="" ID="{FA6315CB-5433-4C72-BEA5-EB22DF093F02}" ShortID="378933906">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Roamers_02" ID="{1DEBA9D2-4386-4E78-BF26-514253EEB63A}"/>
+										<CustomState Name="" ID="{A0527910-A5AA-419B-A126-62A445176718}" ShortID="736921740">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Customers_01" ID="{21270C67-9F8C-4F83-90DB-AEB4A415FBCE}"/>
+										<CustomState Name="" ID="{3E657D15-BE67-4902-A184-E8629CA99585}" ShortID="674828511">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_TrailLightBug" ID="{6040A503-0C8B-40C9-A1B7-9C03CE95443B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<RandomSequenceContainer Name="Hallucinations" ID="{42180809-0DD3-4D79-BA6C-CE46BE958EF1}" ShortID="35106724">
+					<PropertyList>
+						<Property Name="InitialDelay" Type="Real64">
+							<ValueList>
+								<Value>4</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{CC43BA81-EA3B-4EC0-975A-3D5A9B8CA9A1}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="7"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-230</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{34227EE2-12A6-4377-B8B4-732D5657401E}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="800"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{C0E74504-27AE-48E2-94F2-3313FD8423B3}">
+										<PropertyList>
+											<Property Name="Max" Type="Real64" Value="10"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="sfx_eerie1" ID="{19DC4FEE-2E28-45E4-B8F9-73312BBBF85E}" ShortID="490484634">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_eerie1" ID="{5140FEAC-A493-4BFF-B9C7-FD08FEE69613}">
+									<Language>SFX</Language>
+									<AudioFile>sfx_eerie1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="396585843"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_eerie1" ID="{5140FEAC-A493-4BFF-B9C7-FD08FEE69613}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx_eerie2" ID="{BBD32B6A-A039-4ED5-9669-E56AB8835796}" ShortID="350278067">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B6F7BB25-1F67-46E5-9F38-FDE269FB8652}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{197EF8BE-591C-4551-AFC0-51C79285E2C2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_eerie2" ID="{A80FA6B9-F83B-4C39-932E-466953D77EE0}">
+									<Language>SFX</Language>
+									<AudioFile>sfx_eerie2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="508119624"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_eerie2" ID="{A80FA6B9-F83B-4C39-932E-466953D77EE0}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<StateInfo>
+						<StatePropertyList>
+							<Property Name="Highpass"/>
+							<Property Name="Lowpass"/>
+							<Property Name="Pitch"/>
+							<Property Name="Volume"/>
+						</StatePropertyList>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="MentalState" ID="{9746BC30-1CD8-4EF0-8DAD-CE6697CF2C29}"/>
+								<StateGroupInfo Name="" ID="{CA76D254-C7C6-41A8-BADF-507D65E10A26}" ShortID="479200245"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Mental75" ID="{E5D7A720-F1F6-40A7-B12A-E8CB61F0B033}"/>
+								<CustomState Name="" ID="{4C674D27-1A59-45ED-9689-F2086847C537}" ShortID="869263393"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Mental50" ID="{3BD9547E-8119-466D-B51F-40E7FFD42FB2}"/>
+								<CustomState Name="" ID="{4FA2B510-DFEB-40C1-8954-CB41106B9D63}" ShortID="676376352">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-10"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Mental25" ID="{25B40CCA-8B0C-4671-BD1D-C3D874C0424C}"/>
+								<CustomState Name="" ID="{AD61C433-2BE8-4354-A06B-501EC11E37E5}" ShortID="159498404">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-30"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Mental0" ID="{18411788-3B28-48E6-B875-CE3FC5ADDD60}"/>
+								<CustomState Name="" ID="{CEAA59F8-8D93-4235-99D9-05AF44F75281}" ShortID="667040990">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-200"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Mental100" ID="{85F7A492-5A1F-48F5-943E-3B2C2C59E639}"/>
+								<CustomState Name="" ID="{54D9BDB5-AF63-4842-941A-5806FA2F0EF3}" ShortID="620670819">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-200"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="None" ID="{9085BFB1-5021-49D9-A1AA-587B658E6523}"/>
+								<CustomState Name="" ID="{21902641-AA04-472D-8BD3-8ECE44249F7C}" ShortID="256124876">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-200"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
