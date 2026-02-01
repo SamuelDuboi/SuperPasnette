@@ -241,9 +241,17 @@ PrefabInstance:
       propertyPath: m_TagString
       value: TransformObj
       objectReference: {fileID: 0}
+    - target: {fileID: 1255680583061273982, guid: fb0ff34bfea2a254c97d5c914492c179, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2029393726182902866, guid: fb0ff34bfea2a254c97d5c914492c179, type: 3}
       propertyPath: m_Name
       value: baclegume
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564961938143797767, guid: fb0ff34bfea2a254c97d5c914492c179, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4854702566409792218, guid: fb0ff34bfea2a254c97d5c914492c179, type: 3}
       propertyPath: m_RootOrder
@@ -816,7 +824,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2069089567253641837, guid: dd73b59e3c0d5f64197664b1c907a3be, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.4304867
+      value: -3.4
       objectReference: {fileID: 0}
     - target: {fileID: 2069089567253641837, guid: dd73b59e3c0d5f64197664b1c907a3be, type: 3}
       propertyPath: m_LocalRotation.w
@@ -845,6 +853,18 @@ PrefabInstance:
     - target: {fileID: 2069089567253641837, guid: dd73b59e3c0d5f64197664b1c907a3be, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3949178695715744205, guid: dd73b59e3c0d5f64197664b1c907a3be, type: 3}
+      propertyPath: m_Radius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3949178695715744206, guid: dd73b59e3c0d5f64197664b1c907a3be, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -31.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 3949178695715744206, guid: dd73b59e3c0d5f64197664b1c907a3be, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 3949178696111512204, guid: dd73b59e3c0d5f64197664b1c907a3be, type: 3}
       propertyPath: m_Radius
