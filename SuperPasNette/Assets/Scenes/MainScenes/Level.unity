@@ -245,6 +245,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1745500176522461622, guid: fb0ff34bfea2a254c97d5c914492c179, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2029393726182902866, guid: fb0ff34bfea2a254c97d5c914492c179, type: 3}
       propertyPath: m_Name
       value: baclegume
@@ -888,7 +892,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3949178696111512204, guid: dd73b59e3c0d5f64197664b1c907a3be, type: 3}
       propertyPath: m_Radius
-      value: 2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3949178696111512207, guid: dd73b59e3c0d5f64197664b1c907a3be, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -18.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 3949178696111512207, guid: dd73b59e3c0d5f64197664b1c907a3be, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 3949178696111512207, guid: dd73b59e3c0d5f64197664b1c907a3be, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.19
       objectReference: {fileID: 0}
     - target: {fileID: 9215995790817036126, guid: dd73b59e3c0d5f64197664b1c907a3be, type: 3}
       propertyPath: m_Name
