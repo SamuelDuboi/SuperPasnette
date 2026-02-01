@@ -104,23 +104,28 @@ public class GameManager : MonoBehaviour
         {
             case 1:
                 npcManager?.KillClients();
+                //AkSoundEngine.SetState("Paranormal", "Customers_01");
                 break;
             case 2:
                 npcManager?.InitNPC();
+                //AkSoundEngine.SetState("Paranormal", "Roamers_02");
                 break;
             case 3:
                 Debug.Log("Blinking Lights");
                 break;
             case 4:
                 layoutManager?.ChangeLayout();
+                //AkSoundEngine.SetState("Paranormal", "Layout_04");
                 break;
             case 5:
                 npcManager?.InitMrX();
+                //AkSoundEngine.SetState("Paranormal", "Layout_05");
                 break;
             case 6:
                 Debug.Log("Slow Speed");
                 npcManager?.SlowEveryone(newSpeed);
                 if (player) player.movementSpeed = newSpeed;
+                //AkSoundEngine.SetState("Paranormal", "Layout_06");
                 break;
         }
 
